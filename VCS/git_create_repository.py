@@ -1,6 +1,6 @@
 #! /usr/bin/env python
 '''
-    Created on 2016-41-10
+    Created on 2016-4-10
     
     @author: lingjie
     @name:   git_create_repository
@@ -33,5 +33,3 @@ else:
 print n*'='    
 print "= Done!" + (n-len("= Done!")-1)*' ' + "="
 print n*'='
-
-
