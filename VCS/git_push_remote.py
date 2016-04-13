@@ -13,15 +13,15 @@ if len(sys.argv) < 2:
     print "Usage: git_push_remote.py <git_dir> [commit_message]" 
     exit()
 
-titlemsg = "= Starting " + sys.argv[0] + "... ="
-n = len(titlemsg)
+title = "= Starting " + sys.argv[0] + "... ="
+n = len(title)
 print n*'='
-print titlemsg
+print title
 print n*'='
 
 os.chdir(sys.argv[1])
 print "PWD: "+ os.popen("pwd").readline()
-if len(sys.argv)==3 and sys.argv[2]!="":
+if len(sys.argv) == 3 and sys.argv[2] != "":
     os.system("git add .")
     os.system("git commit -a -m '"+sys.argv[2]+"'")
 
@@ -34,4 +34,3 @@ for remote in os.popen("git remote show").readlines():
 print n*'='    
 print "= Done!" + (n-len("= Done!")-1)*' ' + "="
 print n*'='
-
