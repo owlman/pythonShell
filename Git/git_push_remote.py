@@ -23,12 +23,12 @@ os.chdir(sys.argv[1])
 print "PWD: "+ os.popen("pwd").readline()
 if len(sys.argv) == 3 and sys.argv[2] != "":
     os.system("git add .")
-    os.system("git commit -a -m '"+sys.argv[2]+"'")
+    os.system("git commit -m '"+sys.argv[2]+"'")
 
 for remote in os.popen("git remote show").readlines():
     print ""
     print "Being pushed to " + remote[0:-1] + "..."
-    os.system("git push -u " + remote[0:-1] +" master")
+    os.system("git push -u " + remote[0:-1])
     print "Push is complete!"
 
 print n*'='    
