@@ -13,14 +13,9 @@ if len(sys.argv) < 2:
 	print "Usage: git_create_repository.py <git_reps_dir> [init_commit_message]"
 	exit()
 
-title = "= Starting " + sys.argv[0] + "... ="
-n = len(title)
-print n*'='
-print title
-print n*'='
-
 os.chdir(sys.argv[1])
 print "PWD: " + os.popen("pwd").readline()
+
 os.system("git init")
 os.system("touch .gitignore")
 os.system("touch README.md")
@@ -30,7 +25,3 @@ if len(sys.argv) == 3 and sys.argv[2] != "":
 	os.system("git commit -m '" + sys.argv[2] + "' ")
 else:
 	os.system("git commit -m 'init commit.'")
-
-print n*'='    
-print "= Done!" + (n-len("= Done!")-1)*' ' + "="
-print n*'='

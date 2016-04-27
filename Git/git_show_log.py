@@ -14,8 +14,11 @@ if len(sys.argv) < 2:
 	exit()
 
 os.chdir(sys.argv[1])
+print "PWD: " + os.popen("pwd").readline()
+
 cmd = "git log "
 if len(sys.argv) >= 3:
 	cmd += " ".join(sys.argv[2:])
 
+print "CMD: " + cmd
 os.system(cmd) 
