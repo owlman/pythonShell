@@ -1,9 +1,9 @@
 #! /usr/bin/env python
 '''
-    Created on 2016-4-26
+    Created on 2016-4-27
     
     @author: lingjie
-    @name:   git_show_log
+    @name:   git_show_status
 '''
 
 import os
@@ -14,8 +14,8 @@ if len(sys.argv) < 2:
 	exit()
 
 os.chdir(sys.argv[1])
-cmd = "git log "
+cmd = "git status "
 if len(sys.argv) >= 3:
 	cmd += " ".join(sys.argv[2:])
-
+print cmd
 os.system(cmd) 
