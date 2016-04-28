@@ -3,7 +3,7 @@
     Created on 2016-4-28
     
     @author: lingjie
-    @name:   sshdir_permissions_config
+    @name:   install_oh_myzsh
 '''
 
 import os
@@ -15,9 +15,8 @@ print n*'='
 print title
 print n*'='
 
-cmds = ["setfacl -b ~/.ssh/id_rsa",
-	    "chgrp Users ~/.ssh/id_rsa",
-	    "chmod 600 ~/.ssh/id_rsa"
+cmds = ["git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh",
+	    "cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc"
 ]
 
 for cmd in cmds:
