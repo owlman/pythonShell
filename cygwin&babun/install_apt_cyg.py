@@ -1,9 +1,9 @@
 #! /usr/bin/env python
 '''
-    Created on 2016-4-28
+    Created on 2016-4-29
     
     @author: lingjie
-    @name:   install_oh_myzsh
+    @name:   install_apt_cyg
 '''
 
 import os
@@ -16,8 +16,8 @@ print title
 print n*'='
 
 cmds = [
-		"git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh",
-	    "cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc"
+		"lynx -source rawgit.com/transcode-open/apt-cyg/master/apt-cyg > apt-cyg",
+	    "install apt-cyg /bin"
 ]
 
 for cmd in cmds:

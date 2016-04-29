@@ -15,7 +15,8 @@ print n*'='
 print title
 print n*'='
 
-cmds = ["setfacl -b ~/.ssh/id_rsa",
+cmds = [
+		"setfacl -b ~/.ssh/id_rsa",
 	    "chgrp Users ~/.ssh/id_rsa",
 	    "chmod 600 ~/.ssh/id_rsa"
 ]
