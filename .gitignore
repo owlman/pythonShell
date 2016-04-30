@@ -64,3 +64,7 @@ target/
 #eclipse project files
 .project
 .pydev*
+
+# Mac OSX
+.DS_Store
+*/.DS_Store
