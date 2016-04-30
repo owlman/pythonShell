@@ -15,14 +15,17 @@ print n*'='
 print title
 print n*'='
 
-cmds = [
-		"lynx -source rawgit.com/transcode-open/apt-cyg/master/apt-cyg > apt-cyg",
-	    "install apt-cyg /bin"
-]
 
-for cmd in cmds:
-	print cmd
-	os.system(cmd)
+if os.path.exists("/bin/apt-cyg"):
+	print "apt-cyg has installed."
+else :
+	cmds = [
+			"lynx -source rawgit.com/transcode-open/apt-cyg/master/apt-cyg > apt-cyg",
+		    "install apt-cyg /bin"
+	]
+	for cmd in cmds:
+		print cmd
+		os.system(cmd)
 
 print n*'='    
 print "= Done!" + (n-len("= Done!")-1)*' ' + "="
