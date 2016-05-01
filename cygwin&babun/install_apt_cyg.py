@@ -23,6 +23,7 @@ else :
 		"lynx -source rawgit.com/transcode-open/apt-cyg/master/apt-cyg > apt-cyg",
 		"install apt-cyg /bin"
 	]
+	
 	for cmd in cmds:
 		print cmd
 		os.system(cmd)
