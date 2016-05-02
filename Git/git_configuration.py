@@ -8,6 +8,7 @@
 
 import os
 import sys
+import platform
 
 title = "= Starting " + sys.argv[0] + "... ="
 n = len(title)
@@ -28,6 +29,11 @@ cmds = [
 	"git config --global color.branch auto",
 	"git config --global color.interactive auto"
 ]
+
+if platform.system() == "Linux":
+	cmds.append("git config --global core.autocrlf input")
+else:
+	cmds.append("git config --global core.autocrlf true")
 
 for cmd in cmds:
 	print cmd
