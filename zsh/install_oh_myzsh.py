@@ -15,7 +15,8 @@ print n*'='
 print title
 print n*'='
 
-if os.path.exists("/home/lingjie/.oh-my-zsh"):
+os.system("cd")
+if os.path.exists("./.oh-my-zsh"):
 	print "oh-my-zsh has installed."
 else :
 	cmds = [
