@@ -10,7 +10,7 @@ import os
 import sys
 
 if len(sys.argv) < 2:
-    print "Usage: git_push_remote.py <git_dir>" 
+    print "Usage: git_pull_remote.py <git_dir>" 
     exit()
 
 title = "= Starting " + sys.argv[0] + "... ="
