@@ -1,16 +1,16 @@
 #! /usr/bin/env python
 '''
-    Created on 2015-12-20
+    Created on 2015-5-9
     
     @author: lingjie
-    @name:   git_push_remote
+    @name:   git_pull_remote
 '''
 
 import os
 import sys
 
 if len(sys.argv) < 2:
-    print "Usage: git_push_remote.py <git_dir> [commit_message]" 
+    print "Usage: git_push_remote.py <git_dir>" 
     exit()
 
 title = "= Starting " + sys.argv[0] + "... ="
@@ -21,15 +21,12 @@ print n*'='
 
 os.chdir(sys.argv[1])
 print "PWD: "+ os.popen("pwd").readline()
-if len(sys.argv) == 3 and sys.argv[2] != "":
-    os.system("git add .")
-    os.system("git commit -m '"+sys.argv[2]+"'")
 
 for remote in os.popen("git remote show").readlines():
     print ""
-    print "Pushing to " + remote[0:-1] + "..."
-    os.system("git push -u " + remote[0:-1])
-    print "Push is complete!"
+    print "Pulling from " + remote[0:-1] + "..."
+    os.system("git pull " + remote[0:-1] + " master")
+    print "Pull is complete!"
 
 print n*'='    
 print "= Done!" + (n-len("= Done!")-1)*' ' + "="
