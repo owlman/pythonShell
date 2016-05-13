@@ -25,7 +25,7 @@ else :
 	]
 	
 	for cmd in cmds:
-		print cmd
+		print(cmd)
 		os.system(cmd)
 
 print(n*'=')
