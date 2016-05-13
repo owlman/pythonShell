@@ -11,7 +11,7 @@ import sys
 
 if not len(sys.argv) in range(1, 4):
     print "Usage: git_pull_remote.py <git_dir> [branch]" 
-	exit()
+    exit()
 
 title = "= Starting " + sys.argv[0] + "... ="
 n = len(title)
