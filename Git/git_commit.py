@@ -34,4 +34,4 @@ print "Push is complete!"
 
 print n*'='    
 print "= Done!" + (n-len("= Done!")-1)*' ' + "="
-print n*'='
+print n*'=' 
