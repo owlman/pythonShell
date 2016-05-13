@@ -9,7 +9,7 @@
 import os
 import sys
 
-if len(sys.argv) in range(1,4):
+if not len(sys.argv) in range(1,4):
 	print "Usage: git_create_repository.py <git_reps_dir> [init_commit_message]"
 	exit()
 
