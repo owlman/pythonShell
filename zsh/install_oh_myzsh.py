@@ -11,13 +11,13 @@ import sys
 
 title = "= Starting " + sys.argv[0] + "... ="
 n = len(title)
-print n*'='
-print title
-print n*'='
+print(n*'=')
+print(title)
+print(n*'=')
 
 os.system("cd")
 if os.path.exists("./.oh-my-zsh"):
-	print "oh-my-zsh has installed."
+	print("oh-my-zsh has installed.")
 else :
 	cmds = [
 		"git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh",
@@ -25,9 +25,9 @@ else :
 	]
 
 	for cmd in cmds:
-		print cmd
+		print(cmd)
 		os.system(cmd)
 
-print n*'='    
-print "= Done!" + (n-len("= Done!")-1)*' ' + "="
-print n*'='
+print(n*'=')    
+print("= Done!" + (n-len("= Done!")-1)*' ' + "=")
+print(n*'=')

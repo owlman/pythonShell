@@ -10,11 +10,11 @@ import os
 import sys
 
 if not len(sys.argv) in range(1,4):
-	print "Usage: git_create_repository.py <git_reps_dir> [init_commit_message]"
+	print("Usage: git_create_repository.py <git_reps_dir> [init_commit_message]")
 	exit()
 
 os.chdir(sys.argv[1])
-print "PWD: " + os.popen("pwd").readline()
+print("PWD: " + os.popen("pwd").readline())
 
 os.system("git init")
 os.system("touch .gitignore")

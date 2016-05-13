@@ -11,17 +11,17 @@ import sys
 import time
 
 if not len(sys.argv) in range(1, 4):
-    print "Usage: git_commit.py <git_dir> [commit_message]" 
+    print("Usage: git_commit.py <git_dir> [commit_message]") 
     exit()
 
 title = "= Starting " + sys.argv[0] + "... ="
 n = len(title)
-print n*'='
-print title
-print n*'='
+print(n*'=')
+print(title)
+print(n*'=')
 
 os.chdir(sys.argv[1])
-print "PWD: "+ os.popen("pwd").readline()
+print("PWD: "+ os.popen("pwd").readline())
 if len(sys.argv) == 3 and sys.argv[2] != "":
     commit_message = sys.argv[2]
 else:
@@ -30,8 +30,8 @@ else:
 os.system("git add .")
 os.system("git commit -m '"+ commit_message + "'")
 
-print "Push is complete!"
+print("Push is complete!")
 
-print n*'='    
-print "= Done!" + (n-len("= Done!")-1)*' ' + "="
-print n*'=' 
+print(n*'=')    
+print("= Done!" + (n-len("= Done!")-1)*' ' + "=")
+print(n*'=')

@@ -12,9 +12,9 @@ import platform
 
 title = "= Starting " + sys.argv[0] + "... ="
 n = len(title)
-print n*'='
-print title
-print n*'='
+print(n*'=')
+print(title)
+print(n*'=')
 
 cmds = [
 	"git config --global user.name 'owlman'" ,
@@ -36,9 +36,9 @@ else:
 	cmds.append("git config --global core.autocrlf true")
 
 for cmd in cmds:
-	print cmd
+	print(cmd)
 	os.system(cmd)
 
-print n*'='    
-print "= Done!" + (n-len("= Done!")-1)*' ' + "="
-print n*'='
+print(n*'=')    
+print("= Done!" + (n-len("= Done!")-1)*' ' + "=")
+print(n*'=')
