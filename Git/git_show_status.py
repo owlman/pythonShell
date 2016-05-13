@@ -9,7 +9,7 @@
 import os
 import sys
 
-if len(sys.argv) in range(1, 3):
+if len(sys.argv) in range(1, 4):
 	print "Usage: git_show_log.py <git_dir> [option]" 
 	exit()
 
