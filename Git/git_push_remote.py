@@ -9,7 +9,7 @@
 import os
 import sys
 
-if len(sys.argv) < 2:
+if len(sys.argv) in range(1, 3):
     print "Usage: git_push_remote.py <git_dir> [commit_message]" 
     exit()
 
