@@ -38,7 +38,8 @@ else :
 		"brew install watch",
 		"brew install wdiff --with-gettext",
 		"brew install wget",
-		"brew install gdb",  
+		"brew install emacs",
+		"brew install gdb",  .
 		"brew install gpatch",
 		"brew install m4",
 		"brew install make",
