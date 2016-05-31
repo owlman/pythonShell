@@ -3,14 +3,14 @@
     Created on 2016-5-31
     
     @author: lingjie
-    @name:   install
+    @name:   uninstall
 '''
 
 import os
 import sys
 
 if not len(sys.argv) in range(2,3):
-	print("Usage: install.py <install_dir>")
+	print("Usage: uninstall.py <install_dir>")
 	exit(0)
 
 title = "= Starting " + sys.argv[0] + "... ="
@@ -29,12 +29,9 @@ for file in files:
 	filename = os.path.split(os.path.realpath(file[0:-1]))[1]
 	if(filename == "install.py" or filename == "uninstall.py"):
 		continue
-	cmds = ["cp " + file[0:-1] + " " + filename,
-			"chmod +x " + filename
-	]
-	for cmd in cmds:
-		print cmd
-		os.system(cmd)
+	cmd = "rm " + filename		
+	print cmd
+	os.system(cmd)
 
 print(n*'=')    
 print("= installed!" + (n-len("= installed!")-1)*' ' + "=")
