@@ -34,5 +34,5 @@ for file in files:
 	os.system(cmd)
 
 print(n*'=')    
-print("= installed!" + (n-len("= installed!")-1)*' ' + "=")
+print("= uninstalled!" + (n-len("= uninstalled!")-1)*' ' + "=")
 print(n*'=')
