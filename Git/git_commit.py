@@ -10,9 +10,9 @@ import os
 import sys
 import time
 
-if not len(sys.argv) in range(1, 4):
+if not len(sys.argv) in range(2, 4):
     print("Usage: git_commit.py <git_dir> [commit_message]") 
-    exit()
+    exit(1)
 
 title = "= Starting " + sys.argv[0] + "... ="
 n = len(title)

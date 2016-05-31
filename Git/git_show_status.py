@@ -9,9 +9,9 @@
 import os
 import sys
 
-if len(sys.argv) > 2:
-	print("Usage: git_show_log.py <git_dir> [option]") 
-	exit()
+if len(sys.argv) < 2:
+	print("Usage: git_show_status.py <git_dir> [option]") 
+	exit(1)
 
 os.chdir(sys.argv[1])
 print("PWD: " + os.popen("pwd").readline())

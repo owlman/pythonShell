@@ -9,9 +9,9 @@
 import os
 import sys
 
-if not len(sys.argv) in range(1,4):
+if not len(sys.argv) in range(2,4):
 	print("Usage: git_create_repository.py <git_reps_dir> [init_commit_message]")
-	exit()
+	exit(1)
 
 os.chdir(sys.argv[1])
 print("PWD: " + os.popen("pwd").readline())
