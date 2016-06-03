@@ -8,6 +8,7 @@
 
 import os
 import sys
+import shutil
 
 if not len(sys.argv) in range(2,3):
 	print("Usage: install.py <install_dir>")
@@ -27,14 +28,11 @@ print("PWD: " + os.popen("pwd").readline())
 
 for file in files:
 	filename = os.path.split(os.path.realpath(file[0:-1]))[1]
-	if(filename == "install.py" or filename == "uninstall.py"):
+	if(filename == "install.py" or filename == "uninstall.py"):	
 		continue
-	cmds = ["cp " + file[0:-1] + " " + filename,
-			"chmod +x " + filename
-	]
-	for cmd in cmds:
-		print cmd
-		os.system(cmd)
+	print("copying..." + filename)
+	shutil.copy(file[0:-1],filename)
+	os.system("chmod +x " + filename)
 
 print(n*'=')    
 print("= installed!" + (n-len("= installed!")-1)*' ' + "=")

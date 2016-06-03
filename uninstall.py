@@ -29,9 +29,8 @@ for file in files:
 	filename = os.path.split(os.path.realpath(file[0:-1]))[1]
 	if(filename == "install.py" or filename == "uninstall.py"):
 		continue
-	cmd = "rm " + filename		
-	print cmd
-	os.system(cmd)
+	print("removing..." + filename)	
+	os.remove(filename)
 
 print(n*'=')    
 print("= uninstalled!" + (n-len("= uninstalled!")-1)*' ' + "=")
