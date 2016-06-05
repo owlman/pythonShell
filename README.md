@@ -4,7 +4,8 @@
 ## 目录说明 
 + Git              -- Git版本控制脚本
 + zsh              -- zsh shell脚本
-+ cygwin&babun     -- cygwin shell脚本
++ cygwin           -- cygwin shell脚本
++ helloworld       -- 各语言环境的测试脚本
 
 ## 联系方式
 如果您对该项目有兴趣，或者有任何意见，可以用以下任何一种方式联系我：
