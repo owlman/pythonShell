@@ -3,8 +3,7 @@
 
 ## 目录说明 
 + Git              -- Git版本控制脚本
-+ zsh              -- zsh shell脚本
-+ cygwin           -- cygwin shell脚本
++ shell            -- 通用性shell脚本
 + helloworld       -- 各语言环境的测试脚本
 
 ## 联系方式
