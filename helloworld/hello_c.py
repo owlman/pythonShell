@@ -8,6 +8,7 @@
 import os
 import sys
 import shutil
+import platform
 
 if not len(sys.argv) in range(2, 3):
     print("Usage: hello_c.py <compiler>") 
@@ -24,7 +25,12 @@ file.close()
 	
 cmd = sys.argv[1] + r" example/hello.c -o example/test.exe"
 os.system(cmd)
-os.system(r"example/test.exe")
+
+sysstr = platform.system()
+if(sysstr =="Windows"):
+	os.system(r"example\test.exe")
+else:
+	os.system(r"example/test.exe")
 
 if(os.path.exists("example")):
 	shutil.rmtree("example")
