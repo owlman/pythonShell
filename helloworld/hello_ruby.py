@@ -12,9 +12,9 @@ import platform
 code = "puts \"hello world!\""
 sysstr = platform.system()
 if(sysstr =="Windows"):
-	codepath = sys.path[0] + "\\test_ruby.rb"
+	codepath = sys.path[0] + "\\src\\test_ruby.rb"
 else:
-	codepath = sys.path[0] + "/test_ruby.rb"
+	codepath = sys.path[0] + "/src/test_ruby.rb"
 
 if(not os.path.exists(codepath)):
 	file = open(codepath,'w')
