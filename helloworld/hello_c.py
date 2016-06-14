@@ -14,7 +14,7 @@ if not len(sys.argv) in range(2, 3):
     print("Usage: hello_c.py <compiler>") 
     exit(1)
 
-codepath = sys.path[0] + "/src/test_c.c"
+codepath = sys.path[0] + "/tmp/test_c.c"
 if(not os.path.exists("example")):
 	os.mkdir("example")
 
