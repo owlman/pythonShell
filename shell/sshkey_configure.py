@@ -15,7 +15,7 @@ print(n*'=')
 print(title)
 print(n*'=')
 
-if os.path.exists("~/.ssh/id_rsa"):
+if(os.path.exists(os.environ["HOME"]+"/.ssh/id_rsa")):
 	print("the ssh key has configureation completed .")
 else :
 	cmd = "ssh-keygen -t rsa -C 'jie.owl2008@gmail.com'"

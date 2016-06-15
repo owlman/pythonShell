@@ -15,7 +15,7 @@ print(n*'=')
 print(title)
 print(n*'=')
 
-os.system("cd")
+os.chdir(os.environ["HOME"])
 if os.path.exists("./.oh-my-zsh"):
 	print("oh-my-zsh has installed.")
 else :
