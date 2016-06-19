@@ -30,10 +30,10 @@ cmds = [
 	"git config --global color.interactive auto"
 ]
 
-if platform.system() == "Linux":
-	cmds.append("git config --global core.autocrlf input")
-else:
+if platform.system() == "Windows":
 	cmds.append("git config --global core.autocrlf true")
+else:
+	cmds.append("git config --global core.autocrlf input")
 
 for cmd in cmds:
 	print(cmd)
