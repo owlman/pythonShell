@@ -15,13 +15,15 @@ print(n*'=')
 print(title)
 print(n*'=')
 
+if os.path.exists("~/tmp"):
+	os.mkdir("~/tmp")
 
 if os.path.exists("/bin/apt-cyg"):
 	print("apt-cyg has installed.")
 else :
 	cmds = [
-		"lynx -source rawgit.com/transcode-open/apt-cyg/master/apt-cyg > apt-cyg",
-		"install apt-cyg /bin"
+		"lynx -source rawgit.com/transcode-open/apt-cyg/master/apt-cyg > ~/tmp/apt-cyg",
+		"install ~/tmp/apt-cyg /bin"
 	]
 	
 	for cmd in cmds:
