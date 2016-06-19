@@ -11,12 +11,12 @@ import platform
 
 code = "puts \"hello world!\""
 sysstr = platform.system()
-if(sysstr =="Windows"):
+if sysstr =="Windows" :
 	codepath = sys.path[0] + "\\tmp\\test_ruby.rb"
 else:
 	codepath = sys.path[0] + "/tmp/test_ruby.rb"
 
-if(not os.path.exists(codepath)):
+if not os.path.exists(codepath):
 	file = open(codepath,'w')
 	file.writelines(code)
 	file.close()

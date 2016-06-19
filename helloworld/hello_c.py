@@ -15,10 +15,10 @@ if not len(sys.argv) in range(2, 3):
     exit(1)
 
 codepath = sys.path[0] + "/tmp/test_c.c"
-if(not os.path.exists("example")):
+if not os.path.exists("example"):
 	os.mkdir("example")
 
-if(not os.path.exists(codepath)):
+if not os.path.exists(codepath):
 	code = "#include <stdio.h>\nint main(){printf(\"hello world!\\n\");return 0;} "
 	file = open(codepath,'w')
 	file.writelines(code)
@@ -29,10 +29,10 @@ cmd = sys.argv[1] + r" example/hello.c -o example/test.exe"
 os.system(cmd)
 
 sysstr = platform.system()
-if(sysstr =="Windows"):
+if sysstr =="Windows":
 	os.system(r"example\test.exe")
 else:
 	os.system(r"example/test.exe")
 
-if(os.path.exists("example")):
+if os.path.exists("example"):
 	shutil.rmtree("example")

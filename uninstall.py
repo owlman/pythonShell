@@ -25,12 +25,12 @@ files = os.popen("find " + my_dir + " -name '*.py'").readlines()
 
 os.chdir(sys.argv[1])
 print("PWD: " + os.popen("pwd").readline())
-if(os.path.exists("tmp")):
+if os.path.exists("tmp"):
 	shutil.rmtree("tmp")
 
 for file in files:
 	filename = os.path.split(os.path.realpath(file[0:-1]))[1]
-	if(filename == "install.py" or filename == "uninstall.py"):
+	if filename == "install.py" or filename == "uninstall.py":
 		continue
 	print("removing..." + filename)	
 	os.remove(filename)
