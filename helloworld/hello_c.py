@@ -25,13 +25,13 @@ if not os.path.exists(codepath):
 	file.close()
 
 shutil.copy(codepath,"example/hello.c")
-cmd = sys.argv[1] + r" example/hello.c -o example/test.exe"
-os.system(cmd)
 
 sysstr = platform.system()
 if sysstr =="Windows":
+	os.system(sys.argv[1] + r" example\hello.c -o example\test.exe")
 	os.system(r"example\test.exe")
 else:
+	os.system(sys.argv[1] + r" example/hello.c -o example/test.exe")
 	os.system(r"example/test.exe")
 
 if os.path.exists("example"):
