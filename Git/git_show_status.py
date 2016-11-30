@@ -14,7 +14,7 @@ if len(sys.argv) < 2:
 	exit(1)
 
 os.chdir(sys.argv[1])
-print("PWD: " + os.popen("pwd").readline())
+print("work_dir: " + sys.argv[1])
 
 cmd = "git status "
 if len(sys.argv) >= 3:

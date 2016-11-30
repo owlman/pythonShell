@@ -21,6 +21,7 @@ print(n*'=')
 
 os.chdir(sys.argv[1])
 print("work_dir: " + sys.argv[1])
+
 if len(sys.argv) == 3 and sys.argv[2] != "":
     os.system("git add .")
     os.system("git commit -m '"+sys.argv[2]+"'")

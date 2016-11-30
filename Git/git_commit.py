@@ -21,7 +21,7 @@ print(title)
 print(n*'=')
 
 os.chdir(sys.argv[1])
-print("PWD: "+ os.popen("pwd").readline())
+print("work_dir: " + sys.argv[1])
 if len(sys.argv) == 3 and sys.argv[2] != "":
     commit_message = sys.argv[2]
 else:

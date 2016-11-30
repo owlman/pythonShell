@@ -25,7 +25,7 @@ else :
 	branch = "master"
 
 os.chdir(sys.argv[1])
-print("PWD: "+ os.popen("pwd").readline())
+print("work_dir: " + sys.argv[1])
 
 for remote in os.popen("git remote show").readlines():
     print("")

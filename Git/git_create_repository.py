@@ -14,7 +14,7 @@ if not len(sys.argv) in range(2,4):
 	exit(1)
 
 os.chdir(sys.argv[1])
-print("PWD: " + os.popen("pwd").readline())
+print("work_dir: " + sys.argv[1])
 
 os.system("git init")
 os.system("touch .gitignore")
