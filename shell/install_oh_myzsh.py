@@ -12,8 +12,23 @@ import sys
 title = "= Starting " + sys.argv[0] + "... ="
 n = len(title)
 print(n*'=')
+    host = "hk.scaret.in"  
+    password = "lingjie123"  
+        
+    print user  
+    child = pexpect.spawn("ssh -D 7070 %s@%s" %
 print(title)
+    host = "hk.scaret.in"  
+    password = "lingjie123"  
+        
+    print user  
+    child = pexpect.spawn("ssh -D 7070 %s@%s" %
 print(n*'=')
+    host = "hk.scaret.in"  
+    password = "lingjie123"  
+        
+    print user  
+    child = pexpect.spawn("ssh -D 7070 %s@%s" %
 
 os.chdir(os.environ["HOME"])
 if os.path.exists("./.oh-my-zsh"):
