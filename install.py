@@ -9,6 +9,7 @@
 import os
 import sys
 import shutil
+import platform
 
 if not len(sys.argv) in range(2,3):
 	print("Usage: install.py <install_dir>")
@@ -29,9 +30,16 @@ if not os.path.exists("tmp"):
 	os.mkdir("tmp")
 
 for file in files:
+	filepath = os.path.split(os.path.realpath(file[0:-1]))[0]
+	dirname = filepath.split("/")[-1]
 	filename = os.path.split(os.path.realpath(file[0:-1]))[1]
-	if filename == "install.py" or filename == "uninstall.py":	
+	if (filename == "install.py" or filename == "uninstall.py"):	
 		continue
+	if (platform.platform() != "darwin" and dirname == "macos_tools"):
+		continue
+	if (platform.platform() != "Windows" and dirname == "win_tools"):
+		continue
+  
 	print("copying..." + filename)
 	shutil.copy(file[0:-1],filename)
 	os.system("chmod +x " + filename)

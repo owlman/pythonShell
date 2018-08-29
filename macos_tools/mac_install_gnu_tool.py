@@ -3,7 +3,7 @@
     Created on 2016-4-29
     
     @author: lingjie
-    @name:   install_apt_cyg
+    @name:   mac_install_gnu_tool
 '''
 
 import os
@@ -39,7 +39,7 @@ else :
 		"brew install wdiff --with-gettext",
 		"brew install wget",
 		"brew install emacs",
-		"brew install gdb",  .
+		"brew install gdb",
 		"brew install gpatch",
 		"brew install m4",
 		"brew install make",
