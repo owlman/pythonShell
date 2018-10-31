@@ -13,7 +13,7 @@ if not len(sys.argv) in range(2, 4):
     print("Usage: git_pull_remote.py <git_dir> [branch]") 
     exit(1)
 
-title = "= Starting " + sys.argv[0] + "... ="
+title = "=    Starting " + sys.argv[0] + "......    ="
 n = len(title)
 print(n*'=')
 print(title)
@@ -34,5 +34,5 @@ for remote in os.popen("git remote show").readlines():
     print("Pull is complete!")
 
 print(n*'=')    
-print("= Done!" + (n-len("= Done!")-1)*' ' + "=")
+print("=     Done!" + (n-len("=     Done!")-1)*' ' + "=")
 print(n*'=')

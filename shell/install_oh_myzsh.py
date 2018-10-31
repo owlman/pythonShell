@@ -9,9 +9,12 @@
 import os
 import sys
 
-title = "= Starting " + sys.argv[0] + "... ="
+title = "=    Starting " + sys.argv[0] + "......    ="
 n = len(title)
 print(n*'=')
+print(title)
+print(n*'=')
+
 os.chdir(os.environ["HOME"])
 if os.path.exists("./.oh-my-zsh"):
 	print("oh-my-zsh has installed.")
@@ -26,5 +29,5 @@ else :
 		os.system(cmd)
 
 print(n*'=')    
-print("= Done!" + (n-len("= Done!")-1)*' ' + "=")
+print("=     Done!" + (n-len("=     Done!")-1)*' ' + "=")
 print(n*'=')

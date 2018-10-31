@@ -13,7 +13,7 @@ if not len(sys.argv) in range(2, 4):
     print("Usage: git_push_remote.py <git_dir> [commit_message]")
     exit()
 
-title = "= Starting " + sys.argv[0] + "... ="
+title = "=    Starting " + sys.argv[0] + "......    ="
 n = len(title)
 print(n*'=')
 print(title)
@@ -33,5 +33,5 @@ for remote in os.popen("git remote show").readlines():
     print("Push is complete!")
 
 print(n*'=')    
-print("= Done!" + (n-len("= Done!")-1)*' ' + "=")
+print("=     Done!" + (n-len("=     Done!")-1)*' ' + "=")
 print(n*'=')

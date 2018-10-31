@@ -14,7 +14,7 @@ if not len(sys.argv) in range(2, 4):
     print("Usage: git_commit.py <git_dir> [commit_message]") 
     exit(1)
 
-title = "= Starting " + sys.argv[0] + "... ="
+title = "=    Starting " + sys.argv[0] + "......    ="
 n = len(title)
 print(n*'=')
 print(title)
@@ -30,8 +30,8 @@ else:
 os.system("git add .")
 os.system("git commit -m '"+ commit_message + "'")
 
-print("Push is complete!")
+print("Commit is complete!")
 
 print(n*'=')    
-print("= Done!" + (n-len("= Done!")-1)*' ' + "=")
+print("=     Done!" + (n-len("=     Done!")-1)*' ' + "=")
 print(n*'=')
