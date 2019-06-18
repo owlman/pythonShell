@@ -1,10 +1,10 @@
 #! /usr/bin/env python
-'''
+"""
     Created on 2015-5-9
     
     @author: lingjie
     @name:   git_pull_remote
-'''
+"""
 
 import os
 import sys
@@ -20,9 +20,9 @@ print(title)
 print(n*'=')
 
 if len(sys.argv) == 3 and sys.argv[2] != "":
-	branch = sys.argv[2]
-else :
-	branch = "master"
+    branch = sys.argv[2]
+else:
+    branch = "master"
 
 os.chdir(sys.argv[1])
 print("work_dir: " + sys.argv[1])

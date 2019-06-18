@@ -1,10 +1,10 @@
 #! /usr/bin/env python
-'''
+"""
     Created on 2016-5-15
     
     @author: lingjie
     @name:   sshky_configure
-'''
+"""
 
 import os
 import sys
@@ -16,11 +16,11 @@ print(title)
 print(n*'=')
 
 if os.path.exists(os.environ["HOME"]+"/.ssh/id_rsa"):
-	print("the ssh key has configureation completed .")
-else :
-	cmd = "ssh-keygen -t rsa -C 'jie.owl2008@gmail.com'"
-	print(cmd)
-	os.system(cmd)
+    print("the ssh key has configureation completed .")
+else:
+    cmd = "ssh-keygen -t rsa -C 'jie.owl2008@gmail.com'"
+    print(cmd)
+    os.system(cmd)
 
 print(n*'=')    
 print("= Done!" + (n-len("= Done!")-1)*' ' + "=")

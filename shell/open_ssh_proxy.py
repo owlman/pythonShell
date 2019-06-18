@@ -1,12 +1,13 @@
 #!/usr/bin/env python  
 # -*- coding: utf-8 -*-  
-'''
+"""
 Created on 2018-06-11 
     
 @author: lingjie 
 @name:   open_ssh_proxy
-'''
-import pexpect  
+"""
+
+import pexpect
     
 if __name__ == "__main__":  
     user = "username"  
@@ -17,8 +18,8 @@ if __name__ == "__main__":
        print("Please setting username,hostname and password...")
        exit(1)
         
-    print user  
-    child = pexpect.spawn("ssh -D 7070 %s@%s" % (user,host))  
+    print(user)
+    child = pexpect.spawn("ssh -D 7070 %s@%s" % (user, host))
     child.expect("password:")  
     child.sendline(pword)  
         

@@ -1,10 +1,10 @@
 #! /usr/bin/env python
-'''
+"""
     Created on 2015-12-20
     
     @author: lingjie
     @name:   git_push_remote
-'''
+"""
 
 import os
 import sys

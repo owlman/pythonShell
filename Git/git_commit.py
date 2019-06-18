@@ -1,10 +1,10 @@
 #! /usr/bin/env python
-'''
+"""
     Created on 2016-5-13
     
     @author: lingjie
     @name:   git_commit
-'''
+"""
 
 import os
 import sys
