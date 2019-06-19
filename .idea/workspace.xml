@@ -2,23 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3a9c9591-02b2-41b3-8829-1afb169829ab" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Git/git_commit.py" beforeDir="false" afterPath="$PROJECT_DIR$/Git/git_commit.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Git/git_configuration.py" beforeDir="false" afterPath="$PROJECT_DIR$/Git/git_configuration.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Git/git_create_repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/Git/git_create_repository.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Git/git_pull_remote.py" beforeDir="false" afterPath="$PROJECT_DIR$/Git/git_pull_remote.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Git/git_push_remote.py" beforeDir="false" afterPath="$PROJECT_DIR$/Git/git_push_remote.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Git/git_show_log.py" beforeDir="false" afterPath="$PROJECT_DIR$/Git/git_show_log.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Git/git_show_status.py" beforeDir="false" afterPath="$PROJECT_DIR$/Git/git_show_status.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Git/gitbook_push.py" beforeDir="false" afterPath="$PROJECT_DIR$/Git/gitbook_push.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/helloworld/hello_ruby.py" beforeDir="false" afterPath="$PROJECT_DIR$/helloworld/hello_ruby.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/macos_tools/mac_install_gnu_tool.py" beforeDir="false" afterPath="$PROJECT_DIR$/macos_tools/mac_install_gnu_tool.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shell/install_oh_myzsh.py" beforeDir="false" afterPath="$PROJECT_DIR$/shell/install_oh_myzsh.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shell/open_ssh_proxy.py" beforeDir="false" afterPath="$PROJECT_DIR$/shell/open_ssh_proxy.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shell/sshdir_permissions_config.py" beforeDir="false" afterPath="$PROJECT_DIR$/shell/sshdir_permissions_config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shell/sshkey_configure.py" beforeDir="false" afterPath="$PROJECT_DIR$/shell/sshkey_configure.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uninstall.py" beforeDir="false" afterPath="$PROJECT_DIR$/uninstall.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,10 +15,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/macos_tools/mac_install_gnu_tool.py">
+        <entry file="file://$PROJECT_DIR$/Git/gitbook_push.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="845">
-              <caret line="55" lean-forward="true" selection-start-line="55" selection-end-line="55" />
+            <state relative-caret-position="677">
+              <caret line="47" selection-start-line="47" selection-end-line="47" />
             </state>
           </provider>
         </entry>
@@ -61,7 +47,6 @@
         <option value="$PROJECT_DIR$/shell/sshkey_configure.py" />
         <option value="$PROJECT_DIR$/shell/open_ssh_proxy.py" />
         <option value="$PROJECT_DIR$/shell/sshdir_permissions_config.py" />
-        <option value="$PROJECT_DIR$/Git/gitbook_push.py" />
         <option value="$PROJECT_DIR$/Git/git_show_status.py" />
         <option value="$PROJECT_DIR$/Git/git_show_log.py" />
         <option value="$PROJECT_DIR$/Git/git_push_remote.py" />
@@ -71,6 +56,7 @@
         <option value="$PROJECT_DIR$/Git/git_commit.py" />
         <option value="$PROJECT_DIR$/helloworld/hello_ruby.py" />
         <option value="$PROJECT_DIR$/macos_tools/mac_install_gnu_tool.py" />
+        <option value="$PROJECT_DIR$/Git/gitbook_push.py" />
       </list>
     </option>
   </component>
@@ -86,6 +72,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -101,18 +88,27 @@
             <path>
               <item name="shell_tool" type="b2602c69:ProjectViewProjectNode" />
               <item name="shell_tool" type="462c0819:PsiDirectoryNode" />
+              <item name="helloworld" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="shell_tool" type="b2602c69:ProjectViewProjectNode" />
+              <item name="shell_tool" type="462c0819:PsiDirectoryNode" />
               <item name="macos_tools" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="shell_tool" type="b2602c69:ProjectViewProjectNode" />
+              <item name="shell_tool" type="462c0819:PsiDirectoryNode" />
+              <item name="shell" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Python" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -141,7 +137,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1920" y="0" width="1920" height="1080" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -237,13 +232,6 @@
     <entry file="file://$PROJECT_DIR$/helloworld/hello_python.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Git/gitbook_push.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret lean-forward="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Git/git_show_status.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="600">
@@ -302,8 +290,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/macos_tools/mac_install_gnu_tool.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="845">
-          <caret line="55" lean-forward="true" selection-start-line="55" selection-end-line="55" />
+        <state relative-caret-position="24">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+          <folding>
+            <element signature="e#117#126#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Git/gitbook_push.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="677">
+          <caret line="47" selection-start-line="47" selection-end-line="47" />
         </state>
       </provider>
     </entry>
