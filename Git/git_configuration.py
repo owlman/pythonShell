@@ -22,6 +22,7 @@ cmds = [
     "git config --global push.default simple",
     "git config --global color.ui true",
     "git config --global core.quotepath false",
+    "git config --global core.editor nvim",
     "git config --global i18n.logOutputEncodiing utf-8",
     "git config --global i18n.commitEncoding utf-8",
     "git config --global color.diff auto",
