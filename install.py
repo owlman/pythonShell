@@ -18,7 +18,7 @@ def main():
         print("Usage: install.py <install_dir>")
         sys.exit(1)
 
-    title = "=    Starting " + sys.argv[0] + "......    ="
+    title = "=    Starting " + sys.argv[0] + "......    "
     _func.print_banner(title)
     
     my_dir = os.path.dirname(os.path.abspath(sys.argv[0]))
@@ -55,7 +55,7 @@ def main():
         shutil.copy(file, filename)
         os.chmod(filename, os.stat(filename).st_mode | 0o111)
 
-    _func.print_banner("=     Done!")
+    _func.print_banner("=     Done  "+ sys.argv[0] + "......    ")
 
 if __name__ == "__main__":
     main()

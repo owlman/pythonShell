@@ -10,7 +10,7 @@ def run_command(command):
         print(result.stdout)
 
 def print_banner(message):
-    n = len(message)
+    n = len(message) + 2
     print(n * '=')
-    print(message+ (n - len(message) - 1) * ' ' + "=")
+    print(message+ (n - len(message) -1 ) * ' ' + "=")
     print(n * '=')
