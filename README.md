@@ -12,9 +12,9 @@
 
 如果您对该项目有兴趣，或者有任何意见，可以用以下任何一种方式联系我：
 
-- E-mail: ![jie.owl2008@gmail.com](maito:jie.owl2008@gmail.com)
-- Weibo: ![@凌杰_owlman](https://weibo.com/u/1670107570)
-- Twitter/X: ![@lingjieowl](https://x.com/lingjieowl)
+- E-mail: [jie.owl2008@gmail.com](maito:jie.owl2008@gmail.com)
+- Weibo: [@凌杰_owlman](https://weibo.com/u/1670107570)
+- Twitter/X: [@lingjieowl](https://x.com/lingjieowl)
 
 ## 版权声明
 
