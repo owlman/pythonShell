@@ -1,20 +1,20 @@
 # 项目说明
 
-该项目将用于存放本人日常自写自用shell脚本。
+该项目将用于存放本人日常使用的自动化脚本。
 
-## 目录说明 
+## 目录说明
 
-+ Git              -- Git版本控制脚本
-+ shell            -- 通用性shell脚本
-+ helloworld       -- 各语言环境的测试脚本
+- network_operation：与网络操作相关的自动化脚本；
+- project_manage：与项目管理相关的自动化脚本
+- shell_configure：与 shell 环境配置相关的自动化脚本；
 
 ## 联系方式
 
 如果您对该项目有兴趣，或者有任何意见，可以用以下任何一种方式联系我：
 
-+ E-mail: jie.owl2008@gmail.com
-+ weibo: 凌杰_owlman
-+ twitter: @lingjieowl
+- E-mail: ![jie.owl2008@gmail.com](maito:jie.owl2008@gmail.com)
+- Weibo: ![@凌杰_owlman](https://weibo.com/u/1670107570)
+- Twitter/X: ![@lingjieowl](https://x.com/lingjieowl)
 
 ## 版权声明
 

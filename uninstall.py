@@ -1,48 +1,62 @@
 #! /usr/bin/env python
 """
-    Created on 2016-5-31
-    
-    @author: lingjie
-    @name:   uninstall
+Uninstall script to remove all files from a specified installation directory.
+
+Usage: python script.py <install_dir>
 """
 
 import os
 import sys
 import shutil
-import platform
-import subprocess
+import glob
 
-if len(sys.argv) != 2:
-    print("Usage: uninstall.py <install_dir>")
-    exit(0)
+def main():
+    if len(sys.argv) < 2:
+        print("Usage: python script.py <install_dir>")
+        sys.exit(1)
 
-title = "= Starting " + sys.argv[0] + "... ="
-n = len(title)
-print(n*'=')
-print(title)
-print(n*'=')
+    install_dir = sys.argv[1]
+    if not os.path.isdir(install_dir):
+        print(f"Error: {install_dir} is not a valid directory.")
+        sys.exit(1)
 
-my_dir = sys.path[0]
-files = subprocess.check_output(["find", my_dir, "-name", "*.py"]).decode().splitlines()
+    # Save the current working directory
+    cwd = os.getcwd()
 
-os.chdir(sys.argv[1])
-print("PWD: " + os.getcwd())
-if os.path.exists("tmp"):
-    shutil.rmtree("tmp")
+    # Change to the installation directory
+    os.chdir(install_dir)
+    print(f"Current working directory: {os.getcwd()}")
 
-if os.path.exists("template"):
-    shutil.rmtree("template")
+    # Remove 'tmp' and 'template' directories if they exist
+    if os.path.exists("tmp"):
+        shutil.rmtree("tmp")
+    if os.path.exists("template"):
+        shutil.rmtree("template")
 
-for file in files:
-    filepath = os.path.split(os.path.realpath(file))[0]
-    dirname = os.path.basename(filepath)
-    filename = os.path.split(os.path.realpath(file))[1]
-    if filename == "install.py" or filename == "uninstall.py":
-        continue
+    # Remove all files except 'install.py' and 'uninstall.py'
+    for file in glob.glob(os.path.join(install_dir, "*")):
+        if file.startswith(os.path.join(os.getcwd(), 'tmp')) or file.startswith(os.path.join(os.getcwd(), 'template')):
+            continue
 
-    print("removing..." + filename)
-    os.remove(file)
+        dirname, filename = os.path.split(file)
+        if filename in ["install.py", "uninstall.py"]:
+            continue
 
-print(n*'=')    
-print("= uninstalled!" + (n-len("= uninstalled!")-1)*' ' + "=")
-print(n*'=')
+        try:
+            print(f"Removing... {filename}")
+            os.remove(file)
+            print(f"Removed {filename}")
+        except OSError as e:
+            print(f"Error removing {filename}: {e}")
+
+    # Restore the original working directory
+    os.chdir(cwd)
+
+    # Print uninstallation success message
+    message = "Uninstalled!"
+    print("=" * (len(message) + 10))
+    print("=" * (len(message) + 8) + message + "=" * (len(message) + 8))
+    print("=" * (len(message) + 10))
+
+if __name__ == "__main__":
+    main()
