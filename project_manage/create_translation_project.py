@@ -10,12 +10,7 @@ import os
 import sys
 import shutil
 import subprocess
-
-def print_banner(title):
-    n = len(title)
-    print(n * '=')
-    print(title)
-    print(n * '=')
+import _lib.func as _func
 
 def main():
     if len(sys.argv) < 2 or len(sys.argv) > 3:
@@ -23,7 +18,7 @@ def main():
         sys.exit(1)
 
     title = "=    Starting " + sys.argv[0] + "......    ="
-    print_banner(title)
+    _func.print_banner(title)
 
     project_dir = sys.argv[1]
     project_name = sys.argv[2] if len(sys.argv) == 3 and sys.argv[2] else "translation_proj"
@@ -36,7 +31,7 @@ def main():
     if not os.path.exists(project_name):
         print("Creating the project template...")
         try:
-            subprocess.run(["unzip", template_dir], check=True)
+            _func.run_command(["unzip", template_dir], check=True)
         except subprocess.CalledProcessError as e:
             print(f"Failed to unzip template: {e}")
             sys.exit(1)
@@ -48,7 +43,7 @@ def main():
         print(f"Failed to move project: {e}")
         sys.exit(1)
 
-    print_banner("=     Done!" + (len(title) - len("=     Done!") - 1) * ' ' + "=")
+    _func.print_banner("=     Done!" + (len(title) - len("=     Done!") - 1) * ' ' + "=")
 
 if __name__ == "__main__":
     main()

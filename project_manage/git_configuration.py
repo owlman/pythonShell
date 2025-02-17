@@ -6,8 +6,6 @@
     @name:   git_configuration
 """
 
-import os
-import sys
 import platform
 import subprocess
 

@@ -1,14 +1,16 @@
 #! /usr/bin/env python
 """
-Uninstall script to remove all files from a specified installation directory.
-
-Usage: python script.py <install_dir>
+    Created on 2018-10-31
+    
+    @author: lingjie
+    @name:   uninstall
 """
 
 import os
 import sys
 import shutil
 import glob
+import _func
 
 def main():
     if len(sys.argv) < 2:
@@ -55,10 +57,8 @@ def main():
     os.chdir(cwd)
 
     # Print uninstallation success message
-    message = "Uninstalled!"
-    print("=" * (len(message) + 10))
-    print("=" * (len(message) + 8) + message + "=" * (len(message) + 8))
-    print("=" * (len(message) + 10))
+    message = "=       Uninstalled!"
+    _func.print_banner(message)
 
 if __name__ == "__main__":
     main()

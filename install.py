@@ -11,6 +11,7 @@ import sys
 import shutil
 import platform
 import glob
+import _func
 
 def main():
     if len(sys.argv) != 2:
@@ -18,11 +19,8 @@ def main():
         sys.exit(1)
 
     title = "=    Starting " + sys.argv[0] + "......    ="
-    n = len(title)
-    print(n * '=')
-    print(title)
-    print(n * '=')
-
+    _func.print_banner(title)
+    
     my_dir = os.path.dirname(os.path.abspath(sys.argv[0]))
     files = glob.glob(os.path.join(my_dir, "**", "*.py"), recursive=True)
     template_files = glob.glob(os.path.join(my_dir, "**", "*.zip"), recursive=True)
@@ -41,6 +39,7 @@ def main():
             print("copying..." + filename)
             shutil.copy(file, os.path.join("template", filename))
 
+
     for file in files:
         filepath = os.path.dirname(file)
         dirname = os.path.basename(filepath)
@@ -56,9 +55,7 @@ def main():
         shutil.copy(file, filename)
         os.chmod(filename, os.stat(filename).st_mode | 0o111)
 
-    print(n * '=')
-    print("=     Done!" + (n - len("=     Done!") - 1) * ' ' + "=")
-    print(n * '=')
+    _func.print_banner("=     Done!")
 
 if __name__ == "__main__":
     main()
