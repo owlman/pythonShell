@@ -58,6 +58,9 @@ docs/_build/
 # PyBuilder
 target/
 
+#  idea project files
+.idea/
+
 #Ipython Notebook
 .ipynb_checkpoints
 
@@ -68,3 +71,4 @@ target/
 # Mac OSX
 .DS_Store
 */.DS_Store
+
