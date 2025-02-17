@@ -25,26 +25,28 @@ def main():
 
     # Change to the installation directory
     os.chdir(install_dir)
-    print(f"Current working directory: {os.getcwd()}")
+    print(f"Changed to directory: {os.getcwd()}")
 
     # Remove 'tmp' and 'template' directories if they exist
-    if os.path.exists("tmp"):
-        shutil.rmtree("tmp")
-    if os.path.exists("template"):
-        shutil.rmtree("template")
+    for dir_name in ["tmp", "template"]:
+        dir_path = os.path.join(install_dir, dir_name)
+        if os.path.exists(dir_path):
+            shutil.rmtree(dir_path)
+            print(f"Removed directory: {dir_name}")
 
     # Remove all files except 'install.py' and 'uninstall.py'
-    for file in glob.glob(os.path.join(install_dir, "*")):
-        if file.startswith(os.path.join(os.getcwd(), 'tmp')) or file.startswith(os.path.join(os.getcwd(), 'template')):
+    for file_path in glob.glob(os.path.join(install_dir, "*")):
+        if file_path.startswith(os.path.join(install_dir, 'tmp')) \
+            or file_path.startswith(os.path.join(install_dir, 'template')):
             continue
 
-        dirname, filename = os.path.split(file)
+        dirname, filename = os.path.split(file_path)
         if filename in ["install.py", "uninstall.py"]:
             continue
 
         try:
             print(f"Removing... {filename}")
-            os.remove(file)
+            os.remove(file_path)
             print(f"Removed {filename}")
         except OSError as e:
             print(f"Error removing {filename}: {e}")
