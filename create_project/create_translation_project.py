@@ -8,36 +8,47 @@
 
 import os
 import sys
+import shutil
+import subprocess
 
-if not len(sys.argv) in range(2, 4):
-    print("Usage: create_translation_project.py <project_dir> [project_name]") 
-    exit(1)
+def print_banner(title):
+    n = len(title)
+    print(n * '=')
+    print(title)
+    print(n * '=')
 
-title = "=    Starting " + sys.argv[0] + "......    ="
-n = len(title)
-print(n*'=')
-print(title)
-print(n*'=')
+def main():
+    if len(sys.argv) < 2 or len(sys.argv) > 3:
+        print("Usage: create_translation_project.py <project_dir> [project_name]")
+        sys.exit(1)
 
-project_dir = sys.argv[1]
+    title = "=    Starting " + sys.argv[0] + "......    ="
+    print_banner(title)
 
-if len(sys.argv) == 3 and sys.argv[2] != "":
-    project_name = sys.argv[2]
-else:
-    project_name = "translation_proj"
+    project_dir = sys.argv[1]
+    project_name = sys.argv[2] if len(sys.argv) == 3 and sys.argv[2] else "translation_proj"
 
-if not os.path.exists(project_dir):
-    print("Your <project_dir> is error !")
-else:
-    if not os.path.exists("translation_proj"):
+    if not os.path.exists(project_dir):
+        print("Your <project_dir> is error!")
+        sys.exit(1)
+
+    template_dir = os.path.join(sys.path[0], "template", "translation_proj.zip")
+    if not os.path.exists(project_name):
         print("Creating the project template...")
-        unzip_cmd = "unzip " + sys.path[0] + "/template/translation_proj.zip" 
-        os.system(unzip_cmd)
+        try:
+            subprocess.run(["unzip", template_dir], check=True)
+        except subprocess.CalledProcessError as e:
+            print(f"Failed to unzip template: {e}")
+            sys.exit(1)
 
-    print("Creating your project to " + project_dir + "....")
-    move_cmd = "mv ./translation_proj " + project_dir + "/" + project_name
-    os.system(move_cmd) 
+    print(f"Creating your project to {project_dir}....")
+    try:
+        shutil.move(project_name, os.path.join(project_dir, project_name))
+    except Exception as e:
+        print(f"Failed to move project: {e}")
+        sys.exit(1)
 
-print(n*'=')    
-print("=     Done!" + (n-len("=     Done!")-1)*' ' + "=")
-print(n*'=')
+    print_banner("=     Done!" + (len(title) - len("=     Done!") - 1) * ' ' + "=")
+
+if __name__ == "__main__":
+    main()

@@ -8,30 +8,33 @@
 
 import os
 import sys
+import subprocess
 
-if not len(sys.argv) in range(2,4):
+def print_border(title):
+    n = len(title)
+    print(n * '=')
+    print(title)
+    print(n * '=')
+
+if len(sys.argv) < 2 or len(sys.argv) > 3:
     print("Usage: git_create_repository.py <git_reps_dir> [init_commit_message]")
     exit(1)
 
-title = "=    Starting " + sys.argv[0] + "......    ="
-n = len(title)
-print(n*'=')
-print(title)
-print(n*'=')
+print_border("=    Starting " + sys.argv[0] + "......    =")
+
+if not os.path.isdir(sys.argv[1]):
+    print(f"Error: Directory '{sys.argv[1]}' does not exist.")
+    exit(1)
 
 os.chdir(sys.argv[1])
 print("work_dir: " + sys.argv[1])
 
-os.system("git init")
-os.system("touch .gitignore")
-os.system("touch README.md")
-os.system("git add .")
+subprocess.run(["git", "init"], check=True)
+subprocess.run(["touch", ".gitignore"], check=True)
+subprocess.run(["touch", "README.md"], check=True)
+subprocess.run(["git", "add", "."], check=True)
 
-if len(sys.argv) == 3 and sys.argv[2] != "":
-    os.system("git commit -m '" + sys.argv[2] + "' ")
-else:
-    os.system("git commit -m 'init commit.'")
+commit_message = sys.argv[2] if len(sys.argv) == 3 and sys.argv[2] else "init commit."
+subprocess.run(["git", "commit", "-m", commit_message], check=True)
 
-print(n*'=')    
-print("=     Done!" + (n-len("=     Done!")-1)*' ' + "=")
-print(n*'=')
+print_border("=     Done!" + (len("=    Starting " + sys.argv[0] + "......    =") - len("=     Done!") - 1) * ' ' + "=")

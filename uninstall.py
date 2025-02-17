@@ -10,8 +10,9 @@ import os
 import sys
 import shutil
 import platform
+import subprocess
 
-if not len(sys.argv) in range(2,3):
+if len(sys.argv) != 2:
     print("Usage: uninstall.py <install_dir>")
     exit(0)
 
@@ -22,10 +23,10 @@ print(title)
 print(n*'=')
 
 my_dir = sys.path[0]
-files = os.popen("find " + my_dir + " -name '*.py'").readlines()
+files = subprocess.check_output(["find", my_dir, "-name", "*.py"]).decode().splitlines()
 
 os.chdir(sys.argv[1])
-print("PWD: " + os.popen("pwd").readline())
+print("PWD: " + os.getcwd())
 if os.path.exists("tmp"):
     shutil.rmtree("tmp")
 
@@ -33,18 +34,14 @@ if os.path.exists("template"):
     shutil.rmtree("template")
 
 for file in files:
-    filepath = os.path.split(os.path.realpath(file[0:-1]))[0]
-    dirname = filepath.split("/")[-1]
-    filename = os.path.split(os.path.realpath(file[0:-1]))[1]
-    if (filename == "install.py" or filename == "uninstall.py"):
-        continue
-    if (platform.platform() != "darwin" and dirname == "macos_tools"):
-        continue
-    if (platform.platform() != "Windows" and dirname == "win_tools"):
+    filepath = os.path.split(os.path.realpath(file))[0]
+    dirname = os.path.basename(filepath)
+    filename = os.path.split(os.path.realpath(file))[1]
+    if filename == "install.py" or filename == "uninstall.py":
         continue
 
     print("removing..." + filename)
-    os.remove(filename)
+    os.remove(file)
 
 print(n*'=')    
 print("= uninstalled!" + (n-len("= uninstalled!")-1)*' ' + "=")

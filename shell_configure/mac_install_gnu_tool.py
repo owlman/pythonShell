@@ -8,31 +8,28 @@
 
 import os
 import sys
+import subprocess
 
-title = "= Starting " + sys.argv[0] + "... ="
+title = "= Starting " + os.path.basename(sys.argv[0]) + "... ="
 n = len(title)
 print(n*'=')
 print(title)
 print(n*'=')
 
-
-if os.path.exists("/usr/bin/gdb"):
-    print("the gnu tool has installed.")
-else:
+def install_gnu_tools():
     cmds = [
         "brew install coreutils",
-        "brew tap homebrew/dupes",
         "brew install binutils",
         "brew install diffutils",
-        "brew install ed --default-names",
-        "brew install findutils --default-names",
+        "brew install ed",
+        "brew install findutils",
         "brew install gawk",
-        "brew install gnu-indent --default-names",
-        "brew install gnu-sed --default-names",
-        "brew install gnu-tar --default-names",
-        "brew install gnu-which --default-names",
-        "brew install gnutls --default-names",
-        "brew install grep --default-names",
+        "brew install gnu-indent",
+        "brew install gnu-sed",
+        "brew install gnu-tar",
+        "brew install gnu-which",
+        "brew install gnutls",
+        "brew install grep",
         "brew install gzip",
         "brew install screen",
         "brew install watch",
@@ -45,11 +42,19 @@ else:
         "brew install make",
         "brew install nano"
     ]
-
     for cmd in cmds:
         print(cmd)
-        os.system(cmd)
+        subprocess.run(cmd, shell=True, check=True)
+
+if not os.path.exists("/usr/local/bin/brew"):
+    print("Homebrew is not installed. Please install Homebrew first.")
+    sys.exit(1)
+
+if os.system("which gdb") == 0:
+    print("the gnu tool has installed.")
+else:
+    install_gnu_tools()
 
 print(n*'=')
-print("= Done!" + (n-len("= Done!")-1)*' ' + "=")
+print("= Done!" + max(0, n - len("= Done!") - 1) * ' ' + "=")
 print(n*'=')

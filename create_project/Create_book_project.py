@@ -8,6 +8,8 @@
 
 import os
 import sys
+import shutil
+import subprocess
 
 if not len(sys.argv) in range(2, 4):
     print("Usage: create_book_project.py <project_dir> [project_name]")
@@ -28,15 +30,27 @@ else:
 
 if not os.path.exists(project_dir):
     print("Your <project_dir> is error !")
-else:
-    if not os.path.exists("book_proj"):
-        print("Creating the project template...")
-        unzip_cmd = "unzip " + sys.path[0] + "/template/book_proj.zip"
-        os.system(unzip_cmd)
+    exit(1)
 
-    print("Creating your project to " + project_dir + "....")
-    move_cmd = "mv ./book_proj " + project_dir + "/" + project_name
-    os.system(move_cmd)
+script_dir = os.path.dirname(os.path.abspath(__file__))
+template_zip = os.path.join(script_dir, "template", "book_proj.zip")
+extracted_dir = os.path.join(script_dir, "book_proj")
+
+if not os.path.exists(extracted_dir):
+    print("Creating the project template...")
+    try:
+        subprocess.run(["unzip", template_zip], check=True)
+    except subprocess.CalledProcessError as e:
+        print(f"Failed to unzip template: {e}")
+        exit(1)
+
+print("Creating your project to " + project_dir + "....")
+target_dir = os.path.join(project_dir, project_name)
+try:
+    shutil.move(extracted_dir, target_dir)
+except Exception as e:
+    print(f"Failed to move project: {e}")
+    exit(1)
 
 print(n * '=')
 print("=     Done!" + (n - len("=     Done!") - 1) * ' ' + "=")

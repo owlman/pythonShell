@@ -8,27 +8,39 @@
 
 import os
 import sys
+import subprocess
+
+def print_separator(length):
+    print(length * '=')
 
 if len(sys.argv) < 2:
     print("Usage: git_show_status.py <git_dir> [option]")
-    exit(1)
+    sys.exit(1)
 
 title = "=    Starting " + sys.argv[0] + "......    ="
 n = len(title)
-print(n*'=')
+print_separator(n)
 print(title)
-print(n*'=')
+print_separator(n)
 
-os.chdir(sys.argv[1])
-print("work_dir: " + sys.argv[1])
+git_dir = sys.argv[1]
+if not os.path.isdir(git_dir):
+    print(f"Error: {git_dir} is not a valid directory.")
+    sys.exit(1)
+os.chdir(git_dir)
+print("work_dir: " + git_dir)
 
-cmd = "git status "
+cmd = ["git", "status"]
 if len(sys.argv) >= 3:
-    cmd += " ".join(sys.argv[2:])
+    cmd.extend(sys.argv[2:])
 
-print("CMD: " + cmd)
-os.system(cmd) 
+print("CMD: " + " ".join(cmd))
+result = subprocess.run(cmd, capture_output=True, text=True)
+print(result.stdout)
+if result.returncode != 0:
+    print(f"Error: {result.stderr}")
+    sys.exit(result.returncode)
 
-print(n*'=')    
+print_separator(n)    
 print("=     Done!" + (n-len("=     Done!")-1)*' ' + "=")
-print(n*'=')
+print_separator(n)
