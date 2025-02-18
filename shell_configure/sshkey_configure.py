@@ -7,31 +7,38 @@
 """
 
 import os
-import sys
-import subprocess
+
+# debug mode
+# import sys
+# sys.path.append(os.path.join(os.path.dirname(__file__), ".."))
+import _func
+
+def check_default_ssh_key():
+    ssh_dir = os.path.expanduser('~/.ssh')
+    if not os.path.exists(ssh_dir):
+        return False
+    
+    # Check if the private and public key files exist
+    private_key = os.path.join(ssh_dir, 'id_rsa')
+    public_key = os.path.join(ssh_dir, 'id_rsa.pub')
+    
+    return os.path.isfile(private_key) and os.path.isfile(public_key)
 
 def main():
-    title = "Starting " + sys.argv[0] + "..."
-    n = len(title)
-    print(n * '=')
-    print(title)
-    print(n * '=')
-
-    ssh_key_path = os.path.join(os.environ.get("HOME", ""), ".ssh", "id_rsa")
-    if os.path.exists(ssh_key_path):
-        print("The SSH key has configuration completed.")
+    # Print the banner
+    _func.print_banner("Starting sshkey_configure .....")
+    
+    # Check if the ssh key has configuration completed
+    if check_default_ssh_key():
+        print("SSH key has been configured.")
     else:
         email = input("Please enter your email for the SSH key: ")
         cmd = ["ssh-keygen", "-t", "rsa", "-C", email]
-        try:
-            subprocess.run(cmd, check=True)
-            print("SSH key generated successfully.")
-        except subprocess.CalledProcessError as e:
-            print(f"An error occurred while generating the SSH key: {e}")
-
-    print(n * '=')    
-    print("= Done!" + (n - len("= Done!") - 1) * ' ' + "=")
-    print(n * '=')
+        _func.run_command(cmd)
+        
+    # Print the banner
+    _func.print_banner("sshkey_configure has been executed successfully.")
 
 if __name__ == "__main__":
     main()
+

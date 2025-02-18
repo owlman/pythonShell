@@ -8,14 +8,17 @@
 
 import os
 import sys
-
 # debug mode
 # sys.path.append(os.path.join(os.path.dirname(__file__), ".."))
 import _func
 
 def main():
     # Print the banner
-    _func.print_banner("Starting install_oh_myzsh .....")
+    if sys.platform == "win32":
+        _func.print_banner("Error: This script is not supported on Windows.")
+        exit(1)
+    else:
+        _func.print_banner("Starting install_oh_myzsh .....")
 
     # switch to the home directory
     cwd = os.getcwd()

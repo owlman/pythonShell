@@ -9,40 +9,38 @@
 import os
 import sys
 
-def run_command(cmd):
-    """
-    运行系统命令并检查其返回值。
-    """
-    return os.system(cmd)
+# debug mode
+# import sys
+# sys.path.append(os.path.join(os.path.dirname(__file__), ".."))
+import _func
 
 def main():
-    title = "=    Starting " + sys.argv[0] + "......    ="
-    n = len(title)
-    print(n*'=')
-    print(title)
-    print(n*'=')
-    
-    ssh_key_path = os.path.expanduser('~/.ssh/id_rsa')  # 展开用户主目录路径
-
+    # Print the banner
+    # Check if the platform is Windows
+    if sys.platform == "win32":
+            _func.print_banner("Error: This script is not supported on Windows.")
+            exit(1)
+    else:
+        _func.print_banner("Starting sshdir_permissions_config .....")
+            
+    # Check if the ssh key file exists    
+    ssh_key_path = os.path.expanduser('~/.ssh/id_rsa')
     if not os.path.exists(ssh_key_path):
-        print("Error: SSH key file does not exist at {}".format(ssh_key_path))
-        return
+        print(f"Error: ssh key file '{ssh_key_path}' does not exist.")
+    else:        
+        # Run the commands
+        cmds = [
+            f"setfacl -b {ssh_key_path}",
+            f"chgrp Users {ssh_key_path}",
+            f"chmod 600 {ssh_key_path}"
+        ]
 
-    cmds = [
-        "setfacl -b {}".format(ssh_key_path),
-        "chgrp Users {}".format(ssh_key_path),
-        "chmod 600 {}".format(ssh_key_path)
-    ]
-
-    for cmd in cmds:
-        result = run_command(cmd)
-        if result != 0:
-            print("Error executing command: {}".format(cmd))
-            return
-
-    print("=" * n)    
-    print("=     Done!" + (n-len("=     Done!")-1)*' ' + "=")
-    print("=" * n)
+        for cmd in cmds:
+            print(f"Running command: {cmd}")
+            _func.run_command(cmd)
+            
+        # Print the banner
+        _func.print_banner("sshdir_permissions_config has been executed successfully.")
 
 if __name__ == "__main__":
     main()
