@@ -16,8 +16,8 @@ if len(sys.argv) < 2 or len(sys.argv) > 3:
     print("Usage: git_push_remote.py <git_dir> [commit_message]")
     exit()
 
-script_name = os.path.basename(sys.argv[0])
-title = f"=    Starting {script_name}......    "
+scriptname = os.path.basename(sys.argv[0])
+title = f"Starting {scriptname} ....."
 _func.print_banner(title)
 
 try:
@@ -42,4 +42,4 @@ for remote in os.popen("git remote show").readlines():
     _func.run_command(f"git push -u {remote}")
     print("Push is complete!")
 
-_func.print_banner("=     Done!")
+_func.print_banner(f"{scriptname} has been executed successfully.")

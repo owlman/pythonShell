@@ -21,6 +21,8 @@ def main():
     if not os.path.isdir(install_dir):
         print(f"Error: {install_dir} is not a valid directory.")
         sys.exit(1)
+    else:
+        _func.print_banner(f"Uninstalling {install_dir}...")
 
     # Save the current working directory
     cwd = os.getcwd()
@@ -56,9 +58,8 @@ def main():
     # Restore the original working directory
     os.chdir(cwd)
 
-    # Print uninstallation success message
-    message = "=       Uninstalled!"
-    _func.print_banner(message)
+    # Print uninstallation success message    
+    _func.print_banner(f"Uninstallation of {install_dir} is complete.")
 
 if __name__ == "__main__":
     main()

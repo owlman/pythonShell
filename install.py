@@ -9,7 +9,6 @@
 import os
 import sys
 import shutil
-import platform
 import glob
 import _func
 
@@ -18,8 +17,8 @@ def main():
         print("Usage: install.py <install_dir>")
         sys.exit(1)
 
-    title = "=    Starting " + sys.argv[0] + "......    "
-    _func.print_banner(title)
+    scriptname = os.path.basename(sys.argv[0])
+    _func.print_banner(f"Starting {scriptname} .....")
     
     my_dir = os.path.dirname(os.path.abspath(sys.argv[0]))
     files = glob.glob(os.path.join(my_dir, "**", "*.py"), recursive=True)
@@ -46,16 +45,14 @@ def main():
         filename = os.path.basename(file)
         if filename in ("install.py", "uninstall.py"):
             continue
-        if platform.system() != "Darwin" and dirname == "macos_tools":
-            continue
-        if platform.system() != "Windows" and dirname == "win_tools":
+        if dirname in ("tmp", "template", "__pycache__"):
             continue
 
         print("copying..." + filename)
         shutil.copy(file, filename)
         os.chmod(filename, os.stat(filename).st_mode | 0o111)
 
-    _func.print_banner("=     Done  "+ sys.argv[0] + "......    ")
+    _func.print_banner(f"{scriptname} has been executed successfully.")
 
 if __name__ == "__main__":
     main()

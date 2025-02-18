@@ -1,16 +1,22 @@
 import subprocess
 
 def run_command(command):
-    result = subprocess.run(command, shell=True, text=True, capture_output=True)
-    if result.returncode != 0:
-        print(f"Error executing command: {command}")
-        print(result.stderr)
-        exit()
-    else:
-        print(result.stdout)
+    try:
+        result = subprocess.run(command, shell=True, text=True, capture_output=True)
+        if result.returncode != 0:
+            print(f"Error: Command '{command}' failed.")
+            print(result.stderr)
+        else:
+            print(result.stdout)
+    except FileNotFoundError:
+        print(f"Error: Command '{command}' not found.")
+    
 
 def print_banner(message):
-    n = len(message) + 2
-    print(n * '=')
-    print(message+ (n - len(message) -1 ) * ' ' + "=")
-    print(n * '=')
+    bannerWidth = 100
+    borderChar = "#"
+    bannerBorder = bannerWidth * borderChar
+    middleLine = borderChar + message.center(bannerWidth - 2) + borderChar 
+    print(bannerBorder)
+    print(middleLine)
+    print(bannerBorder)
