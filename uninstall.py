@@ -13,10 +13,12 @@ import glob
 import _func
 
 def main():
+    # Check the number of arguments
     if len(sys.argv) < 2:
         print("Usage: python script.py <install_dir>")
         sys.exit(1)
 
+    # Get the installation directory
     install_dir = sys.argv[1]
     if not os.path.isdir(install_dir):
         print(f"Error: {install_dir} is not a valid directory.")

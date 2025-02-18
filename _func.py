@@ -1,5 +1,6 @@
 import subprocess
 
+# Run a command in the shell
 def run_command(command):
     try:
         result = subprocess.run(command, shell=True, text=True, capture_output=True)
@@ -8,10 +9,11 @@ def run_command(command):
             print(result.stderr)
         else:
             print(result.stdout)
-    except FileNotFoundError:
-        print(f"Error: Command '{command}' not found.")
-    
+    except subprocess.CalledProcessError as e:
+            print(f"Error: Command '{command}' failed.")
+            exit(1) 
 
+# Print a banner with a message
 def print_banner(message):
     bannerWidth = 90
     borderChar = "#"

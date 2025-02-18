@@ -13,10 +13,12 @@ import glob
 import _func
 
 def main():
+    # Check the number of arguments
     if len(sys.argv) != 2:
         print("Usage: install.py <install_dir>")
         sys.exit(1)
 
+    # Print the banner
     scriptname = os.path.basename(sys.argv[0])
     _func.print_banner(f"Starting {scriptname} .....")    
 
@@ -42,6 +44,7 @@ def main():
             print("copying..." + filename)
             shutil.copy(file, os.path.join("template", filename))
 
+    # Copy all the python files to the installation directory
     for file in files:
         filepath = os.path.dirname(file)
         dirname = os.path.basename(filepath)

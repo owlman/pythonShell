@@ -9,41 +9,53 @@
 import os
 import sys
 import shutil
-import subprocess
-import _lib.func as _func
+
+sys.path.append(os.path.join(os.path.dirname(__file__), ".."))
+import _func
 
 def main():
+    # Check the number of arguments
     if len(sys.argv) < 2 or len(sys.argv) > 3:
         print("Usage: create_translation_project.py <project_dir> [project_name]")
         sys.exit(1)
 
-    title = "=    Starting " + sys.argv[0] + "......    ="
-    _func.print_banner(title)
+    # Print the banner
+    scriptname = os.path.basename(sys.argv[0])
+    _func.print_banner(f"Starting {scriptname} .....")
 
-    project_dir = sys.argv[1]
-    project_name = sys.argv[2] if len(sys.argv) == 3 and sys.argv[2] else "translation_proj"
-
-    if not os.path.exists(project_dir):
+    # Get the project directory and project name
+    projectdir = sys.argv[1]
+    
+    # Check if the project name is provided
+    if len(sys.argv) == 3 and sys.argv[2] != "":
+        projectname = sys.argv[2]
+    else:
+        projectname = "translation_proj"
+    
+    # Check if the project directory exists
+    if not os.path.exists(projectdir):
         print("Your <project_dir> is error!")
         sys.exit(1)
 
-    template_dir = os.path.join(sys.path[0], "template", "translation_proj.zip")
-    if not os.path.exists(project_name):
+    # Create the project template
+    scriptdir = os.path.dirname(os.path.abspath(__file__))
+    template = os.path.join(scriptdir, "template", "translation_proj.zip")
+    extractedpath = os.path.join(scriptdir, "translation_proj")
+    if not os.path.exists(extractedpath):
         print("Creating the project template...")
-        try:
-            _func.run_command(["unzip", template_dir], check=True)
-        except subprocess.CalledProcessError as e:
-            print(f"Failed to unzip template: {e}")
-            sys.exit(1)
-
-    print(f"Creating your project to {project_dir}....")
+        _func.run_command(f"unzip {template} -d {scriptdir}")
+    
+    # Move the project to the project directory
+    print(f"Creating your project to {projectdir}....")
     try:
-        shutil.move(project_name, os.path.join(project_dir, project_name))
+        targetdir = os.path.join(projectdir, projectname)
+        shutil.move(extractedpath, targetdir)
     except Exception as e:
         print(f"Failed to move project: {e}")
         sys.exit(1)
 
-    _func.print_banner("=     Done!" + (len(title) - len("=     Done!") - 1) * ' ' + "=")
+    # Print the banner
+    _func.print_banner(f"{scriptname} has been executed successfully.")
 
 if __name__ == "__main__":
     main()
