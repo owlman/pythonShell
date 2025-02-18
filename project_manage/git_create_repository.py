@@ -34,17 +34,18 @@ def main():
     print(f"Changed to directory: {os.getcwd()}\n")
 
     # Initialize the git repository
-    _func.run_command("git init .")
+    if not os.path.exists(".git"):
+        _func.run_command("git init .")
     if not os.path.exists(".gitignore"):
-        _func.run_command("touch .gitignore")
+        open(".gitignore", "w")
     if not os.path.exists("README.md"):
-        _func.run_command("touch README.md")
+        open("README.md", "w")
     _func.run_command("git status")
     _func.run_command("git add .")
     if len(sys.argv) == 3 and sys.argv[2] != "":
         _func.run_command(f"git commit -m '{sys.argv[2]}'")
     else:
-        _func.run_command("git commit -m 'Initial commit'")
+        _func.run_command("git commit -m 'Initial_commit'")
         
     # Restore the original working directory
     os.chdir(cwd)

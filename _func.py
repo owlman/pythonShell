@@ -2,10 +2,9 @@ import sys
 import subprocess
 
 # Run a command in the shell
-def run_command(cmd):
+def run_command(cmds):
     try:
-        print(cmd.split())
-        popen = subprocess.Popen(cmd.split(), stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        popen = subprocess.Popen(cmds, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
         for line in iter(popen.stdout.readline, b''):
             sys.stdout.write(line.decode('utf-8'))
             sys.stdout.flush()
@@ -16,11 +15,11 @@ def run_command(cmd):
             
         returncode = popen.wait()
         if returncode != 0:
-            print(f"Error: Command '{cmd}' failed.")
+            print(f"Error: Command '{cmds}' failed.")
             exit(1)
     
     except subprocess.CalledProcessError as e:
-            print(f"Error: Command '{cmd}' failed.")
+            print(f"Error: Command '{cmds}' failed.")
             exit(1) 
     finally:
         if popen.stdout:
@@ -37,4 +36,3 @@ def print_banner(message):
     print(bannerBorder)
     print(middleLine)
     print(bannerBorder)
-
