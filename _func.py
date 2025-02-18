@@ -23,5 +23,3 @@ def print_banner(message):
     print(middleLine)
     print(bannerBorder)
 
-import subprocess
-
