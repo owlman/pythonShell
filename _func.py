@@ -5,11 +5,9 @@ import subprocess
 def run_command(cmd):
     try:
         popen = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-
         for line in iter(popen.stdout.readline, b''):
             sys.stdout.write(line.decode('utf-8'))
             sys.stdout.flush()
-
         popen.wait()
     except subprocess.CalledProcessError as e:
             print(f"Error: Command '{cmd}' failed.")

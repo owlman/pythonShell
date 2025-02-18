@@ -41,7 +41,6 @@ def main():
         _func.run_command(f"git commit -m '{sys.argv[2]}'")
 
     # Push to all remotes
-    print("Pushing to all remotes...\n")
     for remote in os.popen("git remote show").readlines():
         remote = remote.strip()
         print("Pushing to " + remote + "...")
