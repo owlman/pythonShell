@@ -35,10 +35,12 @@ def main():
 
     # Add and commit changes if a commit message is provided
     if len(sys.argv) == 3 and sys.argv[2] != "":
+        print("Adding and committing changes...")
         _func.run_command("git add .")
         _func.run_command(f"git commit -m '{sys.argv[2]}'")
 
     # Push to all remotes
+    print("Pushing to all remotes...")
     for remote in os.popen("git remote show").readlines():
         remote = remote.strip()
         print("Pushing to " + remote + "...")
