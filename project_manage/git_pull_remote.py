@@ -10,37 +10,36 @@ import os
 import sys
 import subprocess
 
-if not len(sys.argv) in range(2, 4):
-    print("Usage: git_pull_remote.py <git_dir> [branch]") 
-    exit(1)
+# debug mode
+# sys.path.append(os.path.join(os.path.dirname(__file__), ".."))
+import _func
 
-git_dir = sys.argv[1]
-if not os.path.isdir(git_dir):
-    print(f"Error: {git_dir} is not a valid directory.")
-    exit(1)
+def main():
+    if not len(sys.argv) in range(2, 4):
+        print("Usage: git_pull_remote.py <git_dir> [branch]") 
+        exit(1)
 
-title = "=    Starting " + sys.argv[0] + "......    ="
-n = len(title)
-print(n*'=')
-print(title)
-print(n*'=')
+    gitrepo = sys.argv[1]
+    if not os.path.isdir(gitrepo):
+        print(f"Error: {gitrepo} is not a valid directory.")
+        exit(1)
+    # Print the banner
+    _func.print_banner(f"Starting {os.path.basename(sys.argv[0])} .....")
+    
+    branch = sys.argv[2] if len(sys.argv) == 3 and sys.argv[2] != "" else "master"
+    cwd = os.getcwd()
+    os.chdir(gitrepo)
+    print(f"Changed to directory: {os.getcwd()}\n")
 
-branch = sys.argv[2] if len(sys.argv) == 3 and sys.argv[2] != "" else "master"
-
-os.chdir(git_dir)
-print("work_dir: " + git_dir)
-
-try:
-    remotes = subprocess.check_output(["git", "remote", "show"]).decode().splitlines()
-    for remote in remotes:
-        print("")
-        print("Pulling from " + remote + "...")
-        subprocess.run(["git", "pull", remote, branch], check=True)
+    for remote in subprocess.check_output("git remote show", shell=True).decode().split("\n"):
+        print(f"\nPulling from remote: {remote}...")
+        _func.run_command(f"git pull {remote} {branch}")
         print("Pull is complete!")
-except subprocess.CalledProcessError as e:
-    print(f"Error: {e}")
-    exit(1)
 
-print(n*'=')    
-print("=     Done!" + (n-len("=     Done!")-1)*' ' + "=")
-print(n*'=')
+    # Restore the original working directory
+    os.chdir(cwd)
+    # Print the banner
+    _func.print_banner(f"{os.path.basename(sys.argv[0])} has been executed successfully.")
+    
+if __name__ == "__main__":
+    main()

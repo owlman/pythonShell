@@ -8,6 +8,7 @@
 
 import os
 import sys
+import subprocess
 
 # debug mode
 # sys.path.append(os.path.join(os.path.dirname(__file__), ".."))
@@ -41,7 +42,7 @@ def main():
         _func.run_command(f"git commit -m '{sys.argv[2]}'")
 
     # Push to all remotes
-    for remote in os.popen("git remote show").readlines():
+    for remote in subprocess.check_output("git remote", shell=True).decode().split("\n"):
         remote = remote.strip()
         print(f"\nPushing to remote: {remote}...")
         _func.run_command(f"git push -u {remote}")
