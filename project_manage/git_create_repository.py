@@ -37,9 +37,11 @@ def main():
     if not os.path.exists(".git"):
         _func.run_command("git init .")
     if not os.path.exists(".gitignore"):
-        open(".gitignore", "w")
+        file = open(".gitignore", "w")
+        file.close()
     if not os.path.exists("README.md"):
-        open("README.md", "w")
+        file=open("README.md", "w")
+        file.close()
     _func.run_command("git status")
     _func.run_command("git add .")
     if len(sys.argv) == 3 and sys.argv[2] != "":

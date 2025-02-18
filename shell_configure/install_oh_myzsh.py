@@ -9,33 +9,35 @@
 import os
 import sys
 
-title = "=    Starting " + sys.argv[0] + "......    ="
-n = len(title)
-print(n * '=')
-print(title)
-print(n * '=')
+# debug mode
+# sys.path.append(os.path.join(os.path.dirname(__file__), ".."))
+import _func
 
-# 切换到用户主目录
-os.chdir(os.path.expanduser("~"))
+def main():
+    # Print the banner
+    _func.print_banner("Starting install_oh_myzsh .....")
 
-# 检查是否已经安装了 oh-my-zsh
-if os.path.exists("./.oh-my-zsh"):
-    print("oh-my-zsh has installed.")
-else:
-    cmds = [
-        "git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh",
-        "cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc"
-    ]
+    # switch to the home directory
+    cwd = os.getcwd()
+    os.chdir(os.path.expanduser("~"))
 
-    for cmd in cmds:
-        print(cmd)
-        ret = os.system(cmd)
-        if ret != 0:
-            print(f"Command failed with return code {ret}")
-            sys.exit(1)
-
-print(n * '=')
-# 使用 str.ljust 来对齐字符串
-done_msg = "=     Done!".ljust(n - 1) + "="
-print(done_msg)
-print(n * '=')
+    # Check if oh-my-zsh has installed
+    if os.path.exists("./.oh-my-zsh"):
+        print("oh-my-zsh has installed.")
+    else:
+        cmds = [
+            "git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh",
+            "cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc"
+        ]
+        # Run the commands
+        for cmd in cmds:
+            print(f"Running command: {cmd}")
+            _func.run_command(cmd)
+            
+    # Restore the original working directory
+    os.chdir(cwd)
+    # Print the banner
+    _func.print_banner("install_oh_myzsh has been executed successfully.")
+    
+if __name__ == "__main__":
+    main()
