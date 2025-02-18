@@ -32,7 +32,7 @@ def main():
     print(f"Changed to directory: {os.getcwd()}\n")
 
     for remote in subprocess.check_output(["git", "remote", "show"]).decode().splitlines():
-        print(f"\nPulling from remote: {remote}...")
+        print(f"\nPulling from remote:{remote} ...")
         _func.run_command(f"git pull {remote} {branch}")
         print("Pull is complete!")
 
