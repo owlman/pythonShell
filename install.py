@@ -18,26 +18,29 @@ def main():
         sys.exit(1)
 
     scriptname = os.path.basename(sys.argv[0])
-    _func.print_banner(f"Starting {scriptname} .....")
-    
-    my_dir = os.path.dirname(os.path.abspath(sys.argv[0]))
-    files = glob.glob(os.path.join(my_dir, "**", "*.py"), recursive=True)
-    template_files = glob.glob(os.path.join(my_dir, "**", "*.zip"), recursive=True)
+    _func.print_banner(f"Starting {scriptname} .....")    
 
+    # Save the current working directory
+    cwd = os.getcwd()
+   
+   # Change to the installation directory
     install_dir = sys.argv[1]
     os.chdir(install_dir)
     print("PWD: " + os.getcwd())
 
+        # Get all the python files in the current directory
+    my_dir = os.path.dirname(os.path.abspath(sys.argv[0]))
+    files = glob.glob(os.path.join(my_dir, "**", "*.py"), recursive=True)
+    template_files = glob.glob(os.path.join(my_dir, "**", "*.zip"), recursive=True)
+
     if not os.path.exists("tmp"):
         os.mkdir("tmp")
-
     if not os.path.exists("template"):
         os.mkdir("template")
         for file in template_files:
             filename = os.path.basename(file)
             print("copying..." + filename)
             shutil.copy(file, os.path.join("template", filename))
-
 
     for file in files:
         filepath = os.path.dirname(file)

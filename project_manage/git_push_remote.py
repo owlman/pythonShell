@@ -37,7 +37,6 @@ if len(sys.argv) == 3 and sys.argv[2] != "":
 
 for remote in os.popen("git remote show").readlines():
     remote = remote.strip()
-    print("")
     print("Pushing to " + remote + "...")
     _func.run_command(f"git push -u {remote}")
     print("Push is complete!")
