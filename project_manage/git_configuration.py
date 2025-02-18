@@ -7,38 +7,43 @@
 """
 
 import platform
-import subprocess
 
-title = "=    Starting Git Configuration...    ="
-n = len(title)
-print(n*'=')
-print(title)
-print(n*'=')
+# debug mode
+# sys.path.append(os.path.join(os.path.dirname(__file__), ".."))
+import _func
 
-cmds = [
-    "git config --global user.name 'owlman'",
-    "git config --global user.email 'jie.owl2008@gmail.com'",
-    "git config --global push.default simple",
-    "git config --global color.ui true",
-    "git config --global core.quotepath false",
-    "git config --global core.editor nvim",
-    "git config --global i18n.logOutputEncoding utf-8",
-    "git config --global i18n.commitEncoding utf-8",
-    "git config --global color.diff auto",
-    "git config --global color.status auto",
-    "git config --global color.branch auto",
-    "git config --global color.interactive auto"
-]
+def main():
+    # print the banner
+    _func.print_banner("Starting git_configuration .....")
 
-if platform.system() == "Windows":
-    cmds.append("git config --global core.autocrlf true")
-else:
-    cmds.append("git config --global core.autocrlf input")
+    # git configuration commands 
+    cmds = [
+        "git config --global user.name 'owlman'",
+        "git config --global user.email 'jie.owl2008@gmail.com'",
+        "git config --global push.default simple",
+        "git config --global color.ui true",
+        "git config --global core.quotepath false",
+        "git config --global core.editor nvim",
+        "git config --global i18n.logOutputEncoding utf-8",
+        "git config --global i18n.commitEncoding utf-8",
+        "git config --global color.diff auto",
+        "git config --global color.status auto",
+        "git config --global color.branch auto",
+        "git config --global color.interactive auto"
+    ]
+    # set the autocrlf to true on Windows
+    if platform.system() == "Windows":
+        cmds.append("git config --global core.autocrlf true")
+    else:
+        cmds.append("git config --global core.autocrlf input")
 
-for cmd in cmds:
-    print(cmd)
-    subprocess.run(cmd, shell=True, check=True)
+    # run the git configuration commands
+    for cmd in cmds:
+        print(f"Running command: {cmd}")
+        _func.run_command(cmd)
 
-print(n*'=')    
-print(f"=     Done!{' ' * (n - len('=     Done!') - 1)}=")
-print(n*'=')
+    # print the banner
+    _func.print_banner("git_configuration has been executed successfully.")
+    
+if __name__ == "__main__":
+    main()

@@ -8,33 +8,48 @@
 
 import os
 import sys
-import subprocess
 
-def print_border(title):
-    n = len(title)
-    print(n * '=')
-    print(title)
-    print(n * '=')
+# debug mode
+# sys.path.append(os.path.join(os.path.dirname(__file__), ".."))
+import _func
 
-if len(sys.argv) < 2 or len(sys.argv) > 3:
-    print("Usage: git_create_repository.py <git_reps_dir> [init_commit_message]")
-    exit(1)
+def main():
+    # Check the number of arguments
+    if len(sys.argv) < 2 or len(sys.argv) > 3:
+        print("Usage: git_create_repository.py <git_reps_dir> [init_commit_message]")
+        exit(1)
 
-print_border("=    Starting " + sys.argv[0] + "......    =")
+    # Print the banner
+    scriptname = os.path.basename(sys.argv[0])
+    _func.print_banner(f"Starting {scriptname} .....")
+    
+    # Create the git repository if it does not exist
+    projectdir = sys.argv[1]
+    if not os.path.exists(projectdir):
+        os.makedirs(projectdir)
 
-if not os.path.isdir(sys.argv[1]):
-    print(f"Error: Directory '{sys.argv[1]}' does not exist.")
-    exit(1)
+    # Change to the git directory
+    cwd = os.getcwd()
+    os.chdir(projectdir)
+    print(f"Changed to directory: {os.getcwd()}\n")
 
-os.chdir(sys.argv[1])
-print("work_dir: " + sys.argv[1])
-
-subprocess.run(["git", "init"], check=True)
-subprocess.run(["touch", ".gitignore"], check=True)
-subprocess.run(["touch", "README.md"], check=True)
-subprocess.run(["git", "add", "."], check=True)
-
-commit_message = sys.argv[2] if len(sys.argv) == 3 and sys.argv[2] else "init commit."
-subprocess.run(["git", "commit", "-m", commit_message], check=True)
-
-print_border("=     Done!" + (len("=    Starting " + sys.argv[0] + "......    =") - len("=     Done!") - 1) * ' ' + "=")
+    # Initialize the git repository
+    _func.run_command("git init .")
+    if not os.path.exists(".gitignore"):
+        _func.run_command("touch .gitignore")
+    if not os.path.exists("README.md"):
+        _func.run_command("touch README.md")
+    _func.run_command("git status")
+    _func.run_command("git add .")
+    if len(sys.argv) == 3 and sys.argv[2] != "":
+        _func.run_command(f"git commit -m '{sys.argv[2]}'")
+    else:
+        _func.run_command("git commit -m 'Initial commit'")
+        
+    # Restore the original working directory
+    os.chdir(cwd)
+    # Print the banner
+    _func.print_banner(f"{scriptname} has been executed successfully.")
+    
+if __name__ == "__main__":
+    main()
