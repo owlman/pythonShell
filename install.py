@@ -22,16 +22,15 @@ def main():
 
     # Save the current working directory
     cwd = os.getcwd()
-   
+   # Get all the python files in the current directory
+    my_dir = os.path.dirname(os.path.abspath(sys.argv[0]))
+    files = glob.glob(os.path.join(my_dir, "**", "*.py"), recursive=True)
+    template_files = glob.glob(os.path.join(my_dir, "**", "*.zip"), recursive=True)
+
    # Change to the installation directory
     install_dir = sys.argv[1]
     os.chdir(install_dir)
     print("PWD: " + os.getcwd())
-
-        # Get all the python files in the current directory
-    my_dir = os.path.dirname(os.path.abspath(sys.argv[0]))
-    files = glob.glob(os.path.join(my_dir, "**", "*.py"), recursive=True)
-    template_files = glob.glob(os.path.join(my_dir, "**", "*.zip"), recursive=True)
 
     if not os.path.exists("tmp"):
         os.mkdir("tmp")
@@ -50,7 +49,6 @@ def main():
             continue
         if dirname in ("tmp", "template", "__pycache__"):
             continue
-
         print("copying..." + filename)
         shutil.copy(file, filename)
         os.chmod(filename, os.stat(filename).st_mode | 0o111)
