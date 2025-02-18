@@ -43,7 +43,7 @@ def main():
     # Push to all remotes
     for remote in os.popen("git remote show").readlines():
         remote = remote.strip()
-        print(f"\nPushing to remote: {remote} .....")
+        print(f"\nPushing to remote: {remote}...")
         _func.run_command(f"git push -u {remote}")
         print("Push is complete!")
 
