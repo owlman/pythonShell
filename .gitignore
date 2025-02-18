@@ -71,3 +71,7 @@ target/
 # Mac OSX
 .DS_Store
 */.DS_Store
+
+# test files
+tmp/
+test/

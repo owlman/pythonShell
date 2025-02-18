@@ -10,7 +10,8 @@ import os
 import sys
 import shutil
 
-sys.path.append(os.path.join(os.path.dirname(__file__), ".."))
+# debug mode
+# sys.path.append(os.path.join(os.path.dirname(__file__), ".."))
 import _func
 
 def main():
@@ -34,9 +35,8 @@ def main():
     
     # Check if the project directory exists
     if not os.path.exists(projectdir):
-        print("Your <project_dir> is error!")
-        sys.exit(1)
-
+        os.makedirs(projectdir)
+    
     # Create the project template
     scriptdir = os.path.dirname(os.path.abspath(__file__))
     template = os.path.join(scriptdir, "template", "translation_proj.zip")
@@ -49,6 +49,10 @@ def main():
     print(f"Creating your project to {projectdir}....")
     try:
         targetdir = os.path.join(projectdir, projectname)
+        # remove the target directory if it exists
+        if os.path.exists(targetdir):
+            shutil.rmtree(targetdir)
+        print(f"Moving {extractedpath} to {targetdir}....")
         shutil.move(extractedpath, targetdir)
     except Exception as e:
         print(f"Failed to move project: {e}")
