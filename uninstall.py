@@ -32,22 +32,23 @@ def main():
     print(f"Changed to directory: {os.getcwd()}")
 
     # Remove 'tmp' and 'template' directories if they exist
-    for dir_name in ["tmp", "template"]:
-        dir_path = os.path.join(install_dir, dir_name)
-        if os.path.exists(dir_path):
-            shutil.rmtree(dir_path)
-            print(f"Removed directory: {dir_name}")
+    for dir in ["tmp", "template"]:
+        dirpath = os.path.join(install_dir, dir)
+        if os.path.exists(dirpath):
+            shutil.rmtree(dirpath)
+            print(f"Removed directory: {dir}")
 
     # Remove all files except 'install.py' and 'uninstall.py'
     for file_path in glob.glob(os.path.join(install_dir, "*")):
+        # Skip '__pycache__', 'tmp' and 'template' directories
         if file_path.startswith(os.path.join(install_dir, 'tmp')) \
-            or file_path.startswith(os.path.join(install_dir, 'template')):
+            or file_path.startswith(os.path.join(install_dir, 'template')) \
+            or file_path.startswith(os.path.join(install_dir, '__pycache__')):
             continue
-
         dirname, filename = os.path.split(file_path)
         if filename in ["install.py", "uninstall.py"]:
             continue
-
+        
         try:
             print(f"Removing... {filename}")
             os.remove(file_path)

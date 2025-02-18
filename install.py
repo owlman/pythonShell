@@ -20,18 +20,19 @@ def main():
     scriptname = os.path.basename(sys.argv[0])
     _func.print_banner(f"Starting {scriptname} .....")    
 
-    # Save the current working directory
-    cwd = os.getcwd()
    # Get all the python files in the current directory
     my_dir = os.path.dirname(os.path.abspath(sys.argv[0]))
     files = glob.glob(os.path.join(my_dir, "**", "*.py"), recursive=True)
     template_files = glob.glob(os.path.join(my_dir, "**", "*.zip"), recursive=True)
 
+    # Save the current working directory
+    cwd = os.getcwd() 
+    print("PWD: " + cwd)
    # Change to the installation directory
     install_dir = sys.argv[1]
     os.chdir(install_dir)
-    print("PWD: " + os.getcwd())
 
+    # Create 'tmp' and 'template' directories if they do not exist
     if not os.path.exists("tmp"):
         os.mkdir("tmp")
     if not os.path.exists("template"):
@@ -53,6 +54,9 @@ def main():
         shutil.copy(file, filename)
         os.chmod(filename, os.stat(filename).st_mode | 0o111)
 
+    # Restore the original working directory
+    os.chdir(cwd)
+    # Print the banner
     _func.print_banner(f"{scriptname} has been executed successfully.")
 
 if __name__ == "__main__":

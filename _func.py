@@ -13,7 +13,7 @@ def run_command(command):
     
 
 def print_banner(message):
-    bannerWidth = 100
+    bannerWidth = 90
     borderChar = "#"
     bannerBorder = bannerWidth * borderChar
     middleLine = borderChar + message.center(bannerWidth - 2) + borderChar 
