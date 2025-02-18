@@ -25,7 +25,7 @@ def main():
     try:
         cwd = os.getcwd()
         os.chdir(sys.argv[1])
-        print(f"Changed to directory: {os.getcwd()}")
+        print(f"Changed to directory: {os.getcwd()}\n")
     except FileNotFoundError:
         print(f"Error: Directory '{sys.argv[1]}' not found.")
         exit()
