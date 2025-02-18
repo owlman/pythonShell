@@ -31,7 +31,7 @@ def main():
     os.chdir(gitrepo)
     print(f"Changed to directory: {os.getcwd()}\n")
 
-    for remote in subprocess.check_output("git remote show", shell=True).decode().split("\n"):
+    for remote in subprocess.check_output(["git", "remote", "show"], universal_newlines=True).split("\n"):
         print(f"\nPulling from remote: {remote}...")
         _func.run_command(f"git pull {remote} {branch}")
         print("Pull is complete!")
