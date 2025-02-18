@@ -45,7 +45,7 @@ def main():
     for remote in subprocess.check_output(["git", "remote", "show"]).decode().splitlines():
         remote = remote.strip()
         print(f"\nPushing to remote: {remote}...")
-        _func.run_command(f"git push -u {remote}")
+        _func.run_command(f"git push -u {remote}:master")
         print("Push is complete!")
 
     # Restore the original working directory
