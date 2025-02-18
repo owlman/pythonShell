@@ -6,8 +6,7 @@
     @name:   git_configuration
 """
 
-import platform
-
+import sys
 # debug mode
 # sys.path.append(os.path.join(os.path.dirname(__file__), ".."))
 import _func
@@ -32,7 +31,7 @@ def main():
         "git config --global color.interactive auto"
     ]
     # set the autocrlf to true on Windows
-    if platform.system() == "Windows":
+    if sys.platform == "win32":
         cmds.append("git config --global core.autocrlf true")
     else:
         cmds.append("git config --global core.autocrlf input")

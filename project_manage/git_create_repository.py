@@ -8,7 +8,6 @@
 
 import os
 import sys
-
 # debug mode
 # sys.path.append(os.path.join(os.path.dirname(__file__), ".."))
 import _func
