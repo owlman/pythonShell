@@ -4,6 +4,7 @@ import subprocess
 # Run a command in the shell
 def run_command(cmd):
     try:
+        print(cmd.split())
         popen = subprocess.Popen(cmd.split(" "), stdout=subprocess.PIPE, stderr=subprocess.PIPE)
         for line in iter(popen.stdout.readline, b''):
             sys.stdout.write(line.decode('utf-8'))
