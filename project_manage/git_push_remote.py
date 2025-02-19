@@ -36,15 +36,18 @@ def main():
 
     # Add and commit changes if a commit message is provided
     if len(sys.argv) == 3 and sys.argv[2] != "":
-        print("Adding and committing changes...")
-        if subprocess.check_output("git status --porcelain").decode() == "":
+        # Check if there are any changes to commit
+        gitstatus = subprocess.check_output("git status --porcelain").decode()
+        if gitstatus == "":
             print("Error: No changes to commit.")
         else:
+            print("Adding and committing changes...")
             _func.run_command("git add .")
             _func.run_command(f"git commit -m '{sys.argv[2]}'")
 
     # Push to all remotes
-    for remote in subprocess.check_output(["git", "remote", "show"]).decode().splitlines():
+    remotes = subprocess.check_output(["git", "remote", "show"]).decode()
+    for remote in remotes.splitlines():
         remote = remote.strip()
         print(f"\nPushing to remote:{remote} ...")
         _func.run_command(f"git push -u {remote}")
