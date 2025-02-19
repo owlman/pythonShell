@@ -39,9 +39,9 @@ def main():
         print("Adding and committing changes...")
         if subprocess.check_output("git status --porcelain", shell=True).decode() == "":
             print("Error: No changes to commit.")
-            exit(1)
-        _func.run_command("git add .")
-        _func.run_command(f"git commit -m '{sys.argv[2]}'")
+        else:
+            _func.run_command("git add .")
+            _func.run_command(f"git commit -m '{sys.argv[2]}'")
 
     # Push to all remotes
     for remote in subprocess.check_output(["git", "remote", "show"]).decode().splitlines():
