@@ -37,7 +37,7 @@ def main():
     # Add and commit changes if a commit message is provided
     if len(sys.argv) == 3 and sys.argv[2] != "":
         print("Adding and committing changes...")
-        if subprocess.check_output("git status --porcelain", shell=True).decode() == "":
+        if subprocess.check_output("git status --porcelain").decode() == "":
             print("Error: No changes to commit.")
         else:
             _func.run_command("git add .")
