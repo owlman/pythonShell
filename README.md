@@ -2,9 +2,7 @@
 
 # Project Description
 
-**Version:** 1.2.3 (Updated: 2023-10-15)  
-![Python Version](https://img.shields.io/badge/python-3.8%2B-blue)  
-![License](https://img.shields.io/badge/license-GPLv3-green)  
+![Python Version](https://img.shields.io/badge/python-3.8-blue) ![License](https://img.shields.io/badge/license-GPLv3-green)  
 
 This project is implemented in Python and consists of automation scripts I use in my daily work.
 
