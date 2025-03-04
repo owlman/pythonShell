@@ -1,25 +1,23 @@
-# 项目说明
+# Project Description
 
-该项目是基于Python实现的，由本人日常使用的自动化脚本。
+This project is implemented in Python and consists of automation scripts I use in my daily work.
 
-## 目录说明
+## Directory Explanation
 
-- network_operation：与网络操作相关的自动化脚本；
-- project_manage：与项目管理相关的自动化脚本
-- shell_configure：与 shell 环境配置相关的自动化脚本；
+- network_operation: Automation scripts related to network operations;
+- project_manage: Automation scripts related to project management;
+- shell_configure: Automation scripts related to shell environment configuration.
 
-## 联系方式
+## Contact Information
 
-如果您对该项目有兴趣，或者有任何意见，可以用以下任何一种方式联系我：
+If you are interested in this project or have any suggestions, you can contact me in any of the following ways:
 
-- E-mail: [jie.owl2008@gmail.com](maito:jie.owl2008@gmail.com)
+- E-mail: [jie.owl2008@gmail.com](mailto:jie.owl2008@gmail.com)
 - Weibo: [@凌杰_owlman](https://weibo.com/u/1670107570)
 - Twitter/X: [@lingjieowl](https://x.com/lingjieowl)
 
-## 版权声明
+## Copyright Notice
 
-版权所有（C） 2016 凌杰
+Copyright (C) 2016 Jie Ling.
 
-这一程序是自由软件，你可以遵照自由软件基金会出版的GNU通用公共许可证条款来修改和重新发布这一程序。或者用许可证的第二版，或者（根据你的选择）用任何更新的版本。发布这一程序的目的是希望它有用，但没有任何担保。甚至没有适合特定目的的隐含的担保。
-
-更详细的情况请参阅GNU通用公共许可证。你应该会在本项目中看到一份GNU通用公共许可证的副本。
+This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details. You should have received a copy of the GNU General Public License along with this program.
