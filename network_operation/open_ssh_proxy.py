@@ -1,10 +1,13 @@
-#!/usr/bin/env python  
+#! /usr/bin/env python  
 # -*- coding: utf-8 -*-  
 """
-Created on 2018-06-11 
-    
-@author: lingjie 
-@name:   open_ssh_proxy
+    Created on 2018-06-11 
+        
+    @author: lingjie 
+    @name:   open_ssh_proxy
+    @Usage: python open_ssh_proxy.py
+    @description:
+        open a ssh proxy to the host
 """
 
 import pexpect

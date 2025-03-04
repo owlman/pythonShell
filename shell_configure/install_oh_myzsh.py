@@ -4,6 +4,9 @@
     
     @author: lingjie
     @name:   install_oh_myzsh
+    @Usage: python install_oh_myzsh.py    
+    @description:
+        install oh-my-zsh and set zsh as default shell for current user
 """
 
 import os

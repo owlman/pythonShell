@@ -4,6 +4,9 @@
     
     @author: lingjie
     @name:   git_configuration
+    @description:
+        git_configuration.py
+        set the git configuration for the current user
 """
 
 import sys

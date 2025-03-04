@@ -4,6 +4,12 @@
 
     @author: lingjie
     @name:   create_book_project
+    @Usage: python create_book_project.py <project_dir> [projectname]
+    @description:
+        project_dir: project directory
+        projectname: project name
+        if projectname is not provided, the default name is "book_proj".
+        The project template is in the "template" directory.
 """
 
 import os

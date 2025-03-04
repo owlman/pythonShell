@@ -4,6 +4,14 @@
     
     @author: lingjie
     @name:   create_translation_project
+    @Usage: python create_translation_project.py <project_dir> [project_name]
+    @description:
+        project_dir: project directory
+        project_name: project name
+        if project_name is not provided, the default name is "translation_proj"
+        if project directory exists, it will be removed.
+        if project directory does not exist, it will be created.
+        if project directory is not empty, it will be removed.                
 """
 
 import os

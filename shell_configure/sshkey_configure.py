@@ -4,6 +4,10 @@
     
     @author: lingjie
     @name:   sshky_configure
+    @Usage: python sshkey_configure.py
+    @description:
+        Check if the ssh key has configuration completed.
+        If not, configure the ssh key.
 """
 
 import os

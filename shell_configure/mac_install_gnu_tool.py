@@ -4,6 +4,9 @@
     
     @author: lingjie
     @name:   mac_install_gnu_tool
+    @Usage: python mac_install_gnu_tool.py
+    @description:
+        Install the gnu tool on macOS using Homebrew.
 """
 
 import os

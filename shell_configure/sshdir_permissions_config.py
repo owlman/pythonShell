@@ -4,6 +4,10 @@
     
     @author: lingjie
     @name:   sshdir_permissions_config
+    @Usage: python sshdir_permissions_config.py
+    @description:
+        Set the permissions of the ssh key file to 600 and change the group to Users.
+        If the platform is Windows, the script will print an error message and exit.
 """
 
 import os

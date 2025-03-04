@@ -4,8 +4,8 @@
     
     @author: lingjie
     @name:   git_create_repository
+    @Usage: python git_create_repository.py <git_reps_dir> [init_commit_message]
     @description:
-        git_create_repository.py <git_reps_dir> [init_commit_message]
         git_reps_dir: git repository directory
         init_commit_message: initial commit message
         if init_commit_message is not provided, no commit will be performed.
