@@ -4,6 +4,11 @@
     
     @author: lingjie
     @name:   git_push_remote
+    @description:
+        git_push_remote.py <git_dir> [commit_message]
+        git_dir: git directory
+        commit_message: commit message
+        if commit_message is not provided, no commit will be performed.
 """
 
 import os

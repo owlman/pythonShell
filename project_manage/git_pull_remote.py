@@ -4,6 +4,11 @@
     
     @author: lingjie
     @name:   git_pull_remote
+    @description:
+        git_pull_remote.py <git_dir> [branch]
+        git_dir: git directory
+        branch: branch to pull, default is master
+        if branch is not provided, default is master
 """
 
 import os
