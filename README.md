@@ -2,7 +2,7 @@
 
 # Project Description
 
-![Python Version](https://img.shields.io/badge/python-3.8-blue) ![License](https://img.shields.io/badge/license-GPLv3-green)  
+![Python Version](https://img.shields.io/badge/Python-3.12-blue) ![License](https://img.shields.io/badge/License-GPLv3-green)  
 
 This project is implemented in Python and consists of automation scripts I use in my daily work.
 
