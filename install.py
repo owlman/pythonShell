@@ -30,7 +30,7 @@ def main():
     # Save the current working directory
     cwd = os.getcwd() 
     print("PWD: " + cwd)
-   # Change to the installation directory
+    # Change to the installation directory
     install_dir = sys.argv[1]
     os.chdir(install_dir)
 

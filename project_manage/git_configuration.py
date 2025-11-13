@@ -9,7 +9,7 @@
         set the git configuration for the current user
 """
 
-import sys
+import sys, os
 # debug mode
 # sys.path.append(os.path.join(os.path.dirname(__file__), ".."))
 import _func

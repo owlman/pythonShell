@@ -11,9 +11,7 @@
         if commit_message is not provided, no commit will be performed.
 """
 
-import os
-import sys
-import subprocess
+import os, sys, subprocess
 # debug mode
 # sys.path.append(os.path.join(os.path.dirname(__file__), ".."))
 import _func
@@ -43,7 +41,10 @@ def main():
     if len(sys.argv) == 3 and sys.argv[2] != "":
         # Check if there are any changes to commit
         print("Adding and committing changes...")
-        gitstatus = subprocess.check_output("git status --porcelain").decode()
+        gitstatus = subprocess.check_output(
+            "git status --porcelain", 
+            shell=True, text=True
+        )
         if gitstatus == "":
             print("Error: No changes to commit.")
         else:
@@ -51,7 +52,7 @@ def main():
             _func.run_command(f"git commit -m '{sys.argv[2]}'")
 
     # Push to all remotes
-    remotes = subprocess.check_output(["git", "remote", "show"]).decode()
+    remotes = subprocess.check_output(["git", "remote"]).decode()
     for remote in remotes.splitlines():
         remote = remote.strip()
         print(f"\nPushing to remote:{remote} ...")
