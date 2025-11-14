@@ -1,17 +1,24 @@
-#! /usr/bin/env python
+#!/usr/bin/env python3
 """
-    Created on 2015-12-20
-    
-    @author: lingjie
-    @name:   git_push_remote
-    @Usage: python git_push_remote.py <git_dir> [commit_message]
-    @description:
-        git_dir: git directory
-        commit_message: commit message
-        if commit_message is not provided, no commit will be performed.
+Created on 2015-12-20
+
+Author: lingjie
+Name: git_push_remote
+Usage:
+    python git_push_remote.py <git_dir> [commit_message]
+
+Description:
+    git_dir: Path to the Git repository.
+    commit_message: Message used for committing changes.
+                    If commit_message is not provided, no commit will be made.
+
+    This script switches into the target Git directory, optionally commits,
+    and then pushes the current branch to all configured remotes.
 """
 
-import os, sys, subprocess
+import os
+import sys
+import subprocess
 # debug mode
 sys.path.append(os.path.join(os.path.dirname(__file__), ".."))
 import _func
@@ -53,11 +60,14 @@ def main():
 
     # Push to all remotes
     remotes = subprocess.check_output(["git", "remote"], text=True)
+    branch = subprocess.check_output(
+        ["git", "branch", "--show-current"], text=True
+    ).strip()
     for remote in remotes.splitlines():
         remote = remote.strip()
         print(f"\nPushing to remote:{remote} ...")
-        _func.run_command(["git", "pull", "--rebase", remote, "master"])
-        _func.run_command(["git", "push", remote, "master"])
+        _func.run_command(["git", "pull", "--rebase", remote, branch])
+        _func.run_command(["git", "push", remote, branch])
         print("Push is complete!")
 
     # Restore the original working directory
