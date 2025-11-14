@@ -20,7 +20,7 @@ import os
 import sys
 import subprocess
 # debug mode
-sys.path.append(os.path.join(os.path.dirname(__file__), ".."))
+# sys.path.append(os.path.join(os.path.dirname(__file__), ".."))
 import _func
 
 def main(): 
