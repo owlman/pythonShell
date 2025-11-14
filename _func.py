@@ -5,19 +5,35 @@ import time
 
 def run_command(cmd, shell=False, timeout=300):
     """
-    安全、跨平台实时执行命令：
-        - Windows / Linux / macOS 全兼容
-        - 实时输出 stdout / stderr
-        - 支持总体 timeout（而非 select 的局部 timeout）
-        - 默认避免 shell=True 注入风险
+    Execute a command safely with real-time output and cross-platform support.
+
+    Features:
+        - Fully compatible with Windows / Linux / macOS
+        - Real-time stdout and stderr output
+        - True overall timeout (not per-read timeout)
+        - Defaults to shell=False for better security
+        - Gracefully handles cleanup and exit codes
+
+    Args:
+        cmd: Command string or list.
+        shell (bool): Execute via shell. Default: False (safer).
+        timeout (int or None): Total execution timeout in seconds. 
+                               None disables timeout (use with caution).
+
+    Returns:
+        int: Exit code (0 means success).
+
+    Raises:
+        subprocess.TimeoutExpired: If the command exceeds the time limit.
+        subprocess.SubprocessError: For non-zero exit codes or execution errors.
     """
 
-    # ----------- CMD 预处理 ----------- #
+    # ----------- Preprocess command ----------- #
     if isinstance(cmd, str) and not shell:
         import shlex
         cmd = shlex.split(cmd)
 
-    # ----------- 启动子进程 ----------- #
+    # ----------- Start subprocess ----------- #
     popen = subprocess.Popen(
         cmd,
         stdout=subprocess.PIPE,
@@ -34,15 +50,15 @@ def run_command(cmd, shell=False, timeout=300):
 
     try:
         while True:
-            # 检查整体 timeout
+            # Check overall timeout
             if timeout is not None and (time.time() - start_time) > timeout:
                 popen.kill()
                 raise subprocess.TimeoutExpired(cmd, timeout)
 
-            # 等待输出，timeout 设置成 0.1 秒以保持实时流畅
+            # Wait for readable output (0.1s polling for smooth real-time output)
             events = selector.select(timeout=0.1)
 
-            # 读取输出事件
+            # Process ready streams
             for key, _ in events:
                 data = key.fileobj.readline()
                 if data:
@@ -53,9 +69,9 @@ def run_command(cmd, shell=False, timeout=300):
                     sys.stdout.flush()
                     sys.stderr.flush()
 
-            # 如果进程结束且管道没有数据，就退出
+            # Exit if the process has finished and no more data is pending
             if popen.poll() is not None:
-                # 继续读取残留输出
+                # Drain remaining buffered output
                 for pipe in (popen.stdout, popen.stderr):
                     remaining = pipe.read()
                     if remaining:
@@ -65,7 +81,7 @@ def run_command(cmd, shell=False, timeout=300):
                             sys.stderr.write(remaining)
                 break
 
-        # 返回码处理
+        # Non-zero exit code → error
         if popen.returncode != 0:
             raise subprocess.SubprocessError(
                 f"Command '{cmd}' failed with exit code {popen.returncode}"
@@ -74,6 +90,7 @@ def run_command(cmd, shell=False, timeout=300):
         return popen.returncode
 
     finally:
+        # Cleanup
         selector.unregister(popen.stdout)
         selector.unregister(popen.stderr)
         popen.stdout.close()
@@ -81,8 +98,10 @@ def run_command(cmd, shell=False, timeout=300):
         if popen.poll() is None:
             popen.kill()
 
-# Print a banner with a message
 def print_banner(message):
+    """
+    Print a banner with the given message.
+    """
     bannerWidth = 90
     borderChar = "#"
     bannerBorder = bannerWidth * borderChar
