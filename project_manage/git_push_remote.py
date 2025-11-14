@@ -13,7 +13,7 @@
 
 import os, sys, subprocess
 # debug mode
-# sys.path.append(os.path.join(os.path.dirname(__file__), ".."))
+sys.path.append(os.path.join(os.path.dirname(__file__), ".."))
 import _func
 
 def main(): 
@@ -42,21 +42,22 @@ def main():
         # Check if there are any changes to commit
         print("Adding and committing changes...")
         gitstatus = subprocess.check_output(
-            "git status --porcelain", 
-            shell=True, text=True
+            ["git", "status", "--porcelain"],
+            text=True
         )
         if gitstatus == "":
             print("Error: No changes to commit.")
         else:
-            _func.run_command("git add .")
-            _func.run_command(f"git commit -m '{sys.argv[2]}'")
+            _func.run_command(["git", "add", "."])
+            _func.run_command(["git", "commit", "-m", sys.argv[2]])
 
     # Push to all remotes
-    remotes = subprocess.check_output(["git", "remote"]).decode()
+    remotes = subprocess.check_output(["git", "remote"], text=True)
     for remote in remotes.splitlines():
         remote = remote.strip()
         print(f"\nPushing to remote:{remote} ...")
-        _func.run_command(f"git push -u {remote}")
+        _func.run_command(["git", "pull", "--rebase", remote, "master"])
+        _func.run_command(["git", "push", remote, "master"])
         print("Push is complete!")
 
     # Restore the original working directory

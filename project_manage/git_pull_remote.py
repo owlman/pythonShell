@@ -33,10 +33,15 @@ def main():
     print(f"Changed to directory: {os.getcwd()}")
     print(f"Pulling branch: {branch}\n")
 
-    remotes = subprocess.check_output(["git", "remote"]).decode().splitlines()
-    for remote in remotes:
+    remotes = subprocess.check_output(
+        ["git", "remote"], shell=True, text=True
+    )
+    for remote in remotes.splitlines():
         print(f"\nPulling from remote: {remote} ...")
-        _func.run_command(f"git pull {remote} {branch}")
+        _func.run_command(
+            f"git pull {remote} {branch}",
+            shell=True
+        )
         print("Pull is complete!")
 
     os.chdir(cwd)
