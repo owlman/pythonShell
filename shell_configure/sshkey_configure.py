@@ -1,48 +1,36 @@
-#! /usr/bin/env python
+#!/usr/bin/env python3
 """
-    Created on 2016-5-15
-    
-    @author: lingjie
-    @name:   sshky_configure
-    @Usage: python sshkey_configure.py
-    @description:
-        Check if the ssh key has configuration completed.
-        If not, configure the ssh key.
+Configure SSH key if not already configured.
 """
 
 import os
-
-# debug mode
-# import sys
-# sys.path.append(os.path.join(os.path.dirname(__file__), ".."))
+import sys
 import _func
 
 def check_default_ssh_key():
     ssh_dir = os.path.expanduser('~/.ssh')
-    if not os.path.exists(ssh_dir):
-        return False
-    
-    # Check if the private and public key files exist
     private_key = os.path.join(ssh_dir, 'id_rsa')
     public_key = os.path.join(ssh_dir, 'id_rsa.pub')
-    
     return os.path.isfile(private_key) and os.path.isfile(public_key)
 
 def main():
-    # Print the banner
     _func.print_banner("Starting sshkey_configure .....")
-    
-    # Check if the ssh key has configuration completed
+
+    if sys.platform == "win32":
+        print("Warning: This script may not work on Windows without Git Bash or WSL.")
+
+    ssh_dir = os.path.expanduser('~/.ssh')
+    os.makedirs(ssh_dir, exist_ok=True)
+
     if check_default_ssh_key():
         print("SSH key has been configured.")
     else:
         email = input("Please enter your email for the SSH key: ")
-        cmd = ["ssh-keygen", "-t", "rsa", "-C", email]
+        private_key_path = os.path.join(ssh_dir, "id_rsa")
+        cmd = ["ssh-keygen", "-t", "rsa", "-C", email, "-f", private_key_path, "-N", ""]
         _func.run_command(cmd)
-        
-    # Print the banner
+
     _func.print_banner("sshkey_configure has been executed successfully.")
 
 if __name__ == "__main__":
     main()
-

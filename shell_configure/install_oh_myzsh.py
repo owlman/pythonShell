@@ -1,49 +1,46 @@
-#! /usr/bin/env python
+#!/usr/bin/env python3
 """
-    Created on 2016-4-28
-    
-    @author: lingjie
-    @name:   install_oh_myzsh
-    @Usage: python install_oh_myzsh.py    
-    @description:
-        install oh-my-zsh and set zsh as default shell for current user
+Install oh-my-zsh and set zsh as default shell for current user
 """
 
-import os
-import sys
-# debug mode
-# sys.path.append(os.path.join(os.path.dirname(__file__), ".."))
+import os, sys, shutil
 import _func
 
 def main():
-    # Print the banner
     if sys.platform == "win32":
         _func.print_banner("Error: This script is not supported on Windows.")
         exit(1)
-    else:
-        _func.print_banner("Starting install_oh_myzsh .....")
 
-    # switch to the home directory
+    _func.print_banner("Starting install_oh_myzsh .....")
+
+    home = os.path.expanduser("~")
+    oh_my_zsh_dir = os.path.join(home, ".oh-my-zsh")
+    zshrc_template = os.path.join(oh_my_zsh_dir, "templates", "zshrc.zsh-template")
+    zshrc_file = os.path.join(home, ".zshrc")
+
     cwd = os.getcwd()
-    os.chdir(os.path.expanduser("~"))
+    try:
+        os.chdir(home)
 
-    # Check if oh-my-zsh has installed
-    if os.path.exists("./.oh-my-zsh"):
-        print("oh-my-zsh has installed.")
-    else:
-        cmds = [
-            "git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh",
-            "cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc"
-        ]
-        # Run the commands
-        for cmd in cmds:
-            print(f"Running command: {cmd}")
-            _func.run_command(cmd)
-            
-    # Restore the original working directory
-    os.chdir(cwd)
-    # Print the banner
+        if os.path.exists(oh_my_zsh_dir):
+            print("oh-my-zsh is already installed.")
+        else:
+            print("Installing oh-my-zsh...")
+            _func.run_command(["git", "clone", "git://github.com/robbyrussell/oh-my-zsh.git", oh_my_zsh_dir])
+            shutil.copy(zshrc_template, zshrc_file)
+            print(f"Copied {zshrc_template} to {zshrc_file}")
+
+        # Set zsh as default shell
+        if shutil.which("zsh"):
+            _func.run_command(["chsh", "-s", shutil.which("zsh")])
+            print("Set zsh as default shell. You may need to restart your terminal.")
+        else:
+            print("Warning: zsh not found. Please install zsh first.")
+
+    finally:
+        os.chdir(cwd)
+
     _func.print_banner("install_oh_myzsh has been executed successfully.")
-    
+
 if __name__ == "__main__":
     main()

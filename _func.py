@@ -2,46 +2,48 @@ import sys
 import subprocess
 import selectors
 import time
+import shutil
 
 def run_command(cmd, shell=False, timeout=300):
     """
-    Execute a command safely with real-time output and cross-platform support.
+    Execute a system command safely with real-time stdout/stderr output.
 
     Features:
-        - Fully compatible with Windows / Linux / macOS
-        - Real-time stdout and stderr output
-        - True overall timeout (not per-read timeout)
-        - Defaults to shell=False for better security
-        - Gracefully handles cleanup and exit codes
+        - Cross-platform support: Windows / Linux / macOS
+        - Real-time printing of stdout and stderr
+        - Enforces a total timeout for the command
+        - Defaults to shell=False for security
+        - Handles cleanup of subprocess and selector
 
     Args:
-        cmd: Command string or list.
-        shell (bool): Execute via shell. Default: False (safer).
-        timeout (int or None): Total execution timeout in seconds. 
-                               None disables timeout (use with caution).
+        cmd (str or list): Command to execute.
+        shell (bool): Whether to run command through shell. Default is False.
+        timeout (int or None): Maximum allowed execution time in seconds.
+                               None disables the timeout.
 
     Returns:
-        int: Exit code (0 means success).
+        int: Exit code of the command (0 indicates success).
 
     Raises:
-        subprocess.TimeoutExpired: If the command exceeds the time limit.
-        subprocess.SubprocessError: For non-zero exit codes or execution errors.
+        subprocess.TimeoutExpired: If the command runs longer than the timeout.
+        subprocess.SubprocessError: If the command exits with a non-zero status.
     """
 
-    # ----------- Preprocess command ----------- #
+    # If the command is a string and shell=False, split it into a list for safety
     if isinstance(cmd, str) and not shell:
         import shlex
         cmd = shlex.split(cmd)
 
-    # ----------- Start subprocess ----------- #
+    # Start the subprocess, capture both stdout and stderr
     popen = subprocess.Popen(
-        cmd,
-        stdout=subprocess.PIPE,
-        stderr=subprocess.PIPE,
-        text=True,
+        cmd, 
+        stdout=subprocess.PIPE, 
+        stderr=subprocess.PIPE, 
+        text=True, 
         shell=shell
     )
 
+    # Use selectors to monitor both stdout and stderr for real-time output
     selector = selectors.DefaultSelector()
     selector.register(popen.stdout, selectors.EVENT_READ)
     selector.register(popen.stderr, selectors.EVENT_READ)
@@ -50,18 +52,16 @@ def run_command(cmd, shell=False, timeout=300):
 
     try:
         while True:
-            # Check overall timeout
+            # Check for overall timeout
             if timeout is not None and (time.time() - start_time) > timeout:
-                popen.kill()
                 raise subprocess.TimeoutExpired(cmd, timeout)
 
-            # Wait for readable output (0.1s polling for smooth real-time output)
+            # Wait for any output from stdout/stderr with 0.1s polling interval
             events = selector.select(timeout=0.1)
-
-            # Process ready streams
             for key, _ in events:
                 data = key.fileobj.readline()
                 if data:
+                    # Print stdout/stderr immediately
                     if key.fileobj is popen.stdout:
                         sys.stdout.write(data)
                     else:
@@ -69,9 +69,9 @@ def run_command(cmd, shell=False, timeout=300):
                     sys.stdout.flush()
                     sys.stderr.flush()
 
-            # Exit if the process has finished and no more data is pending
+            # Exit the loop if the subprocess has finished
             if popen.poll() is not None:
-                # Drain remaining buffered output
+                # Read and print any remaining output
                 for pipe in (popen.stdout, popen.stderr):
                     remaining = pipe.read()
                     if remaining:
@@ -81,7 +81,7 @@ def run_command(cmd, shell=False, timeout=300):
                             sys.stderr.write(remaining)
                 break
 
-        # Non-zero exit code → error
+        # Raise error if the command failed
         if popen.returncode != 0:
             raise subprocess.SubprocessError(
                 f"Command '{cmd}' failed with exit code {popen.returncode}"
@@ -90,22 +90,31 @@ def run_command(cmd, shell=False, timeout=300):
         return popen.returncode
 
     finally:
-        # Cleanup
-        selector.unregister(popen.stdout)
-        selector.unregister(popen.stderr)
-        popen.stdout.close()
-        popen.stderr.close()
+        # Cleanup: unregister and close file objects
+        for pipe in (popen.stdout, popen.stderr):
+            try:
+                selector.unregister(pipe)
+            except Exception:
+                pass
+            pipe.close()
+        # Ensure the subprocess is terminated
         if popen.poll() is None:
             popen.kill()
 
+
 def print_banner(message):
     """
-    Print a banner with the given message.
+    Print a centered banner around a message, dynamically sized
+    to fit the terminal width.
+
+    Args:
+        message (str): Message to display in the banner.
     """
-    bannerWidth = 90
+    # Get terminal width, defaulting to 90 if detection fails
+    width = shutil.get_terminal_size((90, 20)).columns
     borderChar = "#"
-    bannerBorder = bannerWidth * borderChar
-    middleLine = borderChar + message.center(bannerWidth - 2) + borderChar 
+    bannerBorder = width * borderChar
+    middleLine = borderChar + message.center(width - 2) + borderChar
     print(bannerBorder)
     print(middleLine)
     print(bannerBorder)
