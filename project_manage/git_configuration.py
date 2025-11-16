@@ -12,7 +12,7 @@ def main():
     _func.print_banner("Starting git_configuration .....")
 
     cmds = [
-        ["git", "config", "--global", "user.name", "owlman"],
+        ["git", "config", "--global", "user.name", "o wlman"],
         ["git", "config", "--global", "user.email", "jie.owl2008@gmail.com"],
         ["git", "config", "--global", "push.default", "simple"],
         ["git", "config", "--global", "color.ui", "true"],
