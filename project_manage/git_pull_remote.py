@@ -41,7 +41,14 @@ def main():
 
     cwd = os.getcwd()
     os.chdir(gitrepo)
-
+    
+    # check if the directory is a git repository
+    try:
+        _func.run_command(["git", "rev-parse", "--is-inside-work-tree"])
+    except subprocess.CalledProcessError:
+        print("Error: Not a git repository.")
+        exit()
+    
     print(f"Changed to directory: {os.getcwd()}")
     print(f"Pulling branch: {branch}\n")
 

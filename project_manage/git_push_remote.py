@@ -44,6 +44,13 @@ def main():
         print(f"Error: No permission to access directory '{sys.argv[1]}'.")
         exit()
 
+    # check if the directory is a git repository
+    try:
+        _func.run_command(["git", "rev-parse", "--is-inside-work-tree"])
+    except subprocess.CalledProcessError:
+        print("Error: Not a git repository.")
+        exit()
+
     # Add and commit changes if a commit message is provided
     if len(sys.argv) == 3 and sys.argv[2] != "":
         # Check if there are any changes to commit
