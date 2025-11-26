@@ -46,7 +46,11 @@ def main():
 
     # check if the directory is a git repository
     try:
-        _func.run_command(["git", "rev-parse", "--is-inside-work-tree"])
+        # if is a git repository, do nothing.
+        subprocess.run(
+            ["git", "status"], 
+            check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL
+        )
     except subprocess.CalledProcessError:
         print("Error: Not a git repository.")
         exit()
