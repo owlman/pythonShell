@@ -6,6 +6,7 @@ readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
     "pexpect>=4.8.0",
+    "pytest>=9.0.1",
 ]
 authors = [
     {name = "Jie Ling", email = "jie.owl2008@gmail.com"}
