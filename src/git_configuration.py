@@ -6,10 +6,10 @@ Set the git configuration for the current user
 
 import sys, os
 import platform
-import _func
+import common
 
 def main():
-    _func.print_banner("Starting git_configuration .....")
+    common.print_banner("Starting git_configuration .....")
 
     cmds = [
         ["git", "config", "--global", "user.name", "owlman"],
@@ -34,9 +34,9 @@ def main():
 
     for cmd in cmds:
         print(f"Running command: {' '.join(cmd)}")
-        _func.run_command(cmd)
+        common.run_command(cmd)
 
-    _func.print_banner("git_configuration has been executed successfully.")
+    common.print_banner("git_configuration has been executed successfully.")
 
 if __name__ == "__main__":
     main()

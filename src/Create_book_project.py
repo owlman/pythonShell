@@ -22,7 +22,7 @@ import os
 import sys
 import shutil
 import zipfile
-import _func
+import common
 
 def main():
     if len(sys.argv) < 2 or len(sys.argv) > 3:
@@ -30,7 +30,7 @@ def main():
         exit(1)
 
     scriptname = os.path.basename(sys.argv[0])
-    _func.print_banner(f"Starting {scriptname} .....")
+    common.print_banner(f"Starting {scriptname} .....")
 
     projectdir = sys.argv[1]
     projectname = sys.argv[2] if len(sys.argv) == 3 and sys.argv[2] else "book_proj"
@@ -57,8 +57,7 @@ def main():
         print(f"Failed to extract template: {e}")
         exit(1)
 
-    _func.print_banner(f"{scriptname} has been executed successfully.")
-
+    common.print_banner(f"{scriptname} has been executed successfully.")
 
 if __name__ == "__main__":
     main()
