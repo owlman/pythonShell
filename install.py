@@ -10,7 +10,10 @@ import os
 import sys
 import shutil
 import glob
-import _func
+
+# Add common module path
+sys.path.append(os.path.join(os.path.dirname(__file__), "src"))
+import common
 
 def main():
     # Check the number of arguments
@@ -20,7 +23,7 @@ def main():
 
     # Print the banner
     scriptname = os.path.basename(sys.argv[0])
-    _func.print_banner(f"Starting {scriptname} .....")    
+    common.print_banner(f"Starting {scriptname} .....")    
 
    # Get all the python files in the current directory
     my_dir = os.path.dirname(os.path.abspath(sys.argv[0]))
@@ -51,7 +54,7 @@ def main():
         filename = os.path.basename(file)
         if filename in ("install.py", "uninstall.py"):
             continue
-        if dirname in ("tmp", "template", "__pycache__"):
+        if dirname in ("tmp", "test", "__pycache__"):
             continue
         print("copying..." + filename)
         shutil.copy(file, filename)
@@ -60,7 +63,7 @@ def main():
     # Restore the original working directory
     os.chdir(cwd)
     # Print the banner
-    _func.print_banner(f"{scriptname} has been executed successfully.")
+    common.print_banner(f"{scriptname} has been executed successfully.")
 
 if __name__ == "__main__":
     main()

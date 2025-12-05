@@ -10,7 +10,10 @@ import os
 import sys
 import shutil
 import glob
-import _func
+
+# Add common module path
+sys.path.append(os.path.join(os.path.dirname(__file__), "src"))
+import common
 
 def main():
     # Check the number of arguments
@@ -24,7 +27,7 @@ def main():
         print(f"Error: {install_dir} is not a valid directory.")
         sys.exit(1)
     else:
-        _func.print_banner(f"Uninstalling {install_dir}...")
+        common.print_banner(f"Uninstalling {install_dir}...")
 
     # Save the current working directory
     cwd = os.getcwd()
@@ -62,7 +65,7 @@ def main():
     os.chdir(cwd)
 
     # Print uninstallation success message    
-    _func.print_banner(f"Uninstallation of {install_dir} is complete.")
+    common.print_banner(f"Uninstallation of {install_dir} is complete.")
 
 if __name__ == "__main__":
     main()

@@ -1,7 +1,65 @@
 [project]
 name = "pythonshell"
 version = "0.1.0"
-description = "Add your description here"
+description = "Python自动化脚本集合，包含Git配置、SSH管理、项目创建等日常开发工具"
 readme = "README.md"
 requires-python = ">=3.12"
-dependencies = []
+dependencies = [
+    "pexpect>=4.8.0",
+]
+authors = [
+    {name = "Jie Ling", email = "jie.owl2008@gmail.com"}
+]
+license = {text = "GPL-3.0"}
+keywords = ["automation", "git", "ssh", "project-management", "shell"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: System :: Systems Administration",
+    "Topic :: Utilities",
+]
+
+[project.urls]
+Homepage = "https://github.com/owlman/pythonShell"
+Repository = "https://github.com/owlman/pythonShell"
+"Bug Tracker" = "https://github.com/owlman/pythonShell/issues"
+
+[project.scripts]
+git-configuration = "git_configuration:main"
+git-create-repo = "git_create_repository:main"
+git-pull-remote = "git_pull_remote:main"
+git-push-remote = "git_push_remote:main"
+create-book-project = "Create_book_project:main"
+create-translation-project = "create_translation_project:main"
+ssh-key-configure = "sshkey_configure:main"
+open-ssh-proxy = "open_ssh_proxy:main"
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-dir]
+"" = "src"
+
+[tool.pytest.ini_options]
+testpaths = ["test"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+addopts = "-v --tb=short"
+
+[tool.coverage.run]
+source = ["src"]
+
+[tool.coverage.report]
+show_missing = true
+skip_covered = false
