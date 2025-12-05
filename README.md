@@ -67,7 +67,7 @@ open-ssh-proxy
 ## 测试
 
 ```bash
-`python -m pytest`
+python -m pytest
 ```
 
 ## 联系方式
