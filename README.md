@@ -30,7 +30,7 @@ PythonShell 是一个 Python 自动化脚本集合，包含 Git 配置、SSH 管
 ```bash
 git clone https://github.com/owlman/pythonShell.git
 cd pythonShell
-python -m pip install -e .
+pip install -e .
 ```
 
 ### 使用安装脚本
@@ -67,7 +67,7 @@ open-ssh-proxy
 ## 测试
 
 ```bash
-python -m pytest
+`python -m pytest`
 ```
 
 ## 联系方式
