@@ -44,14 +44,19 @@ python install.py <install_path>
 安装完成后，所有脚本都可以作为命令行工具直接使用：
 
 ```bash
-# Git 配置
+# Git 相关操作
 git-configuration
+git-create-repository <git_directory> [init_commit_message]
+git-pull-remote <git_directory> [branch]
+git-push-remote <git_directory> [commit_message]
 
-# 创建书籍项目
-create-book-project
+# 项目创建
+create-book-project <project_directory> [project_name]
+create-translation-project <project_directory> [project_name]
 
-# SSH 密钥配置
+# SSH 工具
 ssh-key-configure
+open-ssh-proxy
 ```
 
 ## 开发环境

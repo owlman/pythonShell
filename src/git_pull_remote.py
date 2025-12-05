@@ -3,9 +3,9 @@
 Created on 2015-12-20
 
 Author: lingjie
-Program: git_pull_remote
+Program: git-pull-remote
 Usage:
-    python git_pull_remote.py <git_dir> [branch]
+    git-pull-remote.py <git_directory> [branch]
 
 Description:
     git_dir : Path to a Git repository.
@@ -23,7 +23,7 @@ import common
 def main():
     # Ensure correct number of arguments
     if not len(sys.argv) in (2, 3):
-        print("Usage: git_pull_remote.py <git_dir> [branch]")
+        print("Usage: git-pull-remote <git_directory> [branch]")
         exit(1)
 
     gitrepo = sys.argv[1]

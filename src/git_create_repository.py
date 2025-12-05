@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 """
 Create a git repository with optional initial commit
+usage:
+    git-create-repository <git_directory> [init_commit_message]
 """
 
 import os
@@ -10,7 +12,7 @@ import common
 
 def main():
     if len(sys.argv) < 2 or len(sys.argv) > 3:
-        print("Usage: git_create_repository.py <git_reps_dir> [init_commit_message]")
+        print("Usage: git-create-repository <git_directory> [init_commit_message]")
         exit(1)
 
     scriptname = os.path.basename(sys.argv[0])

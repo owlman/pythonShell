@@ -4,8 +4,8 @@
     Created on 2018-06-11 
         
     @author: lingjie 
-    @name:   open_ssh_proxy
-    @Usage: python open_ssh_proxy.py
+    @Usage: 
+        open-ssh-proxy
     @description:
         open a ssh proxy to the host
 """

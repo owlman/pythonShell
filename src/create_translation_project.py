@@ -5,7 +5,7 @@ Created on 2018-10-31
 Author: lingjie
 Name: create_translation_project
 Usage:
-    python create_translation_project.py <project_dir> [project_name]
+    create-translation-project <project_directory> [project_name]
 
 Description:
     project_dir: Path to the project directory.
@@ -24,7 +24,7 @@ import common
 
 def main():
     if len(sys.argv) < 2 or len(sys.argv) > 3:
-        print("Usage: create_translation_project.py <project_dir> [project_name]")
+        print("Usage: create-translation-project <project_directory> [project_name]")
         sys.exit(1)
 
     scriptname = os.path.basename(sys.argv[0])

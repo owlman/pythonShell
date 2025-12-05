@@ -5,7 +5,7 @@ Created on 2015-12-20
 Author: lingjie
 Name: git_push_remote
 Usage:
-    python git_push_remote.py <git_dir> [commit_message]
+    git-push-remote <git_directory> [commit_message]
 
 Description:
     git_dir: Path to the Git repository.
@@ -22,7 +22,7 @@ import subprocess
 import common
 def main(): 
     if len(sys.argv) < 2 or len(sys.argv) > 3:
-        print("Usage: git_push_remote.py <git_dir> [commit_message]")
+        print("Usage: git-push-remote <git_directory> [commit_message]")
         exit()
 
     # Print the banner

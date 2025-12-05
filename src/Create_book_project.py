@@ -5,7 +5,7 @@ Created on 2019-06-17
 Author: lingjie
 Name: create_book_project
 Usage:
-    python create_book_project.py <project_dir> [projectname]
+    create-book-project <project_directory> [project_name]
 
 Description:
     project_dir: Path where the project should be created.
@@ -26,7 +26,7 @@ import common
 
 def main():
     if len(sys.argv) < 2 or len(sys.argv) > 3:
-        print("Usage: create_book_project.py <project_dir> [projectname]")
+        print("Usage: create-book-project <project_directory> [project_name]")
         exit(1)
 
     scriptname = os.path.basename(sys.argv[0])
