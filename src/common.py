@@ -1,5 +1,4 @@
 #! /usr/bin/env python
-# -*- coding: utf-8 -*-
 """
     Created on 2024-8-31
 
@@ -11,11 +10,12 @@
         - print_banner: Print a centered banner around a message.
 """
 
-import sys
-import subprocess
 import selectors
-import time
 import shutil
+import subprocess
+import sys
+import time
+
 
 def run_command(cmd, shell=False, timeout=300):
     """
@@ -49,10 +49,10 @@ def run_command(cmd, shell=False, timeout=300):
 
     # Start the subprocess, capture both stdout and stderr
     popen = subprocess.Popen(
-        cmd, 
-        stdout=subprocess.PIPE, 
-        stderr=subprocess.PIPE, 
-        text=True, 
+        cmd,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE,
+        text=True,
         shell=shell
     )
 

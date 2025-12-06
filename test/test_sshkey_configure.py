@@ -1,10 +1,9 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 
-import unittest
-import sys
 import os
-from unittest.mock import patch, MagicMock, mock_open
+import sys
+import unittest
+from unittest.mock import MagicMock, mock_open, patch
 
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', 'src'))
 import sshkey_configure
@@ -17,7 +16,7 @@ class TestSSHKeyConfigure(unittest.TestCase):
     @patch('builtins.print')
     def test_ssh_key_already_configured(self, mock_print, mock_banner, mock_check):
         sshkey_configure.main()
-        
+
         mock_print.assert_called_with("SSH key has been configured.")
         mock_banner.assert_called()
 
@@ -28,7 +27,7 @@ class TestSSHKeyConfigure(unittest.TestCase):
     @patch('sshkey_configure.check_default_ssh_key', return_value=False)
     def test_generate_new_ssh_key(self, mock_check, mock_run_command, mock_banner, mock_input, mock_makedirs):
         sshkey_configure.main()
-        
+
         mock_input.assert_called_once()
         mock_run_command.assert_called_once()
         call_args = mock_run_command.call_args[0][0]
@@ -40,9 +39,9 @@ class TestSSHKeyConfigure(unittest.TestCase):
     def test_check_default_ssh_key_exists(self, mock_expanduser, mock_isfile):
         mock_expanduser.return_value = '/home/user/.ssh'
         mock_isfile.return_value = True
-        
+
         result = sshkey_configure.check_default_ssh_key()
-        
+
         self.assertTrue(result)
         self.assertEqual(mock_isfile.call_count, 2)
 
@@ -51,9 +50,9 @@ class TestSSHKeyConfigure(unittest.TestCase):
     def test_check_default_ssh_key_missing(self, mock_expanduser, mock_isfile):
         mock_expanduser.return_value = '/home/user/.ssh'
         mock_isfile.side_effect = [True, False]
-        
+
         result = sshkey_configure.check_default_ssh_key()
-        
+
         self.assertFalse(result)
 
     @patch('sys.platform', 'win32')
@@ -62,7 +61,7 @@ class TestSSHKeyConfigure(unittest.TestCase):
     @patch('builtins.print')
     def test_windows_warning(self, mock_print, mock_banner, mock_check):
         sshkey_configure.main()
-        
+
         calls = [str(call) for call in mock_print.call_args_list]
         self.assertTrue(any('Windows' in str(call) for call in calls))
 
@@ -73,7 +72,7 @@ class TestSSHKeyConfigure(unittest.TestCase):
     @patch('sshkey_configure.check_default_ssh_key', return_value=False)
     def test_ssh_directory_creation(self, mock_check, mock_run_command, mock_banner, mock_input, mock_makedirs):
         sshkey_configure.main()
-        
+
         mock_makedirs.assert_called_once()
         args = mock_makedirs.call_args
         self.assertTrue('.ssh' in str(args))

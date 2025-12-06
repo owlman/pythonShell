@@ -1,10 +1,9 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 
-import unittest
-import sys
 import os
-from unittest.mock import patch, MagicMock
+import sys
+import unittest
+from unittest.mock import MagicMock, patch
 
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', 'src'))
 import git_configuration
@@ -18,10 +17,10 @@ class TestGitConfiguration(unittest.TestCase):
     @patch('platform.system', return_value='Linux')
     def test_configuration_linux(self, mock_platform, mock_banner, mock_run_command):
         git_configuration.main()
-        
+
         self.assertTrue(mock_run_command.called)
         self.assertTrue(mock_banner.called)
-        
+
         calls = [call[0][0] for call in mock_run_command.call_args_list]
         self.assertTrue(any('user.name' in str(call) and 'testuser' in str(call) for call in calls))
         self.assertTrue(any('user.email' in str(call) and 'test@example.com' in str(call) for call in calls))
@@ -33,7 +32,7 @@ class TestGitConfiguration(unittest.TestCase):
     @patch('platform.system', return_value='Windows')
     def test_configuration_windows(self, mock_platform, mock_banner, mock_run_command):
         git_configuration.main()
-        
+
         calls = [call[0][0] for call in mock_run_command.call_args_list]
         self.assertTrue(any('core.autocrlf' in str(call) and 'true' in str(call) for call in calls))
 

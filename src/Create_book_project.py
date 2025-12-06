@@ -19,10 +19,12 @@
 """
 
 import os
-import sys
 import shutil
+import sys
 import zipfile
+
 import common
+
 
 def main():
     if len(sys.argv) < 2 or len(sys.argv) > 3:

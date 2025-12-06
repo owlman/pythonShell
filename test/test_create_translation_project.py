@@ -1,12 +1,11 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 
-import unittest
-import sys
 import os
-import tempfile
 import shutil
-from unittest.mock import patch, MagicMock
+import sys
+import tempfile
+import unittest
+from unittest.mock import MagicMock, patch
 
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', 'src'))
 import create_translation_project
@@ -29,11 +28,11 @@ class TestCreateTranslationProject(unittest.TestCase):
         mock_exists.return_value = False
         mock_zip_instance = MagicMock()
         mock_zipfile.return_value.__enter__.return_value = mock_zip_instance
-        
+
         with patch('os.makedirs') as mock_makedirs:
             with patch('shutil.rmtree') as mock_rmtree:
                 create_translation_project.main()
-        
+
         mock_makedirs.assert_called()
         mock_banner.assert_called()
 
@@ -45,10 +44,10 @@ class TestCreateTranslationProject(unittest.TestCase):
         mock_exists.side_effect = [True, True]
         mock_zip_instance = MagicMock()
         mock_zipfile.return_value.__enter__.return_value = mock_zip_instance
-        
+
         with patch('shutil.rmtree') as mock_rmtree:
             create_translation_project.main()
-        
+
         mock_rmtree.assert_called()
         mock_banner.assert_called()
 
@@ -72,7 +71,7 @@ class TestCreateTranslationProject(unittest.TestCase):
     @patch('builtins.print')
     def test_extraction_failure(self, mock_print, mock_zipfile, mock_banner):
         mock_zipfile.side_effect = Exception("Extraction failed")
-        
+
         with patch('os.path.exists', return_value=False):
             with patch('os.makedirs'):
                 with self.assertRaises(SystemExit):

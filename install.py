@@ -9,14 +9,15 @@
         - <install_directory>: The directory where the files will be installed.
 """
 
-import os
-import sys
-import shutil
 import glob
+import os
+import shutil
+import sys
 
 # Add common module path
 sys.path.append(os.path.join(os.path.dirname(__file__), "src"))
 import common
+
 
 def main():
     # Check the number of arguments
@@ -26,7 +27,7 @@ def main():
 
     # Print the banner
     script_name = os.path.basename(sys.argv[0])
-    common.print_banner(f"Starting {script_name} .....")    
+    common.print_banner(f"Starting {script_name} .....")
 
    # Get all the python files in the current directory
     current_directory = os.path.dirname(os.path.abspath(sys.argv[0]))
@@ -35,7 +36,7 @@ def main():
                                recursive=True)
 
     # Save the current working directory
-    cwd = os.getcwd() 
+    cwd = os.getcwd()
     print("PWD: " + cwd)
     # Change to the installation directory
     install_directory = sys.argv[1]

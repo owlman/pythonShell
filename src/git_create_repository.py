@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 """
 Create a git repository with optional initial commit
 usage:
@@ -7,9 +6,11 @@ usage:
 """
 
 import os
-import sys
 import subprocess
+import sys
+
 import common
+
 
 def main():
     if len(sys.argv) < 2 or len(sys.argv) > 3:

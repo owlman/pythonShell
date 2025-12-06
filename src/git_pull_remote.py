@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 """
 Created on 2015-12-20
 
@@ -17,13 +16,15 @@ Description:
 """
 
 import os
-import sys
 import subprocess
+import sys
+
 import common
+
 
 def main():
     # Ensure correct number of arguments
-    if not len(sys.argv) in (2, 3):
+    if len(sys.argv) not in (2, 3):
         print("Usage: git-pull-remote <git_directory> [branch]")
         exit(1)
 
@@ -41,18 +42,18 @@ def main():
 
     cwd = os.getcwd()
     os.chdir(gitrepo)
-    
+
     # check if the directory is a git repository
     try:
         # if is a git repository, do nothing.
         subprocess.run(
-            ["git", "status"], 
+            ["git", "status"],
             check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL
-        )        
+        )
     except subprocess.CalledProcessError:
         print("Error: Not a git repository.")
         exit()
-    
+
     print(f"Changed to directory: {os.getcwd()}")
     print(f"Pulling branch: {branch}\n")
 

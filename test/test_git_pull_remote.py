@@ -1,11 +1,10 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 
-import unittest
-import sys
 import os
 import subprocess
-from unittest.mock import patch, MagicMock
+import sys
+import unittest
+from unittest.mock import MagicMock, patch
 
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', 'src'))
 import git_pull_remote
@@ -23,9 +22,9 @@ class TestGitPullRemote(unittest.TestCase):
     def test_pull_default_branch(self, mock_isdir, mock_chdir, mock_run, mock_check_output, mock_banner, mock_run_command):
         mock_check_output.return_value = "origin\nupstream\n"
         mock_run.return_value = MagicMock(returncode=0)
-        
+
         git_pull_remote.main()
-        
+
         self.assertTrue(mock_run_command.called)
         calls = [call[0][0] for call in mock_run_command.call_args_list]
         self.assertTrue(any('pull' in str(call) and 'master' in str(call) for call in calls))
@@ -40,9 +39,9 @@ class TestGitPullRemote(unittest.TestCase):
     def test_pull_custom_branch(self, mock_isdir, mock_chdir, mock_run, mock_check_output, mock_banner, mock_run_command):
         mock_check_output.return_value = "origin\n"
         mock_run.return_value = MagicMock(returncode=0)
-        
+
         git_pull_remote.main()
-        
+
         calls = [call[0][0] for call in mock_run_command.call_args_list]
         self.assertTrue(any('pull' in str(call) and 'develop' in str(call) for call in calls))
 
@@ -56,9 +55,9 @@ class TestGitPullRemote(unittest.TestCase):
     def test_pull_multiple_remotes(self, mock_isdir, mock_chdir, mock_run, mock_check_output, mock_banner, mock_run_command):
         mock_check_output.return_value = "origin\nupstream\nfork\n"
         mock_run.return_value = MagicMock(returncode=0)
-        
+
         git_pull_remote.main()
-        
+
         self.assertEqual(mock_run_command.call_count, 3)
 
     @patch('sys.argv', ['git-pull-remote', '/invalid/path'])
@@ -77,10 +76,10 @@ class TestGitPullRemote(unittest.TestCase):
     @patch('builtins.print')
     def test_not_git_repository(self, mock_print, mock_isdir, mock_chdir, mock_run, mock_banner):
         mock_run.side_effect = subprocess.CalledProcessError(1, 'git')
-        
+
         with self.assertRaises(SystemExit):
             git_pull_remote.main()
-        
+
         mock_print.assert_any_call("Error: Not a git repository.")
 
     @patch('sys.argv', ['git-pull-remote'])

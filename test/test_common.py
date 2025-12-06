@@ -1,11 +1,10 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 
-import unittest
-import sys
 import os
-from unittest.mock import patch, MagicMock
 import subprocess
+import sys
+import unittest
+from unittest.mock import MagicMock, patch
 
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', 'src'))
 import common
@@ -40,9 +39,9 @@ class TestPrintBanner(unittest.TestCase):
     @patch('shutil.get_terminal_size')
     def test_print_banner(self, mock_terminal_size, mock_print):
         mock_terminal_size.return_value = MagicMock(columns=80)
-        
+
         common.print_banner("Test Message")
-        
+
         self.assertEqual(mock_print.call_count, 3)
         calls = [str(call) for call in mock_print.call_args_list]
         self.assertTrue(any('#' in str(call) for call in calls))
@@ -51,9 +50,9 @@ class TestPrintBanner(unittest.TestCase):
     @patch('shutil.get_terminal_size')
     def test_print_banner_custom_width(self, mock_terminal_size, mock_print):
         mock_terminal_size.return_value = MagicMock(columns=60)
-        
+
         common.print_banner("Short")
-        
+
         self.assertEqual(mock_print.call_count, 3)
 
 

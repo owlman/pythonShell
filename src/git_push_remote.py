@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 """
 Created on 2015-12-20
 
@@ -18,10 +17,13 @@ Description:
 """
 
 import os
-import sys
 import subprocess
+import sys
+
 import common
-def main(): 
+
+
+def main():
     if len(sys.argv) < 2 or len(sys.argv) > 3:
         print("Usage: git-push-remote <git_directory> [commit_message]")
         exit()
@@ -46,7 +48,7 @@ def main():
     try:
         # if is a git repository, do nothing.
         subprocess.run(
-            ["git", "status"], 
+            ["git", "status"],
             check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL
         )
     except subprocess.CalledProcessError:

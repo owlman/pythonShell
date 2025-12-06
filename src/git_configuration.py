@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 """
     Created on 2018-10-31
 
@@ -13,9 +12,11 @@
         user_email: Git user email
 """
 
-import sys, os
 import platform
+import sys
+
 import common
+
 
 def main():
     # if user_name or user_email is not provided, exit
@@ -54,4 +55,3 @@ def main():
 
 if __name__ == "__main__":
     main()
- 

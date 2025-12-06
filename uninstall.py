@@ -6,14 +6,15 @@
     @name:   uninstall
 """
 
-import os
-import sys
-import shutil
 import glob
+import os
+import shutil
+import sys
 
 # Add common module path
 sys.path.append(os.path.join(os.path.dirname(__file__), "src"))
 import common
+
 
 def main():
     # Check the number of arguments
@@ -53,7 +54,7 @@ def main():
         dirname, filename = os.path.split(file_path)
         if filename in ["install.py", "uninstall.py"]:
             continue
-        
+
         try:
             print(f"Removing... {filename}")
             os.remove(file_path)
@@ -64,7 +65,7 @@ def main():
     # Restore the original working directory
     os.chdir(cwd)
 
-    # Print uninstallation success message    
+    # Print uninstallation success message
     common.print_banner(f"Uninstallation of {install_dir} is complete.")
 
 if __name__ == "__main__":

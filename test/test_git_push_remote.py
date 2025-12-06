@@ -1,11 +1,10 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 
-import unittest
-import sys
 import os
 import subprocess
-from unittest.mock import patch, MagicMock
+import sys
+import unittest
+from unittest.mock import MagicMock, patch
 
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', 'src'))
 import git_push_remote
@@ -25,9 +24,9 @@ class TestGitPushRemote(unittest.TestCase):
             "origin\nupstream\n",
             "main\n"
         ]
-        
+
         git_push_remote.main()
-        
+
         self.assertTrue(mock_run_command.called)
         calls = [call[0][0] for call in mock_run_command.call_args_list]
         self.assertTrue(any('push' in str(call) for call in calls))
@@ -46,9 +45,9 @@ class TestGitPushRemote(unittest.TestCase):
             "origin\n",
             "main\n"
         ]
-        
+
         git_push_remote.main()
-        
+
         calls = [call[0][0] for call in mock_run_command.call_args_list]
         self.assertTrue(any('commit' in str(call) and 'Update files' in str(call) for call in calls))
         self.assertTrue(any('add' in str(call) for call in calls))
@@ -67,9 +66,9 @@ class TestGitPushRemote(unittest.TestCase):
             "origin\n",
             "main\n"
         ]
-        
+
         git_push_remote.main()
-        
+
         mock_print.assert_any_call("Error: No changes to commit.")
 
     @patch('sys.argv', ['git-push-remote', '/tmp/test_repo'])
@@ -84,9 +83,9 @@ class TestGitPushRemote(unittest.TestCase):
             "origin\nupstream\nfork\n",
             "main\n"
         ]
-        
+
         git_push_remote.main()
-        
+
         calls = [call[0][0] for call in mock_run_command.call_args_list]
         push_calls = [call for call in calls if 'push' in str(call)]
         self.assertEqual(len(push_calls), 3)
@@ -97,10 +96,10 @@ class TestGitPushRemote(unittest.TestCase):
     @patch('os.chdir')
     def test_invalid_directory(self, mock_chdir, mock_print, mock_banner):
         mock_chdir.side_effect = FileNotFoundError()
-        
+
         with self.assertRaises(SystemExit):
             git_push_remote.main()
-        
+
         mock_print.assert_any_call("Error: Directory '/invalid/path' not found.")
 
     @patch('sys.argv', ['git-push-remote', '/tmp/not_a_repo'])
@@ -110,10 +109,10 @@ class TestGitPushRemote(unittest.TestCase):
     @patch('builtins.print')
     def test_not_git_repository(self, mock_print, mock_chdir, mock_run, mock_banner):
         mock_run.side_effect = subprocess.CalledProcessError(1, 'git')
-        
+
         with self.assertRaises(SystemExit):
             git_push_remote.main()
-        
+
         mock_print.assert_any_call("Error: Not a git repository.")
 
     @patch('sys.argv', ['git-push-remote'])
