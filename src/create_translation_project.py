@@ -1,19 +1,20 @@
 #!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 """
-Created on 2018-10-31
+    Created on 2018-10-31
 
-Author: lingjie
-Name: create_translation_project
-Usage:
-    create-translation-project <project_directory> [project_name]
+    Author: lingjie
+    Name: create_translation_project
+    Usage:
+        create-translation-project <project_directory> [project_name]
 
-Description:
-    project_dir: Path to the project directory.
-    project_name: Name of the new project (default: "translation_proj").
+    Description:
+        project_directory: Path to the project directory.
+        project_name: Name of the new project (default: "translation_proj").
 
-This script will:
-    - Create or overwrite the target project directory.
-    - Extract the project template into the target directory.
+    This script will:
+        - Create or overwrite the target project directory.
+        - Extract the project template into the target directory.
 """
 
 import os
@@ -27,33 +28,33 @@ def main():
         print("Usage: create-translation-project <project_directory> [project_name]")
         sys.exit(1)
 
-    scriptname = os.path.basename(sys.argv[0])
-    common.print_banner(f"Starting {scriptname} .....")
+    script_name = os.path.basename(sys.argv[0])
+    common.print_banner(f"Starting {script_name} .....")
 
-    projectdir = sys.argv[1]
-    projectname = sys.argv[2] if len(sys.argv) == 3 and sys.argv[2] else "translation_proj"
-    targetdir = os.path.join(projectdir, projectname)
+    project_directory = sys.argv[1]
+    project_name = sys.argv[2] if len(sys.argv) == 3 and sys.argv[2] else "translation_proj"
+    target_directory = os.path.join(project_directory, project_name)
 
     # Create the project directory if it doesn't exist
-    if not os.path.exists(projectdir):
-        os.makedirs(projectdir)
+    if not os.path.exists(project_directory):
+        os.makedirs(project_directory)
 
     # Remove target directory if exists
-    if os.path.exists(targetdir):
-        shutil.rmtree(targetdir)
+    if os.path.exists(target_directory):
+        shutil.rmtree(target_directory)
 
-    print(f"Creating your project at {targetdir} ...")
+    print(f"Creating your project at {target_directory} ...")
 
     # Extract template zip
     template_zip = os.path.join(os.path.dirname(os.path.abspath(__file__)), "template", "translation_proj.zip")
     try:
         with zipfile.ZipFile(template_zip, 'r') as zip_ref:
-            zip_ref.extractall(targetdir)
+            zip_ref.extractall(target_directory)
     except Exception as e:
         print(f"Failed to extract template: {e}")
         sys.exit(1)
 
-    common.print_banner(f"{scriptname} has been executed successfully.")
+    common.print_banner(f"{script_name} has been executed successfully.")
 
 if __name__ == "__main__":
     main()

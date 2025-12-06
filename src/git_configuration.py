@@ -1,7 +1,16 @@
 #!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 """
-git_configuration.py
-Set the git configuration for the current user
+    Created on 2018-10-31
+
+    Author: lingjie
+    Name: git_configuration
+    Usage:
+        git-configuration [user_name] [user_email]       
+
+    Description: 
+        user_name: Git user name 
+        user_email: Git user email
 """
 
 import sys, os
@@ -9,11 +18,16 @@ import platform
 import common
 
 def main():
+    # if user_name or user_email is not provided, exit
+    if len(sys.argv) != 3:
+        print("Usage: git-configuration [user_name] [user_email]")
+        sys.exit(1)
     common.print_banner("Starting git_configuration .....")
 
+    user_name, user_email = sys.argv[1], sys.argv[2]
     cmds = [
-        ["git", "config", "--global", "user.name", "owlman"],
-        ["git", "config", "--global", "user.email", "jie.owl2008@gmail.com"],
+        ["git", "config", "--global", "user.name", user_name],
+        ["git", "config", "--global", "user.email", user_email],
         ["git", "config", "--global", "push.default", "simple"],
         ["git", "config", "--global", "color.ui", "true"],
         ["git", "config", "--global", "core.quotepath", "false"],

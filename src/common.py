@@ -1,3 +1,16 @@
+#! /usr/bin/env python
+# -*- coding: utf-8 -*-
+"""
+    Created on 2024-8-31
+
+    Author: lingjie
+    Name:   common
+    Description: Common utility functions for various scripts.
+    Functions:
+        - run_command: Execute system commands safely with real-time output.
+        - print_banner: Print a centered banner around a message.
+"""
+
 import sys
 import subprocess
 import selectors

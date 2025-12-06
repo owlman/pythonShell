@@ -1,89 +1,211 @@
-# PythonShell
+# pythonShell
 
-![Python Version](https://img.shields.io/badge/Python-3.12+-blue) ![License](https://img.shields.io/badge/License-GPLv3-green)  
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+[![Python Version](https://img.shields.io/badge/python-3.12%2B-blue)](https://www.python.org/downloads/)
 
-PythonShell 是一个 Python 自动化脚本集合，包含 Git 配置、SSH 管理、项目创建等日常开发工具。
+一个 Python 自动化脚本集合，提供日常开发中常用的 Git 管理、SSH 配置、项目创建等命令行工具。
 
 ## 功能特性
 
-### Git 操作工具
-
-- `git-configuration`: Git 配置管理
-- `git-create-repo`: 创建 Git 仓库
-- `git-pull-remote`: 从远程仓库拉取更新
-- `git-push-remote`: 推送更新到远程仓库
-
-### 项目管理工具
-
-- `create-book-project`: 创建书籍项目模板
-- `create-translation-project`: 创建翻译项目模板
-
-### SSH 工具
-
-- `ssh-key-configure`: SSH 密钥配置
-- `open-ssh-proxy`: 开启 SSH 代理
+- 🔧 **Git 自动化**：配置、创建仓库、推送/拉取远程分支
+- 🔑 **SSH 管理**：SSH 密钥配置、SSH 代理连接
+- 📚 **项目模板**：快速创建书籍项目和翻译项目
+- 🛡️ **安全可靠**：命令执行超时控制、实时输出、跨平台支持
+- ✅ **测试覆盖**：完整的单元测试保障代码质量
 
 ## 安装
 
-### 从源码安装
+### 使用 uv（推荐）
 
 ```bash
+# 克隆仓库
 git clone https://github.com/owlman/pythonShell.git
 cd pythonShell
+
+# 使用 uv 安装
+uv pip install -e .
+```
+
+### 使用 pip
+
+```bash
 pip install -e .
 ```
 
-### 使用安装脚本
+### 手动安装
 
 ```bash
-python install.py <install_path>
+# 运行安装脚本
+python install.py /path/to/install/directory
 ```
 
-## 使用方法
+## 命令行工具
 
-安装完成后，所有脚本都可以作为命令行工具直接使用：
+安装后，以下命令将在系统中可用：
+
+### Git 工具
+
+#### `git-configuration`
+配置 Git 全局设置（用户名、邮箱、编辑器等）
 
 ```bash
-# Git 相关操作
-git-configuration
-git-create-repository <git_directory> [init_commit_message]
+git-configuration <user_name> <user_email>
+```
+
+**示例：**
+```bash
+git-configuration "John Doe" "john@example.com"
+```
+
+#### `git-create-repo`
+创建新的 Git 仓库并初始化提交
+
+```bash
+git-create-repo <git_directory> [init_commit_message]
+```
+
+**示例：**
+```bash
+git-create-repo ./my-project "Initial commit"
+```
+
+#### `git-pull-remote`
+从所有远程仓库拉取指定分支
+
+```bash
 git-pull-remote <git_directory> [branch]
+```
+
+**示例：**
+```bash
+git-pull-remote ./my-project main
+```
+
+#### `git-push-remote`
+提交更改并推送到所有远程仓库
+
+```bash
 git-push-remote <git_directory> [commit_message]
+```
 
-# 项目创建
-create-book-project <project_directory> [project_name]
-create-translation-project <project_directory> [project_name]
+**示例：**
+```bash
+git-push-remote ./my-project "Update documentation"
+```
 
-# SSH 工具
+### SSH 工具
+
+#### `ssh-key-configure`
+配置 SSH 密钥（如果不存在则创建）
+
+```bash
 ssh-key-configure
+```
+
+**交互式提示：**
+```
+Please enter your email for the SSH key: your-email@example.com
+```
+
+#### `open-ssh-proxy`
+通过 SSH 建立 SOCKS 代理（端口 7070）
+
+```bash
+# 设置环境变量
+export SSH_USER="username"
+export SSH_HOST="example.com"
+export SSH_PASSWORD="your_password"
+
+# 运行命令
 open-ssh-proxy
 ```
 
-## 开发环境
+### 项目创建工具
 
-- Python 3.12+
-- 依赖项：pexpect>=4.8.0
-
-## 测试
+#### `create-book-project`
+从模板创建书籍项目
 
 ```bash
-python -m pytest
+create-book-project <project_directory> [project_name]
 ```
 
-## 联系方式
+**示例：**
+```bash
+create-book-project ./projects my-book
+```
 
-如果您对这个项目感兴趣或有任何建议，可以通过以下方式联系我：
+#### `create-translation-project`
+从模板创建翻译项目
 
-- 邮箱: [jie.owl2008@gmail.com](mailto:jie.owl2008@gmail.com)
-- 微博: [@凌杰_owlman](https://weibo.com/u/1670107570)
-- Twitter/X: [@lingjieowl](https://x.com/lingjieowl)
+```bash
+create-translation-project <project_directory> [project_name]
+```
 
-## 版权声明
+**示例：**
+```bash
+create-translation-project ./projects my-translation
+```
 
-Copyright (C) 2016 Jie Ling.
+## 开发
 
-本程序是自由软件；您可以根据自由软件基金会发布的 GNU 通用公共许可证条款（第 2 版或（根据您的选择）任何更高版本）重新分发和/或修改它。
+### 运行测试
 
-本程序发布的目的是希望它能够有用，但不提供任何担保；甚至不对适销性或特定用途适用性提供默示担保。有关详细信息，请参阅 GNU 通用公共许可证。
+```bash
+# 运行所有测试
+pytest
 
-您应该随本程序收到一份 GNU 通用公共许可证；如果没有，请写信给自由软件基金会，Inc.，51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA。
+# 运行特定测试文件
+pytest test/test_common.py
+
+# 显示详细输出
+pytest -v
+```
+
+### 项目结构
+
+```
+pythonShell/
+├── src/                    # 源代码
+│   ├── common.py          # 公共工具函数
+│   ├── git_*.py           # Git 相关工具
+│   ├── ssh*.py            # SSH 相关工具
+│   ├── create_*.py        # 项目创建工具
+│   └── template/          # 项目模板
+├── test/                   # 单元测试
+├── pyproject.toml         # 项目配置
+├── install.py             # 安装脚本
+└── uninstall.py           # 卸载脚本
+```
+
+### 核心模块：`common.py`
+
+提供两个核心工具函数：
+
+- **`run_command(cmd, shell=False, timeout=300)`**  
+  安全执行系统命令，支持实时输出、超时控制、跨平台兼容
+
+- **`print_banner(message)`**  
+  打印居中的横幅消息，自动适应终端宽度
+
+## 依赖
+
+- Python >= 3.12
+- pexpect >= 4.8.0
+- pytest >= 9.0.1（开发依赖）
+
+## 许可证
+
+本项目采用 [GNU General Public License v3.0](LICENSE) 许可证。
+
+## 贡献
+
+欢迎提交 Issue 和 Pull Request！
+
+## 作者
+
+**Jie Ling** - [jie.owl2008@gmail.com](mailto:jie.owl2008@gmail.com)
+
+## 链接
+
+- [GitHub 仓库](https://github.com/owlman/pythonShell)
+- [问题反馈](https://github.com/owlman/pythonShell/issues)

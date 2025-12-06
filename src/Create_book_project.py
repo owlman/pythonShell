@@ -1,21 +1,21 @@
 #!/usr/bin/env python3
 """
-Created on 2019-06-17
+    Created on 2019-06-17
 
-Author: lingjie
-Name: create_book_project
-Usage:
-    create-book-project <project_directory> [project_name]
+    Author: lingjie
+    Name: create_book_project
+    Usage:
+        create-book-project <project_directory> [project_name]
 
-Description:
-    project_dir: Path where the project should be created.
-    projectname: Name of the new project (default: "book_proj").
-    The project template is stored in the "template/book_proj.zip" file.
+    Description:
+        <project_directory>: Path where the project should be created.
+        [project_name]: Name of the new project (default: "book_proj").
+        The project template is stored in the "template/book_proj.zip" file.
 
-This script will:
-    - Create the project directory if it does not exist.
-    - Extract the template zip file.
-    - Move it into the target project directory.
+    This script will:
+        - Create the project directory if it does not exist.
+        - Extract the template zip file.
+        - Move it into the target project directory.
 """
 
 import os
@@ -29,35 +29,35 @@ def main():
         print("Usage: create-book-project <project_directory> [project_name]")
         exit(1)
 
-    scriptname = os.path.basename(sys.argv[0])
-    common.print_banner(f"Starting {scriptname} .....")
+    script_name = os.path.basename(sys.argv[0])
+    common.print_banner(f"Starting {script_name} .....")
 
-    projectdir = sys.argv[1]
-    projectname = sys.argv[2] if len(sys.argv) == 3 and sys.argv[2] else "book_proj"
+    project_directory = sys.argv[1]
+    project_name = sys.argv[2] if len(sys.argv) == 3 and sys.argv[2] else "book_proj"
 
-    if not os.path.exists(projectdir):
-        os.makedirs(projectdir)
+    if not os.path.exists(project_directory):
+        os.makedirs(project_directory)
 
     # Paths
-    scriptdir = os.path.dirname(os.path.abspath(__file__))
-    template_zip = os.path.join(scriptdir, "template", "book_proj.zip")
-    targetdir = os.path.join(projectdir, projectname)
+    script_directory = os.path.dirname(os.path.abspath(__file__))
+    template_zip = os.path.join(script_directory, "template", "book_proj.zip")
+    target_directory = os.path.join(project_directory, project_name)
 
     # Remove existing target dir if exists
-    if os.path.exists(targetdir):
-        shutil.rmtree(targetdir)
+    if os.path.exists(target_directory):
+        shutil.rmtree(target_directory)
 
-    print(f"Creating your project at {targetdir} ...")
+    print(f"Creating your project at {target_directory} ...")
 
     # Extract zip using Python built-in module
     try:
         with zipfile.ZipFile(template_zip, 'r') as zip_ref:
-            zip_ref.extractall(targetdir)
+            zip_ref.extractall(target_directory)
     except Exception as e:
         print(f"Failed to extract template: {e}")
         exit(1)
 
-    common.print_banner(f"{scriptname} has been executed successfully.")
+    common.print_banner(f"{script_name} has been executed successfully.")
 
 if __name__ == "__main__":
     main()
