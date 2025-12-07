@@ -50,24 +50,22 @@ def main():
             ["git", "status"],
             check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL
         )
+        print(f"Changed to directory: {os.getcwd()}")
+        print(f"Pulling branch: {branch}\n")
+
+        # Get list of remotes
+        remotes = subprocess.check_output(["git", "remote"], text=True)
+
+        # Pull from each remote
+        for remote in remotes.splitlines():
+            print(f"\nPulling from remote: {remote} ...")
+            common.run_command(["git", "pull", remote, branch])
+            print("Pull complete!")
     except subprocess.CalledProcessError:
         print("Error: Not a git repository.")
         exit()
-
-    print(f"Changed to directory: {os.getcwd()}")
-    print(f"Pulling branch: {branch}\n")
-
-    # Get list of remotes
-    remotes = subprocess.check_output(["git", "remote"], text=True)
-
-    # Pull from each remote
-    for remote in remotes.splitlines():
-        print(f"\nPulling from remote: {remote} ...")
-        common.run_command(["git", "pull", remote, branch])
-        print("Pull complete!")
-
+    
     os.chdir(cwd)
-
     common.print_banner(f"{os.path.basename(sys.argv[0])} executed successfully.")
 
 if __name__ == "__main__":

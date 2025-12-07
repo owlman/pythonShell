@@ -5,7 +5,7 @@
     Author: lingjie
     Name: git_configuration
     Usage:
-        git-configuration [user_name] [user_email]       
+        git-configuration <user_name> <user_email>       
 
     Description: 
         user_name: Git user name 
@@ -14,9 +14,7 @@
 
 import platform
 import sys
-
 import common
-
 
 def main():
     # if user_name or user_email is not provided, exit

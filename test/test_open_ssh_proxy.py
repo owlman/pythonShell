@@ -15,19 +15,19 @@ class TestOpenSSHProxy(unittest.TestCase):
     @patch('open_ssh_proxy.pexpect.spawn')
     @patch('open_ssh_proxy.os.sys.argv', ['open_ssh_proxy.py', 'testuser', 'testhost', 'testpass'])
     def test_main_success(self, mock_spawn):
-        # 设置模拟的 SSH 进程
+        # Set up mock SSH process
         mock_child = MagicMock()
         mock_child.expect.return_value = None
         mock_child.interact.return_value = None
         mock_spawn.return_value = mock_child
 
-        # 调用主函数
+        # Call main function
         open_ssh_proxy.main()
 
-        # 验证是否正确调用了 spawn
+        # Verify spawn was called correctly
         mock_spawn.assert_called_once_with("ssh -D 7070 testuser@testhost")
         
-        # 验证是否正确调用了 expect 和 interact
+        # Verify expect and interact were called correctly
         mock_child.expect.assert_called_once_with("password:")
         mock_child.sendline.assert_called_once_with("testpass")
         mock_child.interact.assert_called_once()
@@ -72,7 +72,7 @@ class TestOpenSSHProxy(unittest.TestCase):
     @patch('open_ssh_proxy.os.sys.argv', ['open_ssh_proxy.py', 'testuser', 'testhost', 'testpass'])
     @patch('builtins.print')
     def test_main_pexpect_exception(self, mock_print, mock_spawn):
-        # 设置 spawn 抛出异常
+        # Set spawn to throw exception
         mock_spawn.side_effect = pexpect.ExceptionPexpect("Connection failed")
         
         with self.assertRaises(SystemExit) as cm:
@@ -86,16 +86,16 @@ class TestOpenSSHProxy(unittest.TestCase):
     @patch('open_ssh_proxy.os.sys.argv', ['open_ssh_proxy.py', 'testuser', 'testhost', 'testpass'])
     @patch('builtins.print')
     def test_main_connection_message(self, mock_print, mock_spawn):
-        # 设置模拟的 SSH 进程
+        # Set up mock SSH process
         mock_child = MagicMock()
         mock_child.expect.return_value = None
         mock_child.interact.return_value = None
         mock_spawn.return_value = mock_child
 
-        # 调用主函数
+        # Call main function
         open_ssh_proxy.main()
 
-        # 验证连接消息是否正确打印
+        # Verify connection message is printed correctly
         mock_print.assert_any_call("Connecting to testuser@testhost...")
 
 

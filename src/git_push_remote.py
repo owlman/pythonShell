@@ -51,39 +51,37 @@ def main():
             ["git", "status"],
             check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL
         )
+        # Add and commit changes if a commit message is provided
+        if len(sys.argv) == 3 and sys.argv[2] != "":
+            # Check if there are any changes to commit
+            print("Adding and committing changes...")
+            gitstatus = subprocess.check_output(
+                ["git", "status", "--porcelain"],
+                text=True
+            )
+            if gitstatus == "":
+                print("Error: No changes to commit.")
+            else:
+                common.run_command(["git", "add", "."])
+                common.run_command(["git", "commit", "-m", sys.argv[2]])
+
+        # Push to all remotes
+        remotes = subprocess.check_output(["git", "remote"], text=True)
+        branch = subprocess.check_output(
+            ["git", "branch", "--show-current"], text=True
+        ).strip()
+        for remote in remotes.splitlines():
+            remote = remote.strip()
+            print(f"\nPushing to remote:{remote} ...")
+            common.run_command(["git", "pull", "--rebase", remote, branch])
+            common.run_command(["git", "push", remote, branch])
+            print("Push is complete!")
     except subprocess.CalledProcessError:
         print("Error: Not a git repository.")
         exit()
 
-    # Add and commit changes if a commit message is provided
-    if len(sys.argv) == 3 and sys.argv[2] != "":
-        # Check if there are any changes to commit
-        print("Adding and committing changes...")
-        gitstatus = subprocess.check_output(
-            ["git", "status", "--porcelain"],
-            text=True
-        )
-        if gitstatus == "":
-            print("Error: No changes to commit.")
-        else:
-            common.run_command(["git", "add", "."])
-            common.run_command(["git", "commit", "-m", sys.argv[2]])
-
-    # Push to all remotes
-    remotes = subprocess.check_output(["git", "remote"], text=True)
-    branch = subprocess.check_output(
-        ["git", "branch", "--show-current"], text=True
-    ).strip()
-    for remote in remotes.splitlines():
-        remote = remote.strip()
-        print(f"\nPushing to remote:{remote} ...")
-        common.run_command(["git", "pull", "--rebase", remote, branch])
-        common.run_command(["git", "push", remote, branch])
-        print("Push is complete!")
-
     # Restore the original working directory
     os.chdir(cwd)
-
     # Print the banner
     common.print_banner(f"{scriptname} has been executed successfully.")
 

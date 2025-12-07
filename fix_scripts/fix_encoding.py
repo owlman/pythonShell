@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-修复测试环境编码问题的脚本
+Script to fix encoding issues in test environment
 """
 
 import os
@@ -9,84 +9,84 @@ import sys
 
 
 def fix_locale_environment():
-    """设置正确的locale环境变量"""
-    # 设置可用的locale
+    """Set correct locale environment variables"""
+    # Set available locale
     os.environ['LC_ALL'] = 'C.utf8'
     os.environ['LANG'] = 'C.utf8'
     os.environ['LANGUAGE'] = 'en_US:en'
 
-    print("已设置locale环境变量:")
+    print("Locale environment variables have been set:")
     print(f"LC_ALL={os.environ['LC_ALL']}")
     print(f"LANG={os.environ['LANG']}")
     print(f"LANGUAGE={os.environ['LANGUAGE']}")
 
 def check_python_encoding():
-    """检查Python编码设置"""
-    print("\nPython编码信息:")
-    print(f"默认编码: {sys.getdefaultencoding()}")
-    print(f"文件系统编码: {sys.getfilesystemencoding()}")
-    print(f"stdout编码: {sys.stdout.encoding if hasattr(sys.stdout, 'encoding') else '未知'}")
+    """Check Python encoding settings"""
+    print("\nPython encoding information:")
+    print(f"Default encoding: {sys.getdefaultencoding()}")
+    print(f"File system encoding: {sys.getfilesystemencoding()}")
+    print(f"stdout encoding: {sys.stdout.encoding if hasattr(sys.stdout, 'encoding') else 'unknown'}")
 
 def run_tests_with_fixed_locale():
-    """使用修复的locale运行测试"""
-    print("\n正在运行测试...")
+    """Run tests with fixed locale"""
+    print("\nRunning tests...")
 
-    # 确保使用项目虚拟环境中的Python
+    # Ensure using Python from project virtual environment
     venv_python = os.path.join(os.getcwd(), '.venv', 'bin', 'python')
     if not os.path.exists(venv_python):
-        venv_python = 'python'  # 回退到系统Python
+        venv_python = 'python'  # Fallback to system Python
 
     try:
-        # 设置环境变量并运行测试
+        # Set environment variables and run tests
         env = os.environ.copy()
         env['LC_ALL'] = 'C.utf8'
         env['LANG'] = 'C.utf8'
         env['LANGUAGE'] = 'en_US:en'
 
-        # 运行测试
+        # Run tests
         result = subprocess.run([
             venv_python, 'test/run_tests.py'
         ], env=env, cwd=os.getcwd(), capture_output=True, text=True)
 
-        print("测试输出:")
+        print("Test output:")
         print(result.stdout)
         if result.stderr:
-            print("错误输出:")
+            print("Error output:")
             print(result.stderr)
 
         return result.returncode == 0
 
     except Exception as e:
-        print(f"运行测试时出错: {e}")
+        print(f"Error running tests: {e}")
         return False
 
 def create_test_runner_script():
-    """创建一个修复了编码问题的测试运行脚本"""
+    """Create a test runner script with fixed encoding issues"""
     script_content = '''#!/usr/bin/env python3
         """
-        修复了编码问题的测试运行脚本
+        Test runner script with fixed encoding issues
         """
 
         import os
         import sys
         import subprocess
 
-        # 修复locale环境变量
+        # Fix locale environment variables
         os.environ['LC_ALL'] = 'C.utf8'
         os.environ['LANG'] = 'C.utf8'
         os.environ['LANGUAGE'] = 'en_US:en'
 
-        # 添加src目录到Python路径
+        # Add src directory to Python path
         project_root = os.path.dirname(os.path.abspath(__file__))
         src_path = os.path.join(project_root, 'src')
         sys.path.insert(0, src_path)
 
         def main():
-            """运行测试"""
-            print("使用修复的locale运行测试...")
+            """Run tests"""
+            print("Running tests with fixed locale...")
             print(f"LC_ALL={os.environ.get('LC_ALL')}")
             
-            # 运行原始测试脚本
+            # Run original test script
             test_script = os.path.join(project_root, 'test', 'run_tests.py')
             
             try:
@@ -103,37 +103,38 @@ def create_test_runner_script():
     with open('run_tests_fixed.py', 'w', encoding='utf-8') as f:
         f.write(script_content)
 
-    # 设置执行权限
+    # Set execution permissions
     os.chmod('run_tests_fixed.py', 0o755)
-    print("已创建修复版测试运行脚本: run_tests_fixed.py")
+    print("Created fixed test runner script: run_tests_fixed.py")
 
 def main():
-    """主函数"""
-    print("PythonShell 测试环境编码问题修复工具")
+    """Main function"""
+    print("PythonShell Test Environment Encoding Issue Fix Tool")
     print("=" * 50)
 
-    # 修复locale环境
+    # Fix locale environment
     fix_locale_environment()
 
-    # 检查Python编码
+    # Check Python encoding
     check_python_encoding()
 
-    # 创建修复版测试脚本
+    # Create fixed test script
     create_test_runner_script()
 
-    # 运行测试
+    # Run tests
     success = run_tests_with_fixed_locale()
 
     if success:
-        print("\n✅ 测试环境编码问题已修复，测试运行成功！")
+        print("\n✅ Test environment encoding issues have been fixed, tests run successfully!")
     else:
-        print("\n❌ 测试仍有问题，请检查详细输出。")
+        print("\n❌ Tests still have issues, please check detailed output.")
 
-        # 提供手动运行命令
-        print("\n可以尝试手动运行以下命令:")
+        # Provide manual run commands
+        print("\nYou can try manually running the following commands:")
         print("export LC_ALL=C.utf8")
         print("export LANG=C.utf8")
         print("python test/run_tests.py")
 
 if __name__ == '__main__':
     main()
+

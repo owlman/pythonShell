@@ -1,166 +1,71 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
 [project]
-name = "pythonshell"
+name = "python-shell-utilities"
 version = "0.1.0"
-description = "Python 自动化脚本集合，提供 Git 管理、SSH 配置、项目模板创建等命令行工具"
-readme = "README.md"
-requires-python = ">=3.12"
-dependencies = [
-    "pexpect>=4.8.0",
-]
 authors = [
-    {name = "Jie Ling", email = "jie.owl2008@gmail.com"}
+    { name = "Ling Jie", email = "jie.owl2008@gmail.com" },
 ]
-maintainers = [
-    {name = "Jie Ling", email = "jie.owl2008@gmail.com"}
-]
-license = "GPL-3.0-or-later"
-keywords = [
-    "automation",
-    "cli",
-    "devtools",
-    "git",
-    "ssh",
-    "project-management",
-    "shell-scripts",
-    "productivity"
-]
+description = "A collection of command-line tools for developer automation, including Git operations and project scaffolding."
+readme = "README.md"
+requires-python = ">=3.8"
 classifiers = [
     "Development Status :: 4 - Beta",
-    "Environment :: Console",
-    "Intended Audience :: Developers",
-    "Intended Audience :: System Administrators",
-    "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
-    "Operating System :: OS Independent",
-    "Operating System :: POSIX :: Linux",
-    "Operating System :: MacOS",
-    "Operating System :: Microsoft :: Windows",
     "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.12",
-    "Programming Language :: Python :: 3.13",
-    "Programming Language :: Python :: 3 :: Only",
-    "Topic :: Software Development :: Build Tools",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
     "Topic :: Software Development :: Libraries :: Python Modules",
-    "Topic :: Software Development :: Version Control :: Git",
-    "Topic :: System :: Installation/Setup",
-    "Topic :: System :: Systems Administration",
     "Topic :: Utilities",
+]
+# Runtime dependencies for the core scripts
+dependencies = [
+    "pexpect",
 ]
 
 [project.optional-dependencies]
 dev = [
-    "pytest>=9.0.1",
-    "pytest-cov>=4.1.0",
-    "pytest-mock>=3.12.0",
-    "ruff>=0.1.0",
-]
-test = [
-    "pytest>=9.0.1",
-    "pytest-cov>=4.1.0",
+    "pytest",
+    "ruff",
 ]
 
 [project.urls]
 Homepage = "https://github.com/owlman/pythonShell"
-Repository = "https://github.com/owlman/pythonShell"
-Documentation = "https://github.com/owlman/pythonShell#readme"
-"Bug Tracker" = "https://github.com/owlman/pythonShell/issues"
-Changelog = "https://github.com/owlman/pythonShell/releases"
-"Source Code" = "https://github.com/owlman/pythonShell"
+Issues = "https://github.com/owlman/pythonShell/issues"
 
 [project.scripts]
-git-configuration = "git_configuration:main"
-git-create-repository = "git_create_repository:main"
-git-pull-remote = "git_pull_remote:main"
-git-push-remote = "git_push_remote:main"
-create-book-project = "create_book_project:main"
-create-translation-project = "create_translation_project:main"
-sshkey-configure = "sshkey_configure:main"
-open-ssh-proxy = "open_ssh_proxy:main"
+# Git Tools
+git-config = "git_configuration:main"
+git-create-repo = "git_create_repository:main"
+git-pull = "git_pull_remote:main"
+git-push = "git_push_remote:main"
 
-[build-system]
-requires = ["setuptools>=61.0", "wheel"]
-build-backend = "setuptools.build_meta"
+# SSH Tools
+ssh-proxy = "open_ssh_proxy:main"
+ssh-key-config = "sshkey_configure:main"
 
-[tool.setuptools]
-zip-safe = false
-
-[tool.setuptools.packages.find]
-where = ["src"]
-include = ["*"]
-exclude = ["test*", "__pycache__", "*.pyc"]
-
-[tool.setuptools.package-dir]
-"" = "src"
+# Project Scaffolding Tools
+create-book = "create_book_project:main"
+create-translation = "create_translation_project:main"
 
 [tool.setuptools.package-data]
-"*" = ["template/*.zip"]
-
-[tool.pytest.ini_options]
-minversion = "9.0"
-testpaths = ["test"]
-python_files = ["test_*.py"]
-python_classes = ["Test*"]
-python_functions = ["test_*"]
-addopts = [
-    "-v",
-    "--tb=short",
-    "--strict-markers",
-    "--strict-config",
-    "--cov=src",
-    "--cov-report=term-missing",
-    "--cov-report=html",
-]
-markers = [
-    "slow: marks tests as slow (deselect with '-m \"not slow\"')",
-    "integration: marks tests as integration tests",
-]
-
-[tool.coverage.run]
-source = ["src"]
-branch = true
-omit = [
-    "*/test/*",
-    "*/__pycache__/*",
-    "*/template/*",
-]
-
-[tool.coverage.report]
-precision = 2
-show_missing = true
-skip_covered = false
-exclude_lines = [
-    "pragma: no cover",
-    "def __repr__",
-    "raise AssertionError",
-    "raise NotImplementedError",
-    "if __name__ == .__main__.:",
-    "if TYPE_CHECKING:",
-    "@abstractmethod",
-]
-
-[tool.coverage.html]
-directory = "htmlcov"
+# Include the template zip files in the package
+"src.template" = ["*.zip"]
 
 [tool.ruff]
-line-length = 100
-target-version = "py312"
-src = ["src", "test"]
+# Optional: Ruff linter configuration
+line-length = 88
+select = ["E", "F", "W", "I", "UP"]
+ignore = []
 
-[tool.ruff.lint]
-select = [
-    "E",   # pycodestyle errors
-    "W",   # pycodestyle warnings
-    "F",   # pyflakes
-    "I",   # isort
-    "B",   # flake8-bugbear
-    "C4",  # flake8-comprehensions
-    "UP",  # pyupgrade
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "-ra -q"
+testpaths = [
+    "test",
 ]
-ignore = [
-    "E501",  # line too long (handled by formatter)
-]
-
-[tool.ruff.lint.per-file-ignores]
-"test_*.py" = ["F401", "F811"]
-
-[tool.ruff.lint.isort]
-known-first-party = ["common"]
