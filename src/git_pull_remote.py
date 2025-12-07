@@ -18,9 +18,7 @@ Description:
 import os
 import subprocess
 import sys
-
 import common
-
 
 def main():
     # Ensure correct number of arguments

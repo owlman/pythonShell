@@ -8,9 +8,7 @@ usage:
 import os
 import subprocess
 import sys
-
 import common
-
 
 def main():
     if len(sys.argv) < 2 or len(sys.argv) > 3:
