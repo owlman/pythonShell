@@ -25,7 +25,7 @@ classifiers = [
 ]
 # Runtime dependencies for the core scripts
 dependencies = [
-    "pexpect",
+    "pexpect"
 ]
 
 [project.optional-dependencies]
@@ -42,8 +42,8 @@ Issues = "https://github.com/owlman/pythonShell/issues"
 # Git Tools
 git-config = "git_configuration:main"
 git-create-repo = "git_create_repository:main"
-git-pull = "git_pull_remote:main"
-git-push = "git_push_remote:main"
+git-pull-remote = "git_pull_remote:main"
+git-push-remote = "git_push_remote:main"
 
 # SSH Tools
 ssh-proxy = "open_ssh_proxy:main"
