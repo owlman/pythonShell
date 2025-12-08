@@ -25,7 +25,7 @@ from . import common
 def main():
     if len(sys.argv) < 2 or len(sys.argv) > 3:
         print("Usage: git-push-remote <git_directory> [commit_message]")
-        exit()
+        exit(1)
 
     # Print the banner
     scriptname = os.path.basename(sys.argv[0])

@@ -58,7 +58,7 @@ class TestPrintBanner(TestCase):
         
         # Check that the border has the correct length
         border_calls = [call for call in mock_print.call_args_list if call.args and '#' in call.args[0]]
-        assert len(border_calls) == 2
+        assert len(border_calls) == 3  # Top border, middle line, and bottom border all contain '#'
         assert len(border_calls[0].args[0]) == 80  # Should be exactly 80 characters
 
     @mock.patch('shutil.get_terminal_size')
@@ -71,7 +71,7 @@ class TestPrintBanner(TestCase):
         
         assert mock_print.call_count == 3
         border_calls = [call for call in mock_print.call_args_list if call.args and '#' in call.args[0]]
-        assert len(border_calls) == 2
+        assert len(border_calls) == 3  # Top border, middle line, and bottom border all contain '#'
 
     @mock.patch('shutil.get_terminal_size')
     @mock.patch('builtins.print')
@@ -85,5 +85,5 @@ class TestPrintBanner(TestCase):
         assert mock_print.call_count == 3
         # Check that the border has the correct length
         border_calls = [call for call in mock_print.call_args_list if call.args and '#' in call.args[0]]
-        assert len(border_calls) == 2
+        assert len(border_calls) == 3  # Top border, middle line, and bottom border all contain '#'
         assert len(border_calls[0].args[0]) == 40  # Should be exactly 40 characters

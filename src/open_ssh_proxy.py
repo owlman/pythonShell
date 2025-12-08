@@ -38,6 +38,7 @@ def main():
 
         # interact with the child process and pass the input/output to the user
         child.interact()
+        exit(0)
     except pexpect.ExceptionPexpect as e:
         print(f"An error occurred: {e}")
         exit(1)

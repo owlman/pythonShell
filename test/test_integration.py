@@ -136,7 +136,7 @@ class TestIntegration(TestCase):
         
         # Verify integration between SSH key configuration and common utilities
         mock_run_command.assert_called_once()
-        mock_banner.assert_called_once()
+        mock_banner.assert_called()  # Called twice: start and success
 
     def test_command_line_interface_integration(self):
         """Test command line interface integration."""

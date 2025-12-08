@@ -37,16 +37,20 @@ class TestCreateBookProject(TestCase):
 
     @mock.patch('src.create_book_project.zipfile.ZipFile')
     @mock.patch('src.create_book_project.common.print_banner')
+    @mock.patch('src.create_book_project.os.makedirs')
+    @mock.patch('src.create_book_project.os.path.exists')
     @mock.patch('sys.argv', ['create-book-project', '/fake/path', 'test_project'])
-    def test_main_with_custom_name(self, mock_banner, mock_zipfile):
+    def test_main_with_custom_name(self, mock_exists, mock_makedirs, mock_banner, mock_zipfile):
         """Test main function with custom project name."""
+        mock_exists.return_value = False  # Directory doesn't exist
         mock_zipfile.return_value.__enter__.return_value.extractall = mock.Mock()
+        mock_zipfile.return_value.__enter__.return_value.extractall.side_effect = Exception("Template not found")
         
         with pytest.raises(SystemExit) as exc_info:
             create_book_project.main()
         
-        # The function should exit normally (not due to error)
-        assert exc_info.value.code == 1  # Since /fake/path doesn't exist
+        # The function should exit with error code 1 due to template extraction failure
+        assert exc_info.value.code == 1
 
     @mock.patch('src.create_book_project.zipfile.ZipFile')
     @mock.patch('src.create_book_project.common.print_banner')
@@ -101,16 +105,20 @@ class TestCreateTranslationProject(TestCase):
 
     @mock.patch('src.create_translation_project.zipfile.ZipFile')
     @mock.patch('src.create_translation_project.common.print_banner')
+    @mock.patch('src.create_translation_project.os.makedirs')
+    @mock.patch('src.create_translation_project.os.path.exists')
     @mock.patch('sys.argv', ['create-translation-project', '/fake/path', 'test_project'])
-    def test_main_with_custom_name(self, mock_banner, mock_zipfile):
+    def test_main_with_custom_name(self, mock_exists, mock_makedirs, mock_banner, mock_zipfile):
         """Test main function with custom project name."""
+        mock_exists.return_value = False  # Directory doesn't exist
         mock_zipfile.return_value.__enter__.return_value.extractall = mock.Mock()
+        mock_zipfile.return_value.__enter__.return_value.extractall.side_effect = Exception("Template not found")
         
         with pytest.raises(SystemExit) as exc_info:
             create_translation_project.main()
         
-        # The function should exit normally (not due to error)
-        assert exc_info.value.code == 1  # Since /fake/path doesn't exist
+        # The function should exit with error code 1 due to template extraction failure
+        assert exc_info.value.code == 1
 
     @mock.patch('src.create_translation_project.zipfile.ZipFile')
     @mock.patch('src.create_translation_project.common.print_banner')

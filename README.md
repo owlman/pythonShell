@@ -110,7 +110,7 @@ if __name__ == "__main__":
 
 3. **运行测试:**
    ```bash
-   python -m unittest discover -s test -p "test_*.py"
+   python -m pytest
    ```
 
 4. **运行代码检查:**
@@ -142,14 +142,10 @@ pythonShell/
 │       └── translation_proj.zip
 ├── test/                  # 测试目录
 │   ├── test_common.py
-│   ├── test_git_configuration.py
-│   ├── test_git_create_repository.py
-│   ├── test_git_pull_remote.py
-│   ├── test_git_push_remote.py
-│   ├── test_open_ssh_proxy.py
-│   ├── test_sshkey_configure.py
-│   ├── test_create_book_project.py
-│   └── test_create_translation_project.py
+│   ├── test_git_operations.py
+│   ├── test_integration.py
+│   ├── test_project_scaffolding.py
+│   └── test_ssh_operations.py
 ├── pyproject.toml         # 项目配置
 ├── README.md             # 本文件
 └── LICENSE               # 许可证
@@ -158,3 +154,164 @@ pythonShell/
 ## 许可证
 
 本项目在 GNU 通用公共许可证 v3.0 下授权。详情请参见 [LICENSE](LICENSE) 文件。
+
+---
+
+# English Version
+
+# Python Shell Utilities
+
+[![Python Version](https://img.shields.io/badge/python-3.8%2B-blue.svg)](https://www.python.org/downloads/)
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+[![Tests](https://img.shields.io/badge/tests-passing-brightgreen.svg)](test/)
+
+A powerful collection of command-line tools designed to automate common developer tasks, including Git operations, SSH configuration, and project scaffolding. This project provides a set of standalone scripts that, when packaged, can be easily installed and used directly from the shell.
+
+## Key Features
+
+- **Git Automation**: Configure Git, create repositories, and streamline push/pull operations
+- **SSH Management**: Easily configure SSH keys and manage SSH proxies
+- **Project Scaffolding**: Quickly create new project structures from predefined templates
+- **Robust & Secure**: Scripts designed with security in mind, preventing common issues like shell injection
+- **Well Tested**: Comprehensive unit test suite ensures reliability and stability
+
+## Architecture Design
+
+The project follows a simple yet robust architectural pattern. The core utility module `src/common.py` provides shared, secure functions for executing shell commands with real-time output. Each feature is implemented as a standalone script in the `src/` directory. These scripts serve as independent command-line entry points, parsing their own arguments and leveraging the common module for heavy lifting.
+
+This design promotes modularity, allowing each tool to be independently tested, maintained, and extended.
+
+A typical script structure includes a `main` function that serves as the entry point defined in `pyproject.toml`:
+
+```python
+# Example structure for scripts in src/
+import sys
+import common
+
+def execute_logic(arg1, arg2):
+    """Contains the core logic of the script"""
+    print(f"Executing with arguments: {arg1} and {arg2}")
+    # Use robust command runner
+    common.run_command(f"echo Hello {arg1}")
+
+def main():
+    """
+    Entry point for the command-line tool
+    Parses arguments and calls core logic
+    """
+    if len(sys.argv) < 3:
+        print(f"Usage: {sys.argv[0]} <arg1> <arg2>")
+        sys.exit(1)
+    
+    common.print_banner(f"Running {sys.argv[0]}")
+    execute_logic(sys.argv[1], sys.argv[2])
+
+if __name__ == "__main__":
+    main()
+```
+
+## Installation
+
+This project is designed to be installed using `pip`.
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/owlman/pythonShell.git
+   cd pythonShell
+   ```
+
+2. **Install the package using pip:**
+   This command will install the package and automatically make all command-line tools available in your system path.
+   ```bash
+   pip install .
+   ```
+
+## Available Commands
+
+After installation, the following commands will be available in your shell.
+
+| Command              | Source Script                     | Description                                    |
+| -------------------- | --------------------------------- | ---------------------------------------------- |
+| `git-config`         | `src/git_configuration.py`        | Configure local Git username and email         |
+| `git-create-repo`     | `src/git_create_repository.py`    | Initialize a new Git repository in current dir |
+| `git-pull-remote`    | `src/git_pull_remote.py`          | Pull changes from specified remote branch      |
+| `git-push-remote`    | `src/git_push_remote.py`          | Push current branch to specified remotes       |
+| `ssh-proxy`          | `src/open_ssh_proxy.py`           | Open SSH proxy connection                      |
+| `ssh-key-config`     | `src/sshkey_configure.py`         | Configure SSH keys for Git authentication      |
+| `create-book`        | `src/create_book_project.py`      | Create new book project structure from template|
+| `create-translation` | `src/create_translation_project.py` | Create new translation project structure from template |
+
+## Output
+
+The execution of these scripts will produce the following artifacts or system state changes.
+
+| Name                     | Description                                                |
+| ------------------------ | ---------------------------------------------------------- |
+| `Configured .gitconfig`  | User's local `.gitconfig` file updated with name and email |
+| `Initialized Git repo`   | Creates `.git` directory, converting current folder to repo |
+| `New project directory`  | Creates new directory based on specified project template |
+| `Updated SSH config`     | User's SSH configuration may be updated with new keys or proxy settings |
+
+## Development
+
+To contribute to the project, please set up your environment as follows.
+
+1. **Create and activate virtual environment:**
+   ```bash
+   python3 -m venv .venv
+   source .venv/bin/activate  # Linux/macOS
+   # or
+   .venv\Scripts\activate     # Windows
+   ```
+
+2. **Install development dependencies in editable mode:**
+   ```bash
+   pip install -e .[dev]
+   ```
+
+3. **Run tests:**
+   ```bash
+   python -m pytest
+   ```
+
+4. **Run code linting:**
+   ```bash
+   ruff check .
+   ```
+
+5. **Type checking:**
+   ```bash
+   mypy src/
+   ```
+
+## Project Structure
+
+```
+pythonShell/
+├── src/                    # Source code directory
+│   ├── common.py          # Common utility functions
+│   ├── git_configuration.py
+│   ├── git_create_repository.py
+│   ├── git_pull_remote.py
+│   ├── git_push_remote.py
+│   ├── open_ssh_proxy.py
+│   ├── sshkey_configure.py
+│   ├── create_book_project.py
+│   ├── create_translation_project.py
+│   └── template/          # Project templates
+│       ├── book_proj.zip
+│       └── translation_proj.zip
+├── test/                  # Test directory
+│   ├── test_common.py
+│   ├── test_git_operations.py
+│   ├── test_integration.py
+│   ├── test_project_scaffolding.py
+│   └── test_ssh_operations.py
+├── pyproject.toml         # Project configuration
+├── README.md             # This file
+└── LICENSE               # License
+```
+
+## License
+
+This project is licensed under the GNU General Public License v3.0. See the [LICENSE](LICENSE) file for details.
