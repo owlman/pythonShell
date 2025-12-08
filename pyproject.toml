@@ -47,18 +47,18 @@ Documentation = "https://github.com/owlman/pythonShell/blob/main/README.md"
 
 [project.scripts]
 # Git Tools
-git-config = "python_shell_utilities.git_configuration:main"
-git-create-repo = "python_shell_utilities.git_create_repository:main"
-git-pull-remote = "python_shell_utilities.git_pull_remote:main"
-git-push-remote = "python_shell_utilities.git_push_remote:main"
+git-config = "src.git_configuration:main"
+git-create-repo = "src.git_create_repository:main"
+git-pull-remote = "src.git_pull_remote:main"
+git-push-remote = "src.git_push_remote:main"
 
 # SSH Tools
-ssh-proxy = "python_shell_utilities.open_ssh_proxy:main"
-ssh-key-config = "python_shell_utilities.sshkey_configure:main"
+ssh-proxy = "src.open_ssh_proxy:main"
+ssh-key-config = "src.sshkey_configure:main"
 
 # Project Scaffolding Tools
-create-book = "python_shell_utilities.create_book_project:main"
-create-translation = "python_shell_utilities.create_translation_project:main"
+create-book = "src.create_book_project:main"
+create-translation = "src.create_translation_project:main"
 
 [tool.setuptools]
 package-dir = {"" = "."}
