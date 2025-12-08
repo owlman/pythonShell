@@ -5,9 +5,7 @@ Configure SSH key if not already configured.
 
 import os
 import sys
-from src import os
-import sys
-import common
+from . import common
 
 def check_default_ssh_key():
     ssh_dir = os.path.expanduser('~/.ssh')

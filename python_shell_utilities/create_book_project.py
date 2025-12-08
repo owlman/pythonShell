@@ -22,15 +22,7 @@ import os
 import shutil
 import sys
 import zipfile
-from src import os
-import sys
-
-# Add project root to Python path
-project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-if project_root not in sys.path:
-    sys.path.insert(0, project_root)
-
-import common
+from . import common
 
 def main():
     if len(sys.argv) < 2 or len(sys.argv) > 3:

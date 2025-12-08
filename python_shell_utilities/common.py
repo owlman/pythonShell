@@ -16,17 +16,6 @@ import subprocess
 import sys
 import time
 
-# Initialize locale settings for consistent encoding behavior
-try:
-    from .locale_init import ensure_utf8_environment, get_encoding_info
-except ImportError:
-    # Fallback for direct execution
-    from locale_init import ensure_utf8_environment, get_encoding_info
-
-# Ensure UTF-8 environment when this module is imported
-ensure_utf8_environment()
-
-
 def run_command(cmd, shell=False, timeout=300):
     """
     Execute a system command safely with real-time stdout/stderr output.

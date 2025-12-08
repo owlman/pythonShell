@@ -1,14 +1,20 @@
 #!/usr/bin/env python3
 """
-Create a git repository with optional initial commit
-usage:
-    git-create-repository <git_directory> [init_commit_message]
+    Created on 2015-12-20
+
+    Author: lingjie
+    Program: git-create-repository
+    usage:
+        git-create-repository <git_directory> [init_commit_message]
+    Description: Create a git repository with optional initial commit
+        git_directory : Path to create the Git repository.
+        init_commit_message : Commit message for the initial commit (default: "Initial commit").
 """
 
 import os
 import subprocess
 import sys
-import common
+from . import common
 
 def main():
     if len(sys.argv) < 2 or len(sys.argv) > 3:
