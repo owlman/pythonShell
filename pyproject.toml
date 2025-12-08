@@ -8,7 +8,7 @@ version = "0.1.0"
 authors = [
     { name = "Ling Jie", email = "jie.owl2008@gmail.com" },
 ]
-description = "A collection of powerful command-line utilities designed to automate common developer tasks, such as Git operations, SSH configuration, and project scaffolding."
+description = "一个强大的命令行工具集合，旨在自动化常见的开发者任务，包括 Git 操作、SSH 配置和项目脚手架"
 readme = "README.md"
 requires-python = ">=3.8"
 license = {file = "LICENSE"}
@@ -25,8 +25,9 @@ classifiers = [
     "Topic :: System :: Systems Administration",
     "Topic :: Utilities",
     "Intended Audience :: Developers",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
 ]
-keywords = ["git", "ssh", "automation", "cli", "developer-tools", "scaffolding"]
+keywords = ["git", "ssh", "automation", "cli", "developer-tools", "scaffolding", "shell", "utilities"]
 dependencies = [
     "pexpect>=4.8.0",
 ]
@@ -46,17 +47,17 @@ Issues = "https://github.com/owlman/pythonShell/issues"
 Documentation = "https://github.com/owlman/pythonShell/blob/main/README.md"
 
 [project.scripts]
-# Git Tools
+# Git 工具
 git-config = "src.git_configuration:main"
 git-create-repo = "src.git_create_repository:main"
 git-pull-remote = "src.git_pull_remote:main"
 git-push-remote = "src.git_push_remote:main"
 
-# SSH Tools
+# SSH 工具
 ssh-proxy = "src.open_ssh_proxy:main"
 ssh-key-config = "src.sshkey_configure:main"
 
-# Project Scaffolding Tools
+# 项目脚手架工具
 create-book = "src.create_book_project:main"
 create-translation = "src.create_translation_project:main"
 
@@ -69,7 +70,7 @@ include = ["src*"]
 
 [tool.setuptools.package-data]
 # Include the template zip files in the package
-"template" = ["*.zip"]
+"src.template" = ["*.zip"]
 
 [tool.ruff]
 line-length = 88
@@ -92,13 +93,14 @@ ignore = [
 
 [tool.ruff.per-file-ignores]
 "test/*" = ["T20"]  # allow print in tests
+"src/*" = ["T20"]  # 允许在源代码中使用 print，因为这些是命令行工具
 
 [tool.mypy]
 python_version = "3.8"
 warn_return_any = true
 warn_unused_configs = true
-disallow_untyped_defs = false  # 改为 false，因为项目中有未类型化的代码
-disallow_incomplete_defs = false  # 改为 false，因为项目中有不完整的类型定义
+disallow_untyped_defs = false  # 项目中有未类型化的代码
+disallow_incomplete_defs = false  # 项目中有不完整的类型定义
 check_untyped_defs = true
 disallow_untyped_decorators = true
 no_implicit_optional = true
@@ -117,4 +119,7 @@ testpaths = [
 markers = [
     "slow: marks tests as slow (deselect with '-m \"not slow\"')",
     "integration: marks tests as integration tests",
+    "git: marks tests related to git operations",
+    "ssh: marks tests related to ssh operations",
+    "scaffolding: marks tests related to project scaffolding",
 ]
