@@ -65,7 +65,7 @@ package-dir = {"" = "."}
 
 [tool.setuptools.packages.find]
 where = ["."]
-include = ["python_shell_utilities*"]
+include = ["src*"]
 
 [tool.setuptools.package-data]
 # Include the template zip files in the package
