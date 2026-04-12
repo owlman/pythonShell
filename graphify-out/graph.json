@@ -1,0 +1,3382 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "label": "common.py",
+      "file_type": "code",
+      "source_file": "src\\common.py",
+      "source_location": "L1",
+      "id": "common",
+      "community": 8
+    },
+    {
+      "label": "run_command()",
+      "file_type": "code",
+      "source_file": "src\\common.py",
+      "source_location": "L19",
+      "id": "common_run_command",
+      "community": 8
+    },
+    {
+      "label": "print_banner()",
+      "file_type": "code",
+      "source_file": "src\\common.py",
+      "source_location": "L117",
+      "id": "common_print_banner",
+      "community": 8
+    },
+    {
+      "label": "Execute a system command safely with real-time stdout/stderr output.      Featur",
+      "file_type": "rationale",
+      "source_file": "src\\common.py",
+      "source_location": "L20",
+      "id": "common_rationale_20",
+      "community": 8
+    },
+    {
+      "label": "Print a centered banner around a message, dynamically sized     to fit the termi",
+      "file_type": "rationale",
+      "source_file": "src\\common.py",
+      "source_location": "L118",
+      "id": "common_rationale_118",
+      "community": 8
+    },
+    {
+      "label": "create_book_project.py",
+      "file_type": "code",
+      "source_file": "src\\create_book_project.py",
+      "source_location": "L1",
+      "id": "create_book_project",
+      "community": 13
+    },
+    {
+      "label": "main()",
+      "file_type": "code",
+      "source_file": "src\\create_book_project.py",
+      "source_location": "L28",
+      "id": "create_book_project_main",
+      "community": 13
+    },
+    {
+      "label": "create_translation_project.py",
+      "file_type": "code",
+      "source_file": "src\\create_translation_project.py",
+      "source_location": "L1",
+      "id": "create_translation_project",
+      "community": 14
+    },
+    {
+      "label": "main()",
+      "file_type": "code",
+      "source_file": "src\\create_translation_project.py",
+      "source_location": "L26",
+      "id": "create_translation_project_main",
+      "community": 14
+    },
+    {
+      "label": "git_configuration.py",
+      "file_type": "code",
+      "source_file": "src\\git_configuration.py",
+      "source_location": "L1",
+      "id": "git_configuration",
+      "community": 15
+    },
+    {
+      "label": "main()",
+      "file_type": "code",
+      "source_file": "src\\git_configuration.py",
+      "source_location": "L21",
+      "id": "git_configuration_main",
+      "community": 15
+    },
+    {
+      "label": "git_create_repository.py",
+      "file_type": "code",
+      "source_file": "src\\git_create_repository.py",
+      "source_location": "L1",
+      "id": "git_create_repository",
+      "community": 16
+    },
+    {
+      "label": "main()",
+      "file_type": "code",
+      "source_file": "src\\git_create_repository.py",
+      "source_location": "L20",
+      "id": "git_create_repository_main",
+      "community": 16
+    },
+    {
+      "label": "git_pull_remote.py",
+      "file_type": "code",
+      "source_file": "src\\git_pull_remote.py",
+      "source_location": "L1",
+      "id": "git_pull_remote",
+      "community": 17
+    },
+    {
+      "label": "main()",
+      "file_type": "code",
+      "source_file": "src\\git_pull_remote.py",
+      "source_location": "L24",
+      "id": "git_pull_remote_main",
+      "community": 17
+    },
+    {
+      "label": "git_push_remote.py",
+      "file_type": "code",
+      "source_file": "src\\git_push_remote.py",
+      "source_location": "L1",
+      "id": "git_push_remote",
+      "community": 18
+    },
+    {
+      "label": "main()",
+      "file_type": "code",
+      "source_file": "src\\git_push_remote.py",
+      "source_location": "L25",
+      "id": "git_push_remote_main",
+      "community": 18
+    },
+    {
+      "label": "open_ssh_proxy.py",
+      "file_type": "code",
+      "source_file": "src\\open_ssh_proxy.py",
+      "source_location": "L1",
+      "id": "open_ssh_proxy",
+      "community": 19
+    },
+    {
+      "label": "main()",
+      "file_type": "code",
+      "source_file": "src\\open_ssh_proxy.py",
+      "source_location": "L17",
+      "id": "open_ssh_proxy_main",
+      "community": 19
+    },
+    {
+      "label": "sshkey_configure.py",
+      "file_type": "code",
+      "source_file": "src\\sshkey_configure.py",
+      "source_location": "L1",
+      "id": "sshkey_configure",
+      "community": 12
+    },
+    {
+      "label": "check_default_ssh_key()",
+      "file_type": "code",
+      "source_file": "src\\sshkey_configure.py",
+      "source_location": "L12",
+      "id": "sshkey_configure_check_default_ssh_key",
+      "community": 12
+    },
+    {
+      "label": "main()",
+      "file_type": "code",
+      "source_file": "src\\sshkey_configure.py",
+      "source_location": "L18",
+      "id": "sshkey_configure_main",
+      "community": 12
+    },
+    {
+      "label": "__init__.py",
+      "file_type": "code",
+      "source_file": "test\\__init__.py",
+      "source_location": "L1",
+      "id": "init",
+      "community": 8
+    },
+    {
+      "label": "Test package for python-shell-utilities.",
+      "file_type": "rationale",
+      "source_file": "test\\__init__.py",
+      "source_location": "L1",
+      "id": "init_rationale_1",
+      "community": 8
+    },
+    {
+      "label": "conftest.py",
+      "file_type": "code",
+      "source_file": "test\\conftest.py",
+      "source_location": "L1",
+      "id": "conftest",
+      "community": 4
+    },
+    {
+      "label": "temp_dir()",
+      "file_type": "code",
+      "source_file": "test\\conftest.py",
+      "source_location": "L13",
+      "id": "conftest_temp_dir",
+      "community": 4
+    },
+    {
+      "label": "mock_ssh_dir()",
+      "file_type": "code",
+      "source_file": "test\\conftest.py",
+      "source_location": "L21",
+      "id": "conftest_mock_ssh_dir",
+      "community": 4
+    },
+    {
+      "label": "mock_project_template()",
+      "file_type": "code",
+      "source_file": "test\\conftest.py",
+      "source_location": "L29",
+      "id": "conftest_mock_project_template",
+      "community": 4
+    },
+    {
+      "label": "mock_sys_argv()",
+      "file_type": "code",
+      "source_file": "test\\conftest.py",
+      "source_location": "L42",
+      "id": "conftest_mock_sys_argv",
+      "community": 4
+    },
+    {
+      "label": "mock_terminal_size()",
+      "file_type": "code",
+      "source_file": "test\\conftest.py",
+      "source_location": "L52",
+      "id": "conftest_mock_terminal_size",
+      "community": 4
+    },
+    {
+      "label": "Pytest configuration and fixtures for python-shell-utilities tests.",
+      "file_type": "rationale",
+      "source_file": "test\\conftest.py",
+      "source_location": "L1",
+      "id": "conftest_rationale_1",
+      "community": 4
+    },
+    {
+      "label": "Create a temporary directory for tests.",
+      "file_type": "rationale",
+      "source_file": "test\\conftest.py",
+      "source_location": "L14",
+      "id": "conftest_rationale_14",
+      "community": 4
+    },
+    {
+      "label": "Create a mock SSH directory for tests.",
+      "file_type": "rationale",
+      "source_file": "test\\conftest.py",
+      "source_location": "L22",
+      "id": "conftest_rationale_22",
+      "community": 4
+    },
+    {
+      "label": "Create a mock project template for tests.",
+      "file_type": "rationale",
+      "source_file": "test\\conftest.py",
+      "source_location": "L30",
+      "id": "conftest_rationale_30",
+      "community": 4
+    },
+    {
+      "label": "Mock sys.argv to prevent interference with actual command line arguments.",
+      "file_type": "rationale",
+      "source_file": "test\\conftest.py",
+      "source_location": "L43",
+      "id": "conftest_rationale_43",
+      "community": 4
+    },
+    {
+      "label": "Mock terminal size for consistent testing.",
+      "file_type": "rationale",
+      "source_file": "test\\conftest.py",
+      "source_location": "L53",
+      "id": "conftest_rationale_53",
+      "community": 4
+    },
+    {
+      "label": "test_common.py",
+      "file_type": "code",
+      "source_file": "test\\test_common.py",
+      "source_location": "L1",
+      "id": "test_common",
+      "community": 7
+    },
+    {
+      "label": "TestRunCommand",
+      "file_type": "code",
+      "source_file": "test\\test_common.py",
+      "source_location": "L16",
+      "id": "test_common_testruncommand",
+      "community": 5
+    },
+    {
+      "label": "TestCase",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "id": "testcase",
+      "community": 7
+    },
+    {
+      "label": ".test_run_command_success_string()",
+      "file_type": "code",
+      "source_file": "test\\test_common.py",
+      "source_location": "L19",
+      "id": "test_common_testruncommand_test_run_command_success_string",
+      "community": 5
+    },
+    {
+      "label": ".test_run_command_success_list()",
+      "file_type": "code",
+      "source_file": "test\\test_common.py",
+      "source_location": "L24",
+      "id": "test_common_testruncommand_test_run_command_success_list",
+      "community": 5
+    },
+    {
+      "label": ".test_run_command_failure()",
+      "file_type": "code",
+      "source_file": "test\\test_common.py",
+      "source_location": "L29",
+      "id": "test_common_testruncommand_test_run_command_failure",
+      "community": 5
+    },
+    {
+      "label": ".test_run_command_timeout()",
+      "file_type": "code",
+      "source_file": "test\\test_common.py",
+      "source_location": "L34",
+      "id": "test_common_testruncommand_test_run_command_timeout",
+      "community": 5
+    },
+    {
+      "label": ".test_run_command_with_shell_true()",
+      "file_type": "code",
+      "source_file": "test\\test_common.py",
+      "source_location": "L39",
+      "id": "test_common_testruncommand_test_run_command_with_shell_true",
+      "community": 5
+    },
+    {
+      "label": "TestPrintBanner",
+      "file_type": "code",
+      "source_file": "test\\test_common.py",
+      "source_location": "L45",
+      "id": "test_common_testprintbanner",
+      "community": 7
+    },
+    {
+      "label": "test_print_banner_default_width()",
+      "file_type": "code",
+      "source_file": "test\\test_common.py",
+      "source_location": "L50",
+      "id": "test_common_test_print_banner_default_width",
+      "community": 7
+    },
+    {
+      "label": "test_print_banner_custom_width()",
+      "file_type": "code",
+      "source_file": "test\\test_common.py",
+      "source_location": "L66",
+      "id": "test_common_test_print_banner_custom_width",
+      "community": 7
+    },
+    {
+      "label": "test_print_banner_long_message()",
+      "file_type": "code",
+      "source_file": "test\\test_common.py",
+      "source_location": "L78",
+      "id": "test_common_test_print_banner_long_message",
+      "community": 7
+    },
+    {
+      "label": "Test module for common utility functions.",
+      "file_type": "rationale",
+      "source_file": "test\\test_common.py",
+      "source_location": "L1",
+      "id": "test_common_rationale_1",
+      "community": 7
+    },
+    {
+      "label": "Test cases for the run_command function.",
+      "file_type": "rationale",
+      "source_file": "test\\test_common.py",
+      "source_location": "L17",
+      "id": "test_common_rationale_17",
+      "community": 5
+    },
+    {
+      "label": "Test running a simple successful command as string.",
+      "file_type": "rationale",
+      "source_file": "test\\test_common.py",
+      "source_location": "L20",
+      "id": "test_common_rationale_20",
+      "community": 5
+    },
+    {
+      "label": "Test running a simple successful command as list.",
+      "file_type": "rationale",
+      "source_file": "test\\test_common.py",
+      "source_location": "L25",
+      "id": "test_common_rationale_25",
+      "community": 5
+    },
+    {
+      "label": "Test running a command that fails.",
+      "file_type": "rationale",
+      "source_file": "test\\test_common.py",
+      "source_location": "L30",
+      "id": "test_common_rationale_30",
+      "community": 5
+    },
+    {
+      "label": "Test command timeout functionality.",
+      "file_type": "rationale",
+      "source_file": "test\\test_common.py",
+      "source_location": "L35",
+      "id": "test_common_rationale_35",
+      "community": 5
+    },
+    {
+      "label": "Test running command with shell=True.",
+      "file_type": "rationale",
+      "source_file": "test\\test_common.py",
+      "source_location": "L40",
+      "id": "test_common_rationale_40",
+      "community": 5
+    },
+    {
+      "label": "Test cases for the print_banner function.",
+      "file_type": "rationale",
+      "source_file": "test\\test_common.py",
+      "source_location": "L46",
+      "id": "test_common_rationale_46",
+      "community": 7
+    },
+    {
+      "label": "Test print_banner with default terminal width.",
+      "file_type": "rationale",
+      "source_file": "test\\test_common.py",
+      "source_location": "L51",
+      "id": "test_common_rationale_51",
+      "community": 20
+    },
+    {
+      "label": "Test print_banner with custom terminal width.",
+      "file_type": "rationale",
+      "source_file": "test\\test_common.py",
+      "source_location": "L67",
+      "id": "test_common_rationale_67",
+      "community": 21
+    },
+    {
+      "label": "Test print_banner with a long message.",
+      "file_type": "rationale",
+      "source_file": "test\\test_common.py",
+      "source_location": "L79",
+      "id": "test_common_rationale_79",
+      "community": 22
+    },
+    {
+      "label": "test_git_operations.py",
+      "file_type": "code",
+      "source_file": "test\\test_git_operations.py",
+      "source_location": "L1",
+      "id": "test_git_operations",
+      "community": 2
+    },
+    {
+      "label": "TestGitConfiguration",
+      "file_type": "code",
+      "source_file": "test\\test_git_operations.py",
+      "source_location": "L16",
+      "id": "test_git_operations_testgitconfiguration",
+      "community": 7
+    },
+    {
+      "label": "test_main_linux_commands()",
+      "file_type": "code",
+      "source_file": "test\\test_git_operations.py",
+      "source_location": "L21",
+      "id": "test_git_operations_test_main_linux_commands",
+      "community": 2
+    },
+    {
+      "label": "test_main_windows_commands()",
+      "file_type": "code",
+      "source_file": "test\\test_git_operations.py",
+      "source_location": "L50",
+      "id": "test_git_operations_test_main_windows_commands",
+      "community": 2
+    },
+    {
+      "label": "test_main_invalid_args()",
+      "file_type": "code",
+      "source_file": "test\\test_git_operations.py",
+      "source_location": "L65",
+      "id": "test_git_operations_test_main_invalid_args",
+      "community": 2
+    },
+    {
+      "label": "TestGitCreateRepository",
+      "file_type": "code",
+      "source_file": "test\\test_git_operations.py",
+      "source_location": "L73",
+      "id": "test_git_operations_testgitcreaterepository",
+      "community": 2
+    },
+    {
+      "label": ".setUp()",
+      "file_type": "code",
+      "source_file": "test\\test_git_operations.py",
+      "source_location": "L76",
+      "id": "test_git_operations_testgitcreaterepository_setup",
+      "community": 2
+    },
+    {
+      "label": ".tearDown()",
+      "file_type": "code",
+      "source_file": "test\\test_git_operations.py",
+      "source_location": "L80",
+      "id": "test_git_operations_testgitcreaterepository_teardown",
+      "community": 2
+    },
+    {
+      "label": "test_main_successful_creation()",
+      "file_type": "code",
+      "source_file": "test\\test_git_operations.py",
+      "source_location": "L92",
+      "id": "test_git_operations_test_main_successful_creation",
+      "community": 2
+    },
+    {
+      "label": "test_main_with_custom_name()",
+      "file_type": "code",
+      "source_file": "test\\test_git_operations.py",
+      "source_location": "L113",
+      "id": "test_git_operations_test_main_with_custom_name",
+      "community": 2
+    },
+    {
+      "label": "TestGitPullRemote",
+      "file_type": "code",
+      "source_file": "test\\test_git_operations.py",
+      "source_location": "L137",
+      "id": "test_git_operations_testgitpullremote",
+      "community": 9
+    },
+    {
+      "label": ".setUp()",
+      "file_type": "code",
+      "source_file": "test\\test_git_operations.py",
+      "source_location": "L140",
+      "id": "test_git_operations_testgitpullremote_setup",
+      "community": 9
+    },
+    {
+      "label": ".tearDown()",
+      "file_type": "code",
+      "source_file": "test\\test_git_operations.py",
+      "source_location": "L144",
+      "id": "test_git_operations_testgitpullremote_teardown",
+      "community": 9
+    },
+    {
+      "label": "test_main_successful_pull()",
+      "file_type": "code",
+      "source_file": "test\\test_git_operations.py",
+      "source_location": "L156",
+      "id": "test_git_operations_test_main_successful_pull",
+      "community": 2
+    },
+    {
+      "label": "test_main_different_remote_branch()",
+      "file_type": "code",
+      "source_file": "test\\test_git_operations.py",
+      "source_location": "L186",
+      "id": "test_git_operations_test_main_different_remote_branch",
+      "community": 2
+    },
+    {
+      "label": "TestGitPushRemote",
+      "file_type": "code",
+      "source_file": "test\\test_git_operations.py",
+      "source_location": "L200",
+      "id": "test_git_operations_testgitpushremote",
+      "community": 10
+    },
+    {
+      "label": ".setUp()",
+      "file_type": "code",
+      "source_file": "test\\test_git_operations.py",
+      "source_location": "L203",
+      "id": "test_git_operations_testgitpushremote_setup",
+      "community": 10
+    },
+    {
+      "label": ".tearDown()",
+      "file_type": "code",
+      "source_file": "test\\test_git_operations.py",
+      "source_location": "L207",
+      "id": "test_git_operations_testgitpushremote_teardown",
+      "community": 10
+    },
+    {
+      "label": "test_main_successful_push()",
+      "file_type": "code",
+      "source_file": "test\\test_git_operations.py",
+      "source_location": "L218",
+      "id": "test_git_operations_test_main_successful_push",
+      "community": 2
+    },
+    {
+      "label": "Test module for Git operations functionality.",
+      "file_type": "rationale",
+      "source_file": "test\\test_git_operations.py",
+      "source_location": "L1",
+      "id": "test_git_operations_rationale_1",
+      "community": 2
+    },
+    {
+      "label": "Test cases for git_configuration functionality.",
+      "file_type": "rationale",
+      "source_file": "test\\test_git_operations.py",
+      "source_location": "L17",
+      "id": "test_git_operations_rationale_17",
+      "community": 7
+    },
+    {
+      "label": "Test git configuration commands on Linux.",
+      "file_type": "rationale",
+      "source_file": "test\\test_git_operations.py",
+      "source_location": "L22",
+      "id": "test_git_operations_rationale_22",
+      "community": 23
+    },
+    {
+      "label": "Test git configuration commands on Windows.",
+      "file_type": "rationale",
+      "source_file": "test\\test_git_operations.py",
+      "source_location": "L51",
+      "id": "test_git_operations_rationale_51",
+      "community": 24
+    },
+    {
+      "label": "Test main function with invalid arguments.",
+      "file_type": "rationale",
+      "source_file": "test\\test_git_operations.py",
+      "source_location": "L66",
+      "id": "test_git_operations_rationale_66",
+      "community": 25
+    },
+    {
+      "label": "Test cases for git_create_repository functionality.",
+      "file_type": "rationale",
+      "source_file": "test\\test_git_operations.py",
+      "source_location": "L74",
+      "id": "test_git_operations_rationale_74",
+      "community": 2
+    },
+    {
+      "label": "Set up test fixtures.",
+      "file_type": "rationale",
+      "source_file": "test\\test_git_operations.py",
+      "source_location": "L77",
+      "id": "test_git_operations_rationale_77",
+      "community": 2
+    },
+    {
+      "label": "Clean up test fixtures.",
+      "file_type": "rationale",
+      "source_file": "test\\test_git_operations.py",
+      "source_location": "L81",
+      "id": "test_git_operations_rationale_81",
+      "community": 2
+    },
+    {
+      "label": "Test successful repository creation.",
+      "file_type": "rationale",
+      "source_file": "test\\test_git_operations.py",
+      "source_location": "L94",
+      "id": "test_git_operations_rationale_94",
+      "community": 26
+    },
+    {
+      "label": "Test repository creation with custom name.",
+      "file_type": "rationale",
+      "source_file": "test\\test_git_operations.py",
+      "source_location": "L115",
+      "id": "test_git_operations_rationale_115",
+      "community": 27
+    },
+    {
+      "label": "Test main function with invalid arguments.",
+      "file_type": "rationale",
+      "source_file": "test\\test_git_operations.py",
+      "source_location": "L130",
+      "id": "test_git_operations_rationale_130",
+      "community": 28
+    },
+    {
+      "label": "Test cases for git_pull_remote functionality.",
+      "file_type": "rationale",
+      "source_file": "test\\test_git_operations.py",
+      "source_location": "L138",
+      "id": "test_git_operations_rationale_138",
+      "community": 9
+    },
+    {
+      "label": "Set up test fixtures.",
+      "file_type": "rationale",
+      "source_file": "test\\test_git_operations.py",
+      "source_location": "L141",
+      "id": "test_git_operations_rationale_141",
+      "community": 9
+    },
+    {
+      "label": "Clean up test fixtures.",
+      "file_type": "rationale",
+      "source_file": "test\\test_git_operations.py",
+      "source_location": "L145",
+      "id": "test_git_operations_rationale_145",
+      "community": 9
+    },
+    {
+      "label": "Test successful git pull.",
+      "file_type": "rationale",
+      "source_file": "test\\test_git_operations.py",
+      "source_location": "L158",
+      "id": "test_git_operations_rationale_158",
+      "community": 29
+    },
+    {
+      "label": "Test main function with invalid arguments.",
+      "file_type": "rationale",
+      "source_file": "test\\test_git_operations.py",
+      "source_location": "L173",
+      "id": "test_git_operations_rationale_173",
+      "community": 30
+    },
+    {
+      "label": "Test git pull with different remote and branch.",
+      "file_type": "rationale",
+      "source_file": "test\\test_git_operations.py",
+      "source_location": "L188",
+      "id": "test_git_operations_rationale_188",
+      "community": 31
+    },
+    {
+      "label": "Test cases for git_push_remote functionality.",
+      "file_type": "rationale",
+      "source_file": "test\\test_git_operations.py",
+      "source_location": "L201",
+      "id": "test_git_operations_rationale_201",
+      "community": 10
+    },
+    {
+      "label": "Set up test fixtures.",
+      "file_type": "rationale",
+      "source_file": "test\\test_git_operations.py",
+      "source_location": "L204",
+      "id": "test_git_operations_rationale_204",
+      "community": 10
+    },
+    {
+      "label": "Clean up test fixtures.",
+      "file_type": "rationale",
+      "source_file": "test\\test_git_operations.py",
+      "source_location": "L208",
+      "id": "test_git_operations_rationale_208",
+      "community": 10
+    },
+    {
+      "label": "Test successful git push.",
+      "file_type": "rationale",
+      "source_file": "test\\test_git_operations.py",
+      "source_location": "L220",
+      "id": "test_git_operations_rationale_220",
+      "community": 32
+    },
+    {
+      "label": "Test main function with invalid arguments.",
+      "file_type": "rationale",
+      "source_file": "test\\test_git_operations.py",
+      "source_location": "L237",
+      "id": "test_git_operations_rationale_237",
+      "community": 33
+    },
+    {
+      "label": "Test git push with different remote and branch.",
+      "file_type": "rationale",
+      "source_file": "test\\test_git_operations.py",
+      "source_location": "L251",
+      "id": "test_git_operations_rationale_251",
+      "community": 34
+    },
+    {
+      "label": "test_integration.py",
+      "file_type": "code",
+      "source_file": "test\\test_integration.py",
+      "source_location": "L1",
+      "id": "test_integration",
+      "community": 0
+    },
+    {
+      "label": "TestIntegration",
+      "file_type": "code",
+      "source_file": "test\\test_integration.py",
+      "source_location": "L15",
+      "id": "test_integration_testintegration",
+      "community": 0
+    },
+    {
+      "label": ".setUp()",
+      "file_type": "code",
+      "source_file": "test\\test_integration.py",
+      "source_location": "L18",
+      "id": "test_integration_testintegration_setup",
+      "community": 0
+    },
+    {
+      "label": ".tearDown()",
+      "file_type": "code",
+      "source_file": "test\\test_integration.py",
+      "source_location": "L22",
+      "id": "test_integration_testintegration_teardown",
+      "community": 0
+    },
+    {
+      "label": ".test_package_imports()",
+      "file_type": "code",
+      "source_file": "test\\test_integration.py",
+      "source_location": "L27",
+      "id": "test_integration_testintegration_test_package_imports",
+      "community": 0
+    },
+    {
+      "label": ".test_common_utilities_integration()",
+      "file_type": "code",
+      "source_file": "test\\test_integration.py",
+      "source_location": "L46",
+      "id": "test_integration_testintegration_test_common_utilities_integration",
+      "community": 0
+    },
+    {
+      "label": "test_git_configuration_integration()",
+      "file_type": "code",
+      "source_file": "test\\test_integration.py",
+      "source_location": "L59",
+      "id": "test_integration_test_git_configuration_integration",
+      "community": 0
+    },
+    {
+      "label": ".test_project_scaffolding_integration()",
+      "file_type": "code",
+      "source_file": "test\\test_integration.py",
+      "source_location": "L70",
+      "id": "test_integration_testintegration_test_project_scaffolding_integration",
+      "community": 0
+    },
+    {
+      "label": "test_ssh_integration()",
+      "file_type": "code",
+      "source_file": "test\\test_integration.py",
+      "source_location": "L82",
+      "id": "test_integration_test_ssh_integration",
+      "community": 0
+    },
+    {
+      "label": ".test_error_handling_integration()",
+      "file_type": "code",
+      "source_file": "test\\test_integration.py",
+      "source_location": "L101",
+      "id": "test_integration_testintegration_test_error_handling_integration",
+      "community": 0
+    },
+    {
+      "label": ".test_cross_platform_integration()",
+      "file_type": "code",
+      "source_file": "test\\test_integration.py",
+      "source_location": "L109",
+      "id": "test_integration_testintegration_test_cross_platform_integration",
+      "community": 0
+    },
+    {
+      "label": "test_ssh_key_integration()",
+      "file_type": "code",
+      "source_file": "test\\test_integration.py",
+      "source_location": "L127",
+      "id": "test_integration_test_ssh_key_integration",
+      "community": 0
+    },
+    {
+      "label": ".test_command_line_interface_integration()",
+      "file_type": "code",
+      "source_file": "test\\test_integration.py",
+      "source_location": "L141",
+      "id": "test_integration_testintegration_test_command_line_interface_integration",
+      "community": 0
+    },
+    {
+      "label": "Integration tests for python-shell-utilities.",
+      "file_type": "rationale",
+      "source_file": "test\\test_integration.py",
+      "source_location": "L1",
+      "id": "test_integration_rationale_1",
+      "community": 0
+    },
+    {
+      "label": "Integration tests for the entire package.",
+      "file_type": "rationale",
+      "source_file": "test\\test_integration.py",
+      "source_location": "L16",
+      "id": "test_integration_rationale_16",
+      "community": 0
+    },
+    {
+      "label": "Set up test fixtures.",
+      "file_type": "rationale",
+      "source_file": "test\\test_integration.py",
+      "source_location": "L19",
+      "id": "test_integration_rationale_19",
+      "community": 0
+    },
+    {
+      "label": "Clean up test fixtures.",
+      "file_type": "rationale",
+      "source_file": "test\\test_integration.py",
+      "source_location": "L23",
+      "id": "test_integration_rationale_23",
+      "community": 0
+    },
+    {
+      "label": "Test that all package modules can be imported.",
+      "file_type": "rationale",
+      "source_file": "test\\test_integration.py",
+      "source_location": "L28",
+      "id": "test_integration_rationale_28",
+      "community": 0
+    },
+    {
+      "label": "Test integration of common utilities with other modules.",
+      "file_type": "rationale",
+      "source_file": "test\\test_integration.py",
+      "source_location": "L47",
+      "id": "test_integration_rationale_47",
+      "community": 0
+    },
+    {
+      "label": "Test git configuration integration.",
+      "file_type": "rationale",
+      "source_file": "test\\test_integration.py",
+      "source_location": "L60",
+      "id": "test_integration_rationale_60",
+      "community": 35
+    },
+    {
+      "label": "Test project scaffolding integration with file system.",
+      "file_type": "rationale",
+      "source_file": "test\\test_integration.py",
+      "source_location": "L71",
+      "id": "test_integration_rationale_71",
+      "community": 0
+    },
+    {
+      "label": "Test SSH operations integration.",
+      "file_type": "rationale",
+      "source_file": "test\\test_integration.py",
+      "source_location": "L83",
+      "id": "test_integration_rationale_83",
+      "community": 36
+    },
+    {
+      "label": "Test error handling across different modules.",
+      "file_type": "rationale",
+      "source_file": "test\\test_integration.py",
+      "source_location": "L102",
+      "id": "test_integration_rationale_102",
+      "community": 0
+    },
+    {
+      "label": "Test cross-platform compatibility.",
+      "file_type": "rationale",
+      "source_file": "test\\test_integration.py",
+      "source_location": "L110",
+      "id": "test_integration_rationale_110",
+      "community": 0
+    },
+    {
+      "label": "Test SSH key configuration integration.",
+      "file_type": "rationale",
+      "source_file": "test\\test_integration.py",
+      "source_location": "L129",
+      "id": "test_integration_rationale_129",
+      "community": 37
+    },
+    {
+      "label": "Test command line interface integration.",
+      "file_type": "rationale",
+      "source_file": "test\\test_integration.py",
+      "source_location": "L142",
+      "id": "test_integration_rationale_142",
+      "community": 0
+    },
+    {
+      "label": "test_project_scaffolding.py",
+      "file_type": "code",
+      "source_file": "test\\test_project_scaffolding.py",
+      "source_location": "L1",
+      "id": "test_project_scaffolding",
+      "community": 1
+    },
+    {
+      "label": "TestCreateBookProject",
+      "file_type": "code",
+      "source_file": "test\\test_project_scaffolding.py",
+      "source_location": "L16",
+      "id": "test_project_scaffolding_testcreatebookproject",
+      "community": 1
+    },
+    {
+      "label": ".setUp()",
+      "file_type": "code",
+      "source_file": "test\\test_project_scaffolding.py",
+      "source_location": "L19",
+      "id": "test_project_scaffolding_testcreatebookproject_setup",
+      "community": 1
+    },
+    {
+      "label": ".tearDown()",
+      "file_type": "code",
+      "source_file": "test\\test_project_scaffolding.py",
+      "source_location": "L33",
+      "id": "test_project_scaffolding_testcreatebookproject_teardown",
+      "community": 1
+    },
+    {
+      "label": "test_main_with_custom_name()",
+      "file_type": "code",
+      "source_file": "test\\test_project_scaffolding.py",
+      "source_location": "L43",
+      "id": "test_project_scaffolding_test_main_with_custom_name",
+      "community": 1
+    },
+    {
+      "label": "test_main_invalid_args()",
+      "file_type": "code",
+      "source_file": "test\\test_project_scaffolding.py",
+      "source_location": "L58",
+      "id": "test_project_scaffolding_test_main_invalid_args",
+      "community": 1
+    },
+    {
+      "label": "test_main_successful_extraction()",
+      "file_type": "code",
+      "source_file": "test\\test_project_scaffolding.py",
+      "source_location": "L70",
+      "id": "test_project_scaffolding_test_main_successful_extraction",
+      "community": 1
+    },
+    {
+      "label": "TestCreateTranslationProject",
+      "file_type": "code",
+      "source_file": "test\\test_project_scaffolding.py",
+      "source_location": "L84",
+      "id": "test_project_scaffolding_testcreatetranslationproject",
+      "community": 1
+    },
+    {
+      "label": ".setUp()",
+      "file_type": "code",
+      "source_file": "test\\test_project_scaffolding.py",
+      "source_location": "L87",
+      "id": "test_project_scaffolding_testcreatetranslationproject_setup",
+      "community": 1
+    },
+    {
+      "label": ".tearDown()",
+      "file_type": "code",
+      "source_file": "test\\test_project_scaffolding.py",
+      "source_location": "L101",
+      "id": "test_project_scaffolding_testcreatetranslationproject_teardown",
+      "community": 1
+    },
+    {
+      "label": "test_main_default_project_name()",
+      "file_type": "code",
+      "source_file": "test\\test_project_scaffolding.py",
+      "source_location": "L156",
+      "id": "test_project_scaffolding_test_main_default_project_name",
+      "community": 1
+    },
+    {
+      "label": "Test module for project scaffolding functionality.",
+      "file_type": "rationale",
+      "source_file": "test\\test_project_scaffolding.py",
+      "source_location": "L1",
+      "id": "test_project_scaffolding_rationale_1",
+      "community": 1
+    },
+    {
+      "label": "Test cases for create_book_project functionality.",
+      "file_type": "rationale",
+      "source_file": "test\\test_project_scaffolding.py",
+      "source_location": "L17",
+      "id": "test_project_scaffolding_rationale_17",
+      "community": 1
+    },
+    {
+      "label": "Set up test fixtures.",
+      "file_type": "rationale",
+      "source_file": "test\\test_project_scaffolding.py",
+      "source_location": "L20",
+      "id": "test_project_scaffolding_rationale_20",
+      "community": 1
+    },
+    {
+      "label": "Clean up test fixtures.",
+      "file_type": "rationale",
+      "source_file": "test\\test_project_scaffolding.py",
+      "source_location": "L34",
+      "id": "test_project_scaffolding_rationale_34",
+      "community": 1
+    },
+    {
+      "label": "Test main function with custom project name.",
+      "file_type": "rationale",
+      "source_file": "test\\test_project_scaffolding.py",
+      "source_location": "L44",
+      "id": "test_project_scaffolding_rationale_44",
+      "community": 38
+    },
+    {
+      "label": "Test main function with invalid arguments.",
+      "file_type": "rationale",
+      "source_file": "test\\test_project_scaffolding.py",
+      "source_location": "L59",
+      "id": "test_project_scaffolding_rationale_59",
+      "community": 39
+    },
+    {
+      "label": "Test successful project creation.",
+      "file_type": "rationale",
+      "source_file": "test\\test_project_scaffolding.py",
+      "source_location": "L72",
+      "id": "test_project_scaffolding_rationale_72",
+      "community": 40
+    },
+    {
+      "label": "Test cases for create_translation_project functionality.",
+      "file_type": "rationale",
+      "source_file": "test\\test_project_scaffolding.py",
+      "source_location": "L85",
+      "id": "test_project_scaffolding_rationale_85",
+      "community": 1
+    },
+    {
+      "label": "Set up test fixtures.",
+      "file_type": "rationale",
+      "source_file": "test\\test_project_scaffolding.py",
+      "source_location": "L88",
+      "id": "test_project_scaffolding_rationale_88",
+      "community": 1
+    },
+    {
+      "label": "Clean up test fixtures.",
+      "file_type": "rationale",
+      "source_file": "test\\test_project_scaffolding.py",
+      "source_location": "L102",
+      "id": "test_project_scaffolding_rationale_102",
+      "community": 1
+    },
+    {
+      "label": "Test main function with custom project name.",
+      "file_type": "rationale",
+      "source_file": "test\\test_project_scaffolding.py",
+      "source_location": "L112",
+      "id": "test_project_scaffolding_rationale_112",
+      "community": 41
+    },
+    {
+      "label": "Test main function with invalid arguments.",
+      "file_type": "rationale",
+      "source_file": "test\\test_project_scaffolding.py",
+      "source_location": "L127",
+      "id": "test_project_scaffolding_rationale_127",
+      "community": 42
+    },
+    {
+      "label": "Test successful project creation.",
+      "file_type": "rationale",
+      "source_file": "test\\test_project_scaffolding.py",
+      "source_location": "L140",
+      "id": "test_project_scaffolding_rationale_140",
+      "community": 43
+    },
+    {
+      "label": "Test main function with default project name.",
+      "file_type": "rationale",
+      "source_file": "test\\test_project_scaffolding.py",
+      "source_location": "L158",
+      "id": "test_project_scaffolding_rationale_158",
+      "community": 44
+    },
+    {
+      "label": "test_ssh_operations.py",
+      "file_type": "code",
+      "source_file": "test\\test_ssh_operations.py",
+      "source_location": "L1",
+      "id": "test_ssh_operations",
+      "community": 3
+    },
+    {
+      "label": "TestSSHKeyConfigure",
+      "file_type": "code",
+      "source_file": "test\\test_ssh_operations.py",
+      "source_location": "L15",
+      "id": "test_ssh_operations_testsshkeyconfigure",
+      "community": 6
+    },
+    {
+      "label": ".setUp()",
+      "file_type": "code",
+      "source_file": "test\\test_ssh_operations.py",
+      "source_location": "L18",
+      "id": "test_ssh_operations_testsshkeyconfigure_setup",
+      "community": 6
+    },
+    {
+      "label": ".tearDown()",
+      "file_type": "code",
+      "source_file": "test\\test_ssh_operations.py",
+      "source_location": "L23",
+      "id": "test_ssh_operations_testsshkeyconfigure_teardown",
+      "community": 6
+    },
+    {
+      "label": "test_main_key_already_exists()",
+      "file_type": "code",
+      "source_file": "test\\test_ssh_operations.py",
+      "source_location": "L34",
+      "id": "test_ssh_operations_test_main_key_already_exists",
+      "community": 3
+    },
+    {
+      "label": "test_main_create_new_key()",
+      "file_type": "code",
+      "source_file": "test\\test_ssh_operations.py",
+      "source_location": "L53",
+      "id": "test_ssh_operations_test_main_create_new_key",
+      "community": 3
+    },
+    {
+      "label": "test_main_windows_warning()",
+      "file_type": "code",
+      "source_file": "test\\test_ssh_operations.py",
+      "source_location": "L69",
+      "id": "test_ssh_operations_test_main_windows_warning",
+      "community": 3
+    },
+    {
+      "label": ".test_check_default_ssh_key_exists()",
+      "file_type": "code",
+      "source_file": "test\\test_ssh_operations.py",
+      "source_location": "L79",
+      "id": "test_ssh_operations_testsshkeyconfigure_test_check_default_ssh_key_exists",
+      "community": 6
+    },
+    {
+      "label": ".test_check_default_ssh_key_missing()",
+      "file_type": "code",
+      "source_file": "test\\test_ssh_operations.py",
+      "source_location": "L95",
+      "id": "test_ssh_operations_testsshkeyconfigure_test_check_default_ssh_key_missing",
+      "community": 6
+    },
+    {
+      "label": ".test_check_default_ssh_key_partial()",
+      "file_type": "code",
+      "source_file": "test\\test_ssh_operations.py",
+      "source_location": "L101",
+      "id": "test_ssh_operations_testsshkeyconfigure_test_check_default_ssh_key_partial",
+      "community": 6
+    },
+    {
+      "label": "TestOpenSSHProxy",
+      "file_type": "code",
+      "source_file": "test\\test_ssh_operations.py",
+      "source_location": "L114",
+      "id": "test_ssh_operations_testopensshproxy",
+      "community": 3
+    },
+    {
+      "label": "test_main_successful_connection()",
+      "file_type": "code",
+      "source_file": "test\\test_ssh_operations.py",
+      "source_location": "L118",
+      "id": "test_ssh_operations_test_main_successful_connection",
+      "community": 3
+    },
+    {
+      "label": "test_main_pexpect_error()",
+      "file_type": "code",
+      "source_file": "test\\test_ssh_operations.py",
+      "source_location": "L139",
+      "id": "test_ssh_operations_test_main_pexpect_error",
+      "community": 3
+    },
+    {
+      "label": "test_main_invalid_args()",
+      "file_type": "code",
+      "source_file": "test\\test_ssh_operations.py",
+      "source_location": "L151",
+      "id": "test_ssh_operations_test_main_invalid_args",
+      "community": 3
+    },
+    {
+      "label": "test_main_empty_user()",
+      "file_type": "code",
+      "source_file": "test\\test_ssh_operations.py",
+      "source_location": "L159",
+      "id": "test_ssh_operations_test_main_empty_user",
+      "community": 3
+    },
+    {
+      "label": "test_main_empty_host()",
+      "file_type": "code",
+      "source_file": "test\\test_ssh_operations.py",
+      "source_location": "L167",
+      "id": "test_ssh_operations_test_main_empty_host",
+      "community": 3
+    },
+    {
+      "label": "test_main_empty_password()",
+      "file_type": "code",
+      "source_file": "test\\test_ssh_operations.py",
+      "source_location": "L175",
+      "id": "test_ssh_operations_test_main_empty_password",
+      "community": 3
+    },
+    {
+      "label": "test_main_complex_credentials()",
+      "file_type": "code",
+      "source_file": "test\\test_ssh_operations.py",
+      "source_location": "L183",
+      "id": "test_ssh_operations_test_main_complex_credentials",
+      "community": 3
+    },
+    {
+      "label": "Test module for SSH operations functionality.",
+      "file_type": "rationale",
+      "source_file": "test\\test_ssh_operations.py",
+      "source_location": "L1",
+      "id": "test_ssh_operations_rationale_1",
+      "community": 3
+    },
+    {
+      "label": "Test cases for sshkey_configure functionality.",
+      "file_type": "rationale",
+      "source_file": "test\\test_ssh_operations.py",
+      "source_location": "L16",
+      "id": "test_ssh_operations_rationale_16",
+      "community": 6
+    },
+    {
+      "label": "Set up test fixtures.",
+      "file_type": "rationale",
+      "source_file": "test\\test_ssh_operations.py",
+      "source_location": "L19",
+      "id": "test_ssh_operations_rationale_19",
+      "community": 6
+    },
+    {
+      "label": "Clean up test fixtures.",
+      "file_type": "rationale",
+      "source_file": "test\\test_ssh_operations.py",
+      "source_location": "L24",
+      "id": "test_ssh_operations_rationale_24",
+      "community": 6
+    },
+    {
+      "label": "Test main function when SSH key already exists.",
+      "file_type": "rationale",
+      "source_file": "test\\test_ssh_operations.py",
+      "source_location": "L36",
+      "id": "test_ssh_operations_rationale_36",
+      "community": 45
+    },
+    {
+      "label": "Test main function creating new SSH key.",
+      "file_type": "rationale",
+      "source_file": "test\\test_ssh_operations.py",
+      "source_location": "L55",
+      "id": "test_ssh_operations_rationale_55",
+      "community": 46
+    },
+    {
+      "label": "Test main function shows warning on Windows.",
+      "file_type": "rationale",
+      "source_file": "test\\test_ssh_operations.py",
+      "source_location": "L70",
+      "id": "test_ssh_operations_rationale_70",
+      "community": 47
+    },
+    {
+      "label": "Test check_default_ssh_key when keys exist.",
+      "file_type": "rationale",
+      "source_file": "test\\test_ssh_operations.py",
+      "source_location": "L80",
+      "id": "test_ssh_operations_rationale_80",
+      "community": 6
+    },
+    {
+      "label": "Test check_default_ssh_key when keys don't exist.",
+      "file_type": "rationale",
+      "source_file": "test\\test_ssh_operations.py",
+      "source_location": "L96",
+      "id": "test_ssh_operations_rationale_96",
+      "community": 6
+    },
+    {
+      "label": "Test check_default_ssh_key when only one key file exists.",
+      "file_type": "rationale",
+      "source_file": "test\\test_ssh_operations.py",
+      "source_location": "L102",
+      "id": "test_ssh_operations_rationale_102",
+      "community": 6
+    },
+    {
+      "label": "Test cases for open_ssh_proxy functionality.",
+      "file_type": "rationale",
+      "source_file": "test\\test_ssh_operations.py",
+      "source_location": "L115",
+      "id": "test_ssh_operations_rationale_115",
+      "community": 3
+    },
+    {
+      "label": "Test successful SSH proxy connection.",
+      "file_type": "rationale",
+      "source_file": "test\\test_ssh_operations.py",
+      "source_location": "L119",
+      "id": "test_ssh_operations_rationale_119",
+      "community": 48
+    },
+    {
+      "label": "Test handling of pexpect errors.",
+      "file_type": "rationale",
+      "source_file": "test\\test_ssh_operations.py",
+      "source_location": "L140",
+      "id": "test_ssh_operations_rationale_140",
+      "community": 49
+    },
+    {
+      "label": "Test main function with invalid arguments.",
+      "file_type": "rationale",
+      "source_file": "test\\test_ssh_operations.py",
+      "source_location": "L152",
+      "id": "test_ssh_operations_rationale_152",
+      "community": 50
+    },
+    {
+      "label": "Test main function with empty username.",
+      "file_type": "rationale",
+      "source_file": "test\\test_ssh_operations.py",
+      "source_location": "L160",
+      "id": "test_ssh_operations_rationale_160",
+      "community": 51
+    },
+    {
+      "label": "Test main function with empty host.",
+      "file_type": "rationale",
+      "source_file": "test\\test_ssh_operations.py",
+      "source_location": "L168",
+      "id": "test_ssh_operations_rationale_168",
+      "community": 52
+    },
+    {
+      "label": "Test main function with empty password.",
+      "file_type": "rationale",
+      "source_file": "test\\test_ssh_operations.py",
+      "source_location": "L176",
+      "id": "test_ssh_operations_rationale_176",
+      "community": 53
+    },
+    {
+      "label": "Test main function with complex username and password.",
+      "file_type": "rationale",
+      "source_file": "test\\test_ssh_operations.py",
+      "source_location": "L184",
+      "id": "test_ssh_operations_rationale_184",
+      "community": 54
+    },
+    {
+      "label": "main.c",
+      "file_type": "code",
+      "source_file": "test\\git_demo_repo\\src\\main.c",
+      "source_location": "L1",
+      "id": "main",
+      "community": 11
+    },
+    {
+      "label": "main()",
+      "file_type": "code",
+      "source_file": "test\\git_demo_repo\\src\\main.c",
+      "source_location": "L3",
+      "id": "main_main",
+      "community": 11
+    },
+    {
+      "label": "test.h",
+      "file_type": "code",
+      "source_file": "test\\git_demo_repo\\src\\test.h",
+      "source_location": "L1",
+      "id": "test",
+      "community": 11
+    },
+    {
+      "label": "sayHello()",
+      "file_type": "code",
+      "source_file": "test\\git_demo_repo\\src\\test.c",
+      "source_location": "L3",
+      "id": "test_sayhello",
+      "community": 11
+    }
+  ],
+  "links": [
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\common.py",
+      "source_location": "L19",
+      "weight": 1.0,
+      "_src": "common",
+      "_tgt": "common_run_command",
+      "source": "common",
+      "target": "common_run_command",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\common.py",
+      "source_location": "L117",
+      "weight": 1.0,
+      "_src": "common",
+      "_tgt": "common_print_banner",
+      "source": "common",
+      "target": "common_print_banner",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\__init__.py",
+      "source_location": "L13",
+      "weight": 1.0,
+      "_src": "init",
+      "_tgt": "common",
+      "source": "common",
+      "target": "init",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\common.py",
+      "source_location": "L20",
+      "weight": 1.0,
+      "_src": "common_rationale_20",
+      "_tgt": "common_run_command",
+      "source": "common_run_command",
+      "target": "common_rationale_20",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\common.py",
+      "source_location": "L118",
+      "weight": 1.0,
+      "_src": "common_rationale_118",
+      "_tgt": "common_print_banner",
+      "source": "common_print_banner",
+      "target": "common_rationale_118",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\create_book_project.py",
+      "source_location": "L28",
+      "weight": 1.0,
+      "_src": "create_book_project",
+      "_tgt": "create_book_project_main",
+      "source": "create_book_project",
+      "target": "create_book_project_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\create_translation_project.py",
+      "source_location": "L26",
+      "weight": 1.0,
+      "_src": "create_translation_project",
+      "_tgt": "create_translation_project_main",
+      "source": "create_translation_project",
+      "target": "create_translation_project_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\git_configuration.py",
+      "source_location": "L21",
+      "weight": 1.0,
+      "_src": "git_configuration",
+      "_tgt": "git_configuration_main",
+      "source": "git_configuration",
+      "target": "git_configuration_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\git_create_repository.py",
+      "source_location": "L20",
+      "weight": 1.0,
+      "_src": "git_create_repository",
+      "_tgt": "git_create_repository_main",
+      "source": "git_create_repository",
+      "target": "git_create_repository_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\git_pull_remote.py",
+      "source_location": "L24",
+      "weight": 1.0,
+      "_src": "git_pull_remote",
+      "_tgt": "git_pull_remote_main",
+      "source": "git_pull_remote",
+      "target": "git_pull_remote_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\git_push_remote.py",
+      "source_location": "L25",
+      "weight": 1.0,
+      "_src": "git_push_remote",
+      "_tgt": "git_push_remote_main",
+      "source": "git_push_remote",
+      "target": "git_push_remote_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\open_ssh_proxy.py",
+      "source_location": "L17",
+      "weight": 1.0,
+      "_src": "open_ssh_proxy",
+      "_tgt": "open_ssh_proxy_main",
+      "source": "open_ssh_proxy",
+      "target": "open_ssh_proxy_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\sshkey_configure.py",
+      "source_location": "L12",
+      "weight": 1.0,
+      "_src": "sshkey_configure",
+      "_tgt": "sshkey_configure_check_default_ssh_key",
+      "source": "sshkey_configure",
+      "target": "sshkey_configure_check_default_ssh_key",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\sshkey_configure.py",
+      "source_location": "L18",
+      "weight": 1.0,
+      "_src": "sshkey_configure",
+      "_tgt": "sshkey_configure_main",
+      "source": "sshkey_configure",
+      "target": "sshkey_configure_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\sshkey_configure.py",
+      "source_location": "L27",
+      "weight": 1.0,
+      "_src": "sshkey_configure_main",
+      "_tgt": "sshkey_configure_check_default_ssh_key",
+      "source": "sshkey_configure_check_default_ssh_key",
+      "target": "sshkey_configure_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\__init__.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_src": "init_rationale_1",
+      "_tgt": "init",
+      "source": "init",
+      "target": "init_rationale_1",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\conftest.py",
+      "source_location": "L13",
+      "weight": 1.0,
+      "_src": "conftest",
+      "_tgt": "conftest_temp_dir",
+      "source": "conftest",
+      "target": "conftest_temp_dir",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\conftest.py",
+      "source_location": "L21",
+      "weight": 1.0,
+      "_src": "conftest",
+      "_tgt": "conftest_mock_ssh_dir",
+      "source": "conftest",
+      "target": "conftest_mock_ssh_dir",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\conftest.py",
+      "source_location": "L29",
+      "weight": 1.0,
+      "_src": "conftest",
+      "_tgt": "conftest_mock_project_template",
+      "source": "conftest",
+      "target": "conftest_mock_project_template",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\conftest.py",
+      "source_location": "L42",
+      "weight": 1.0,
+      "_src": "conftest",
+      "_tgt": "conftest_mock_sys_argv",
+      "source": "conftest",
+      "target": "conftest_mock_sys_argv",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\conftest.py",
+      "source_location": "L52",
+      "weight": 1.0,
+      "_src": "conftest",
+      "_tgt": "conftest_mock_terminal_size",
+      "source": "conftest",
+      "target": "conftest_mock_terminal_size",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\conftest.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_src": "conftest_rationale_1",
+      "_tgt": "conftest",
+      "source": "conftest",
+      "target": "conftest_rationale_1",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\conftest.py",
+      "source_location": "L14",
+      "weight": 1.0,
+      "_src": "conftest_rationale_14",
+      "_tgt": "conftest_temp_dir",
+      "source": "conftest_temp_dir",
+      "target": "conftest_rationale_14",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\conftest.py",
+      "source_location": "L22",
+      "weight": 1.0,
+      "_src": "conftest_rationale_22",
+      "_tgt": "conftest_mock_ssh_dir",
+      "source": "conftest_mock_ssh_dir",
+      "target": "conftest_rationale_22",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\conftest.py",
+      "source_location": "L30",
+      "weight": 1.0,
+      "_src": "conftest_rationale_30",
+      "_tgt": "conftest_mock_project_template",
+      "source": "conftest_mock_project_template",
+      "target": "conftest_rationale_30",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\conftest.py",
+      "source_location": "L43",
+      "weight": 1.0,
+      "_src": "conftest_rationale_43",
+      "_tgt": "conftest_mock_sys_argv",
+      "source": "conftest_mock_sys_argv",
+      "target": "conftest_rationale_43",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\conftest.py",
+      "source_location": "L53",
+      "weight": 1.0,
+      "_src": "conftest_rationale_53",
+      "_tgt": "conftest_mock_terminal_size",
+      "source": "conftest_mock_terminal_size",
+      "target": "conftest_rationale_53",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\test_common.py",
+      "source_location": "L16",
+      "weight": 1.0,
+      "_src": "test_common",
+      "_tgt": "test_common_testruncommand",
+      "source": "test_common",
+      "target": "test_common_testruncommand",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\test_common.py",
+      "source_location": "L45",
+      "weight": 1.0,
+      "_src": "test_common",
+      "_tgt": "test_common_testprintbanner",
+      "source": "test_common",
+      "target": "test_common_testprintbanner",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\test_common.py",
+      "source_location": "L50",
+      "weight": 1.0,
+      "_src": "test_common",
+      "_tgt": "test_common_test_print_banner_default_width",
+      "source": "test_common",
+      "target": "test_common_test_print_banner_default_width",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\test_common.py",
+      "source_location": "L66",
+      "weight": 1.0,
+      "_src": "test_common",
+      "_tgt": "test_common_test_print_banner_custom_width",
+      "source": "test_common",
+      "target": "test_common_test_print_banner_custom_width",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\test_common.py",
+      "source_location": "L78",
+      "weight": 1.0,
+      "_src": "test_common",
+      "_tgt": "test_common_test_print_banner_long_message",
+      "source": "test_common",
+      "target": "test_common_test_print_banner_long_message",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\test_common.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_src": "test_common_rationale_1",
+      "_tgt": "test_common",
+      "source": "test_common",
+      "target": "test_common_rationale_1",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\test_common.py",
+      "source_location": "L16",
+      "weight": 1.0,
+      "_src": "test_common_testruncommand",
+      "_tgt": "testcase",
+      "source": "test_common_testruncommand",
+      "target": "testcase",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\test_common.py",
+      "source_location": "L19",
+      "weight": 1.0,
+      "_src": "test_common_testruncommand",
+      "_tgt": "test_common_testruncommand_test_run_command_success_string",
+      "source": "test_common_testruncommand",
+      "target": "test_common_testruncommand_test_run_command_success_string",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\test_common.py",
+      "source_location": "L24",
+      "weight": 1.0,
+      "_src": "test_common_testruncommand",
+      "_tgt": "test_common_testruncommand_test_run_command_success_list",
+      "source": "test_common_testruncommand",
+      "target": "test_common_testruncommand_test_run_command_success_list",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\test_common.py",
+      "source_location": "L29",
+      "weight": 1.0,
+      "_src": "test_common_testruncommand",
+      "_tgt": "test_common_testruncommand_test_run_command_failure",
+      "source": "test_common_testruncommand",
+      "target": "test_common_testruncommand_test_run_command_failure",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\test_common.py",
+      "source_location": "L34",
+      "weight": 1.0,
+      "_src": "test_common_testruncommand",
+      "_tgt": "test_common_testruncommand_test_run_command_timeout",
+      "source": "test_common_testruncommand",
+      "target": "test_common_testruncommand_test_run_command_timeout",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\test_common.py",
+      "source_location": "L39",
+      "weight": 1.0,
+      "_src": "test_common_testruncommand",
+      "_tgt": "test_common_testruncommand_test_run_command_with_shell_true",
+      "source": "test_common_testruncommand",
+      "target": "test_common_testruncommand_test_run_command_with_shell_true",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\test_common.py",
+      "source_location": "L17",
+      "weight": 1.0,
+      "_src": "test_common_rationale_17",
+      "_tgt": "test_common_testruncommand",
+      "source": "test_common_testruncommand",
+      "target": "test_common_rationale_17",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\test_common.py",
+      "source_location": "L45",
+      "weight": 1.0,
+      "_src": "test_common_testprintbanner",
+      "_tgt": "testcase",
+      "source": "testcase",
+      "target": "test_common_testprintbanner",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\test_git_operations.py",
+      "source_location": "L16",
+      "weight": 1.0,
+      "_src": "test_git_operations_testgitconfiguration",
+      "_tgt": "testcase",
+      "source": "testcase",
+      "target": "test_git_operations_testgitconfiguration",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\test_git_operations.py",
+      "source_location": "L73",
+      "weight": 1.0,
+      "_src": "test_git_operations_testgitcreaterepository",
+      "_tgt": "testcase",
+      "source": "testcase",
+      "target": "test_git_operations_testgitcreaterepository",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\test_git_operations.py",
+      "source_location": "L137",
+      "weight": 1.0,
+      "_src": "test_git_operations_testgitpullremote",
+      "_tgt": "testcase",
+      "source": "testcase",
+      "target": "test_git_operations_testgitpullremote",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\test_git_operations.py",
+      "source_location": "L200",
+      "weight": 1.0,
+      "_src": "test_git_operations_testgitpushremote",
+      "_tgt": "testcase",
+      "source": "testcase",
+      "target": "test_git_operations_testgitpushremote",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\test_integration.py",
+      "source_location": "L15",
+      "weight": 1.0,
+      "_src": "test_integration_testintegration",
+      "_tgt": "testcase",
+      "source": "testcase",
+      "target": "test_integration_testintegration",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\test_project_scaffolding.py",
+      "source_location": "L16",
+      "weight": 1.0,
+      "_src": "test_project_scaffolding_testcreatebookproject",
+      "_tgt": "testcase",
+      "source": "testcase",
+      "target": "test_project_scaffolding_testcreatebookproject",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\test_project_scaffolding.py",
+      "source_location": "L84",
+      "weight": 1.0,
+      "_src": "test_project_scaffolding_testcreatetranslationproject",
+      "_tgt": "testcase",
+      "source": "testcase",
+      "target": "test_project_scaffolding_testcreatetranslationproject",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\test_ssh_operations.py",
+      "source_location": "L15",
+      "weight": 1.0,
+      "_src": "test_ssh_operations_testsshkeyconfigure",
+      "_tgt": "testcase",
+      "source": "testcase",
+      "target": "test_ssh_operations_testsshkeyconfigure",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\test_ssh_operations.py",
+      "source_location": "L114",
+      "weight": 1.0,
+      "_src": "test_ssh_operations_testopensshproxy",
+      "_tgt": "testcase",
+      "source": "testcase",
+      "target": "test_ssh_operations_testopensshproxy",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\test_common.py",
+      "source_location": "L20",
+      "weight": 1.0,
+      "_src": "test_common_rationale_20",
+      "_tgt": "test_common_testruncommand_test_run_command_success_string",
+      "source": "test_common_testruncommand_test_run_command_success_string",
+      "target": "test_common_rationale_20",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\test_common.py",
+      "source_location": "L25",
+      "weight": 1.0,
+      "_src": "test_common_rationale_25",
+      "_tgt": "test_common_testruncommand_test_run_command_success_list",
+      "source": "test_common_testruncommand_test_run_command_success_list",
+      "target": "test_common_rationale_25",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\test_common.py",
+      "source_location": "L30",
+      "weight": 1.0,
+      "_src": "test_common_rationale_30",
+      "_tgt": "test_common_testruncommand_test_run_command_failure",
+      "source": "test_common_testruncommand_test_run_command_failure",
+      "target": "test_common_rationale_30",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\test_common.py",
+      "source_location": "L35",
+      "weight": 1.0,
+      "_src": "test_common_rationale_35",
+      "_tgt": "test_common_testruncommand_test_run_command_timeout",
+      "source": "test_common_testruncommand_test_run_command_timeout",
+      "target": "test_common_rationale_35",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\test_common.py",
+      "source_location": "L40",
+      "weight": 1.0,
+      "_src": "test_common_rationale_40",
+      "_tgt": "test_common_testruncommand_test_run_command_with_shell_true",
+      "source": "test_common_testruncommand_test_run_command_with_shell_true",
+      "target": "test_common_rationale_40",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\test_common.py",
+      "source_location": "L46",
+      "weight": 1.0,
+      "_src": "test_common_rationale_46",
+      "_tgt": "test_common_testprintbanner",
+      "source": "test_common_testprintbanner",
+      "target": "test_common_rationale_46",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\test_git_operations.py",
+      "source_location": "L16",
+      "weight": 1.0,
+      "_src": "test_git_operations",
+      "_tgt": "test_git_operations_testgitconfiguration",
+      "source": "test_git_operations",
+      "target": "test_git_operations_testgitconfiguration",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\test_git_operations.py",
+      "source_location": "L21",
+      "weight": 1.0,
+      "_src": "test_git_operations",
+      "_tgt": "test_git_operations_test_main_linux_commands",
+      "source": "test_git_operations",
+      "target": "test_git_operations_test_main_linux_commands",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\test_git_operations.py",
+      "source_location": "L50",
+      "weight": 1.0,
+      "_src": "test_git_operations",
+      "_tgt": "test_git_operations_test_main_windows_commands",
+      "source": "test_git_operations",
+      "target": "test_git_operations_test_main_windows_commands",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\test_git_operations.py",
+      "source_location": "L236",
+      "weight": 1.0,
+      "_src": "test_git_operations",
+      "_tgt": "test_git_operations_test_main_invalid_args",
+      "source": "test_git_operations",
+      "target": "test_git_operations_test_main_invalid_args",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\test_git_operations.py",
+      "source_location": "L73",
+      "weight": 1.0,
+      "_src": "test_git_operations",
+      "_tgt": "test_git_operations_testgitcreaterepository",
+      "source": "test_git_operations",
+      "target": "test_git_operations_testgitcreaterepository",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\test_git_operations.py",
+      "source_location": "L92",
+      "weight": 1.0,
+      "_src": "test_git_operations",
+      "_tgt": "test_git_operations_test_main_successful_creation",
+      "source": "test_git_operations",
+      "target": "test_git_operations_test_main_successful_creation",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\test_git_operations.py",
+      "source_location": "L113",
+      "weight": 1.0,
+      "_src": "test_git_operations",
+      "_tgt": "test_git_operations_test_main_with_custom_name",
+      "source": "test_git_operations",
+      "target": "test_git_operations_test_main_with_custom_name",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\test_git_operations.py",
+      "source_location": "L137",
+      "weight": 1.0,
+      "_src": "test_git_operations",
+      "_tgt": "test_git_operations_testgitpullremote",
+      "source": "test_git_operations",
+      "target": "test_git_operations_testgitpullremote",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\test_git_operations.py",
+      "source_location": "L156",
+      "weight": 1.0,
+      "_src": "test_git_operations",
+      "_tgt": "test_git_operations_test_main_successful_pull",
+      "source": "test_git_operations",
+      "target": "test_git_operations_test_main_successful_pull",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\test_git_operations.py",
+      "source_location": "L249",
+      "weight": 1.0,
+      "_src": "test_git_operations",
+      "_tgt": "test_git_operations_test_main_different_remote_branch",
+      "source": "test_git_operations",
+      "target": "test_git_operations_test_main_different_remote_branch",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\test_git_operations.py",
+      "source_location": "L200",
+      "weight": 1.0,
+      "_src": "test_git_operations",
+      "_tgt": "test_git_operations_testgitpushremote",
+      "source": "test_git_operations",
+      "target": "test_git_operations_testgitpushremote",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\test_git_operations.py",
+      "source_location": "L218",
+      "weight": 1.0,
+      "_src": "test_git_operations",
+      "_tgt": "test_git_operations_test_main_successful_push",
+      "source": "test_git_operations",
+      "target": "test_git_operations_test_main_successful_push",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\test_git_operations.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_src": "test_git_operations_rationale_1",
+      "_tgt": "test_git_operations",
+      "source": "test_git_operations",
+      "target": "test_git_operations_rationale_1",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\test_git_operations.py",
+      "source_location": "L17",
+      "weight": 1.0,
+      "_src": "test_git_operations_rationale_17",
+      "_tgt": "test_git_operations_testgitconfiguration",
+      "source": "test_git_operations_testgitconfiguration",
+      "target": "test_git_operations_rationale_17",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\test_git_operations.py",
+      "source_location": "L76",
+      "weight": 1.0,
+      "_src": "test_git_operations_testgitcreaterepository",
+      "_tgt": "test_git_operations_testgitcreaterepository_setup",
+      "source": "test_git_operations_testgitcreaterepository",
+      "target": "test_git_operations_testgitcreaterepository_setup",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\test_git_operations.py",
+      "source_location": "L80",
+      "weight": 1.0,
+      "_src": "test_git_operations_testgitcreaterepository",
+      "_tgt": "test_git_operations_testgitcreaterepository_teardown",
+      "source": "test_git_operations_testgitcreaterepository",
+      "target": "test_git_operations_testgitcreaterepository_teardown",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\test_git_operations.py",
+      "source_location": "L74",
+      "weight": 1.0,
+      "_src": "test_git_operations_rationale_74",
+      "_tgt": "test_git_operations_testgitcreaterepository",
+      "source": "test_git_operations_testgitcreaterepository",
+      "target": "test_git_operations_rationale_74",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\test_git_operations.py",
+      "source_location": "L77",
+      "weight": 1.0,
+      "_src": "test_git_operations_rationale_77",
+      "_tgt": "test_git_operations_testgitcreaterepository_setup",
+      "source": "test_git_operations_testgitcreaterepository_setup",
+      "target": "test_git_operations_rationale_77",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\test_git_operations.py",
+      "source_location": "L81",
+      "weight": 1.0,
+      "_src": "test_git_operations_rationale_81",
+      "_tgt": "test_git_operations_testgitcreaterepository_teardown",
+      "source": "test_git_operations_testgitcreaterepository_teardown",
+      "target": "test_git_operations_rationale_81",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\test_git_operations.py",
+      "source_location": "L140",
+      "weight": 1.0,
+      "_src": "test_git_operations_testgitpullremote",
+      "_tgt": "test_git_operations_testgitpullremote_setup",
+      "source": "test_git_operations_testgitpullremote",
+      "target": "test_git_operations_testgitpullremote_setup",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\test_git_operations.py",
+      "source_location": "L144",
+      "weight": 1.0,
+      "_src": "test_git_operations_testgitpullremote",
+      "_tgt": "test_git_operations_testgitpullremote_teardown",
+      "source": "test_git_operations_testgitpullremote",
+      "target": "test_git_operations_testgitpullremote_teardown",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\test_git_operations.py",
+      "source_location": "L138",
+      "weight": 1.0,
+      "_src": "test_git_operations_rationale_138",
+      "_tgt": "test_git_operations_testgitpullremote",
+      "source": "test_git_operations_testgitpullremote",
+      "target": "test_git_operations_rationale_138",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\test_git_operations.py",
+      "source_location": "L141",
+      "weight": 1.0,
+      "_src": "test_git_operations_rationale_141",
+      "_tgt": "test_git_operations_testgitpullremote_setup",
+      "source": "test_git_operations_testgitpullremote_setup",
+      "target": "test_git_operations_rationale_141",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\test_git_operations.py",
+      "source_location": "L145",
+      "weight": 1.0,
+      "_src": "test_git_operations_rationale_145",
+      "_tgt": "test_git_operations_testgitpullremote_teardown",
+      "source": "test_git_operations_testgitpullremote_teardown",
+      "target": "test_git_operations_rationale_145",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\test_git_operations.py",
+      "source_location": "L203",
+      "weight": 1.0,
+      "_src": "test_git_operations_testgitpushremote",
+      "_tgt": "test_git_operations_testgitpushremote_setup",
+      "source": "test_git_operations_testgitpushremote",
+      "target": "test_git_operations_testgitpushremote_setup",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\test_git_operations.py",
+      "source_location": "L207",
+      "weight": 1.0,
+      "_src": "test_git_operations_testgitpushremote",
+      "_tgt": "test_git_operations_testgitpushremote_teardown",
+      "source": "test_git_operations_testgitpushremote",
+      "target": "test_git_operations_testgitpushremote_teardown",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\test_git_operations.py",
+      "source_location": "L201",
+      "weight": 1.0,
+      "_src": "test_git_operations_rationale_201",
+      "_tgt": "test_git_operations_testgitpushremote",
+      "source": "test_git_operations_testgitpushremote",
+      "target": "test_git_operations_rationale_201",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\test_git_operations.py",
+      "source_location": "L204",
+      "weight": 1.0,
+      "_src": "test_git_operations_rationale_204",
+      "_tgt": "test_git_operations_testgitpushremote_setup",
+      "source": "test_git_operations_testgitpushremote_setup",
+      "target": "test_git_operations_rationale_204",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\test_git_operations.py",
+      "source_location": "L208",
+      "weight": 1.0,
+      "_src": "test_git_operations_rationale_208",
+      "_tgt": "test_git_operations_testgitpushremote_teardown",
+      "source": "test_git_operations_testgitpushremote_teardown",
+      "target": "test_git_operations_rationale_208",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\test_integration.py",
+      "source_location": "L15",
+      "weight": 1.0,
+      "_src": "test_integration",
+      "_tgt": "test_integration_testintegration",
+      "source": "test_integration",
+      "target": "test_integration_testintegration",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\test_integration.py",
+      "source_location": "L59",
+      "weight": 1.0,
+      "_src": "test_integration",
+      "_tgt": "test_integration_test_git_configuration_integration",
+      "source": "test_integration",
+      "target": "test_integration_test_git_configuration_integration",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\test_integration.py",
+      "source_location": "L82",
+      "weight": 1.0,
+      "_src": "test_integration",
+      "_tgt": "test_integration_test_ssh_integration",
+      "source": "test_integration",
+      "target": "test_integration_test_ssh_integration",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\test_integration.py",
+      "source_location": "L127",
+      "weight": 1.0,
+      "_src": "test_integration",
+      "_tgt": "test_integration_test_ssh_key_integration",
+      "source": "test_integration",
+      "target": "test_integration_test_ssh_key_integration",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\test_integration.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_src": "test_integration_rationale_1",
+      "_tgt": "test_integration",
+      "source": "test_integration",
+      "target": "test_integration_rationale_1",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\test_integration.py",
+      "source_location": "L18",
+      "weight": 1.0,
+      "_src": "test_integration_testintegration",
+      "_tgt": "test_integration_testintegration_setup",
+      "source": "test_integration_testintegration",
+      "target": "test_integration_testintegration_setup",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\test_integration.py",
+      "source_location": "L22",
+      "weight": 1.0,
+      "_src": "test_integration_testintegration",
+      "_tgt": "test_integration_testintegration_teardown",
+      "source": "test_integration_testintegration",
+      "target": "test_integration_testintegration_teardown",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\test_integration.py",
+      "source_location": "L27",
+      "weight": 1.0,
+      "_src": "test_integration_testintegration",
+      "_tgt": "test_integration_testintegration_test_package_imports",
+      "source": "test_integration_testintegration",
+      "target": "test_integration_testintegration_test_package_imports",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\test_integration.py",
+      "source_location": "L46",
+      "weight": 1.0,
+      "_src": "test_integration_testintegration",
+      "_tgt": "test_integration_testintegration_test_common_utilities_integration",
+      "source": "test_integration_testintegration",
+      "target": "test_integration_testintegration_test_common_utilities_integration",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\test_integration.py",
+      "source_location": "L70",
+      "weight": 1.0,
+      "_src": "test_integration_testintegration",
+      "_tgt": "test_integration_testintegration_test_project_scaffolding_integration",
+      "source": "test_integration_testintegration",
+      "target": "test_integration_testintegration_test_project_scaffolding_integration",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\test_integration.py",
+      "source_location": "L101",
+      "weight": 1.0,
+      "_src": "test_integration_testintegration",
+      "_tgt": "test_integration_testintegration_test_error_handling_integration",
+      "source": "test_integration_testintegration",
+      "target": "test_integration_testintegration_test_error_handling_integration",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\test_integration.py",
+      "source_location": "L109",
+      "weight": 1.0,
+      "_src": "test_integration_testintegration",
+      "_tgt": "test_integration_testintegration_test_cross_platform_integration",
+      "source": "test_integration_testintegration",
+      "target": "test_integration_testintegration_test_cross_platform_integration",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\test_integration.py",
+      "source_location": "L141",
+      "weight": 1.0,
+      "_src": "test_integration_testintegration",
+      "_tgt": "test_integration_testintegration_test_command_line_interface_integration",
+      "source": "test_integration_testintegration",
+      "target": "test_integration_testintegration_test_command_line_interface_integration",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\test_integration.py",
+      "source_location": "L16",
+      "weight": 1.0,
+      "_src": "test_integration_rationale_16",
+      "_tgt": "test_integration_testintegration",
+      "source": "test_integration_testintegration",
+      "target": "test_integration_rationale_16",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\test_integration.py",
+      "source_location": "L19",
+      "weight": 1.0,
+      "_src": "test_integration_rationale_19",
+      "_tgt": "test_integration_testintegration_setup",
+      "source": "test_integration_testintegration_setup",
+      "target": "test_integration_rationale_19",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\test_integration.py",
+      "source_location": "L23",
+      "weight": 1.0,
+      "_src": "test_integration_rationale_23",
+      "_tgt": "test_integration_testintegration_teardown",
+      "source": "test_integration_testintegration_teardown",
+      "target": "test_integration_rationale_23",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\test_integration.py",
+      "source_location": "L28",
+      "weight": 1.0,
+      "_src": "test_integration_rationale_28",
+      "_tgt": "test_integration_testintegration_test_package_imports",
+      "source": "test_integration_testintegration_test_package_imports",
+      "target": "test_integration_rationale_28",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\test_integration.py",
+      "source_location": "L47",
+      "weight": 1.0,
+      "_src": "test_integration_rationale_47",
+      "_tgt": "test_integration_testintegration_test_common_utilities_integration",
+      "source": "test_integration_testintegration_test_common_utilities_integration",
+      "target": "test_integration_rationale_47",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\test_integration.py",
+      "source_location": "L71",
+      "weight": 1.0,
+      "_src": "test_integration_rationale_71",
+      "_tgt": "test_integration_testintegration_test_project_scaffolding_integration",
+      "source": "test_integration_testintegration_test_project_scaffolding_integration",
+      "target": "test_integration_rationale_71",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\test_integration.py",
+      "source_location": "L102",
+      "weight": 1.0,
+      "_src": "test_integration_rationale_102",
+      "_tgt": "test_integration_testintegration_test_error_handling_integration",
+      "source": "test_integration_testintegration_test_error_handling_integration",
+      "target": "test_integration_rationale_102",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\test_integration.py",
+      "source_location": "L110",
+      "weight": 1.0,
+      "_src": "test_integration_rationale_110",
+      "_tgt": "test_integration_testintegration_test_cross_platform_integration",
+      "source": "test_integration_testintegration_test_cross_platform_integration",
+      "target": "test_integration_rationale_110",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\test_integration.py",
+      "source_location": "L142",
+      "weight": 1.0,
+      "_src": "test_integration_rationale_142",
+      "_tgt": "test_integration_testintegration_test_command_line_interface_integration",
+      "source": "test_integration_testintegration_test_command_line_interface_integration",
+      "target": "test_integration_rationale_142",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\test_project_scaffolding.py",
+      "source_location": "L16",
+      "weight": 1.0,
+      "_src": "test_project_scaffolding",
+      "_tgt": "test_project_scaffolding_testcreatebookproject",
+      "source": "test_project_scaffolding",
+      "target": "test_project_scaffolding_testcreatebookproject",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\test_project_scaffolding.py",
+      "source_location": "L111",
+      "weight": 1.0,
+      "_src": "test_project_scaffolding",
+      "_tgt": "test_project_scaffolding_test_main_with_custom_name",
+      "source": "test_project_scaffolding",
+      "target": "test_project_scaffolding_test_main_with_custom_name",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\test_project_scaffolding.py",
+      "source_location": "L126",
+      "weight": 1.0,
+      "_src": "test_project_scaffolding",
+      "_tgt": "test_project_scaffolding_test_main_invalid_args",
+      "source": "test_project_scaffolding",
+      "target": "test_project_scaffolding_test_main_invalid_args",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\test_project_scaffolding.py",
+      "source_location": "L138",
+      "weight": 1.0,
+      "_src": "test_project_scaffolding",
+      "_tgt": "test_project_scaffolding_test_main_successful_extraction",
+      "source": "test_project_scaffolding",
+      "target": "test_project_scaffolding_test_main_successful_extraction",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\test_project_scaffolding.py",
+      "source_location": "L84",
+      "weight": 1.0,
+      "_src": "test_project_scaffolding",
+      "_tgt": "test_project_scaffolding_testcreatetranslationproject",
+      "source": "test_project_scaffolding",
+      "target": "test_project_scaffolding_testcreatetranslationproject",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\test_project_scaffolding.py",
+      "source_location": "L156",
+      "weight": 1.0,
+      "_src": "test_project_scaffolding",
+      "_tgt": "test_project_scaffolding_test_main_default_project_name",
+      "source": "test_project_scaffolding",
+      "target": "test_project_scaffolding_test_main_default_project_name",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\test_project_scaffolding.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_src": "test_project_scaffolding_rationale_1",
+      "_tgt": "test_project_scaffolding",
+      "source": "test_project_scaffolding",
+      "target": "test_project_scaffolding_rationale_1",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\test_project_scaffolding.py",
+      "source_location": "L19",
+      "weight": 1.0,
+      "_src": "test_project_scaffolding_testcreatebookproject",
+      "_tgt": "test_project_scaffolding_testcreatebookproject_setup",
+      "source": "test_project_scaffolding_testcreatebookproject",
+      "target": "test_project_scaffolding_testcreatebookproject_setup",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\test_project_scaffolding.py",
+      "source_location": "L33",
+      "weight": 1.0,
+      "_src": "test_project_scaffolding_testcreatebookproject",
+      "_tgt": "test_project_scaffolding_testcreatebookproject_teardown",
+      "source": "test_project_scaffolding_testcreatebookproject",
+      "target": "test_project_scaffolding_testcreatebookproject_teardown",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\test_project_scaffolding.py",
+      "source_location": "L17",
+      "weight": 1.0,
+      "_src": "test_project_scaffolding_rationale_17",
+      "_tgt": "test_project_scaffolding_testcreatebookproject",
+      "source": "test_project_scaffolding_testcreatebookproject",
+      "target": "test_project_scaffolding_rationale_17",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\test_project_scaffolding.py",
+      "source_location": "L20",
+      "weight": 1.0,
+      "_src": "test_project_scaffolding_rationale_20",
+      "_tgt": "test_project_scaffolding_testcreatebookproject_setup",
+      "source": "test_project_scaffolding_testcreatebookproject_setup",
+      "target": "test_project_scaffolding_rationale_20",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\test_project_scaffolding.py",
+      "source_location": "L34",
+      "weight": 1.0,
+      "_src": "test_project_scaffolding_rationale_34",
+      "_tgt": "test_project_scaffolding_testcreatebookproject_teardown",
+      "source": "test_project_scaffolding_testcreatebookproject_teardown",
+      "target": "test_project_scaffolding_rationale_34",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\test_project_scaffolding.py",
+      "source_location": "L87",
+      "weight": 1.0,
+      "_src": "test_project_scaffolding_testcreatetranslationproject",
+      "_tgt": "test_project_scaffolding_testcreatetranslationproject_setup",
+      "source": "test_project_scaffolding_testcreatetranslationproject",
+      "target": "test_project_scaffolding_testcreatetranslationproject_setup",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\test_project_scaffolding.py",
+      "source_location": "L101",
+      "weight": 1.0,
+      "_src": "test_project_scaffolding_testcreatetranslationproject",
+      "_tgt": "test_project_scaffolding_testcreatetranslationproject_teardown",
+      "source": "test_project_scaffolding_testcreatetranslationproject",
+      "target": "test_project_scaffolding_testcreatetranslationproject_teardown",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\test_project_scaffolding.py",
+      "source_location": "L85",
+      "weight": 1.0,
+      "_src": "test_project_scaffolding_rationale_85",
+      "_tgt": "test_project_scaffolding_testcreatetranslationproject",
+      "source": "test_project_scaffolding_testcreatetranslationproject",
+      "target": "test_project_scaffolding_rationale_85",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\test_project_scaffolding.py",
+      "source_location": "L88",
+      "weight": 1.0,
+      "_src": "test_project_scaffolding_rationale_88",
+      "_tgt": "test_project_scaffolding_testcreatetranslationproject_setup",
+      "source": "test_project_scaffolding_testcreatetranslationproject_setup",
+      "target": "test_project_scaffolding_rationale_88",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\test_project_scaffolding.py",
+      "source_location": "L102",
+      "weight": 1.0,
+      "_src": "test_project_scaffolding_rationale_102",
+      "_tgt": "test_project_scaffolding_testcreatetranslationproject_teardown",
+      "source": "test_project_scaffolding_testcreatetranslationproject_teardown",
+      "target": "test_project_scaffolding_rationale_102",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\test_ssh_operations.py",
+      "source_location": "L15",
+      "weight": 1.0,
+      "_src": "test_ssh_operations",
+      "_tgt": "test_ssh_operations_testsshkeyconfigure",
+      "source": "test_ssh_operations",
+      "target": "test_ssh_operations_testsshkeyconfigure",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\test_ssh_operations.py",
+      "source_location": "L34",
+      "weight": 1.0,
+      "_src": "test_ssh_operations",
+      "_tgt": "test_ssh_operations_test_main_key_already_exists",
+      "source": "test_ssh_operations",
+      "target": "test_ssh_operations_test_main_key_already_exists",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\test_ssh_operations.py",
+      "source_location": "L53",
+      "weight": 1.0,
+      "_src": "test_ssh_operations",
+      "_tgt": "test_ssh_operations_test_main_create_new_key",
+      "source": "test_ssh_operations",
+      "target": "test_ssh_operations_test_main_create_new_key",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\test_ssh_operations.py",
+      "source_location": "L69",
+      "weight": 1.0,
+      "_src": "test_ssh_operations",
+      "_tgt": "test_ssh_operations_test_main_windows_warning",
+      "source": "test_ssh_operations",
+      "target": "test_ssh_operations_test_main_windows_warning",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\test_ssh_operations.py",
+      "source_location": "L114",
+      "weight": 1.0,
+      "_src": "test_ssh_operations",
+      "_tgt": "test_ssh_operations_testopensshproxy",
+      "source": "test_ssh_operations",
+      "target": "test_ssh_operations_testopensshproxy",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\test_ssh_operations.py",
+      "source_location": "L118",
+      "weight": 1.0,
+      "_src": "test_ssh_operations",
+      "_tgt": "test_ssh_operations_test_main_successful_connection",
+      "source": "test_ssh_operations",
+      "target": "test_ssh_operations_test_main_successful_connection",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\test_ssh_operations.py",
+      "source_location": "L139",
+      "weight": 1.0,
+      "_src": "test_ssh_operations",
+      "_tgt": "test_ssh_operations_test_main_pexpect_error",
+      "source": "test_ssh_operations",
+      "target": "test_ssh_operations_test_main_pexpect_error",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\test_ssh_operations.py",
+      "source_location": "L151",
+      "weight": 1.0,
+      "_src": "test_ssh_operations",
+      "_tgt": "test_ssh_operations_test_main_invalid_args",
+      "source": "test_ssh_operations",
+      "target": "test_ssh_operations_test_main_invalid_args",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\test_ssh_operations.py",
+      "source_location": "L159",
+      "weight": 1.0,
+      "_src": "test_ssh_operations",
+      "_tgt": "test_ssh_operations_test_main_empty_user",
+      "source": "test_ssh_operations",
+      "target": "test_ssh_operations_test_main_empty_user",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\test_ssh_operations.py",
+      "source_location": "L167",
+      "weight": 1.0,
+      "_src": "test_ssh_operations",
+      "_tgt": "test_ssh_operations_test_main_empty_host",
+      "source": "test_ssh_operations",
+      "target": "test_ssh_operations_test_main_empty_host",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\test_ssh_operations.py",
+      "source_location": "L175",
+      "weight": 1.0,
+      "_src": "test_ssh_operations",
+      "_tgt": "test_ssh_operations_test_main_empty_password",
+      "source": "test_ssh_operations",
+      "target": "test_ssh_operations_test_main_empty_password",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\test_ssh_operations.py",
+      "source_location": "L183",
+      "weight": 1.0,
+      "_src": "test_ssh_operations",
+      "_tgt": "test_ssh_operations_test_main_complex_credentials",
+      "source": "test_ssh_operations",
+      "target": "test_ssh_operations_test_main_complex_credentials",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\test_ssh_operations.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_src": "test_ssh_operations_rationale_1",
+      "_tgt": "test_ssh_operations",
+      "source": "test_ssh_operations",
+      "target": "test_ssh_operations_rationale_1",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\test_ssh_operations.py",
+      "source_location": "L18",
+      "weight": 1.0,
+      "_src": "test_ssh_operations_testsshkeyconfigure",
+      "_tgt": "test_ssh_operations_testsshkeyconfigure_setup",
+      "source": "test_ssh_operations_testsshkeyconfigure",
+      "target": "test_ssh_operations_testsshkeyconfigure_setup",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\test_ssh_operations.py",
+      "source_location": "L23",
+      "weight": 1.0,
+      "_src": "test_ssh_operations_testsshkeyconfigure",
+      "_tgt": "test_ssh_operations_testsshkeyconfigure_teardown",
+      "source": "test_ssh_operations_testsshkeyconfigure",
+      "target": "test_ssh_operations_testsshkeyconfigure_teardown",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\test_ssh_operations.py",
+      "source_location": "L79",
+      "weight": 1.0,
+      "_src": "test_ssh_operations_testsshkeyconfigure",
+      "_tgt": "test_ssh_operations_testsshkeyconfigure_test_check_default_ssh_key_exists",
+      "source": "test_ssh_operations_testsshkeyconfigure",
+      "target": "test_ssh_operations_testsshkeyconfigure_test_check_default_ssh_key_exists",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\test_ssh_operations.py",
+      "source_location": "L95",
+      "weight": 1.0,
+      "_src": "test_ssh_operations_testsshkeyconfigure",
+      "_tgt": "test_ssh_operations_testsshkeyconfigure_test_check_default_ssh_key_missing",
+      "source": "test_ssh_operations_testsshkeyconfigure",
+      "target": "test_ssh_operations_testsshkeyconfigure_test_check_default_ssh_key_missing",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\test_ssh_operations.py",
+      "source_location": "L101",
+      "weight": 1.0,
+      "_src": "test_ssh_operations_testsshkeyconfigure",
+      "_tgt": "test_ssh_operations_testsshkeyconfigure_test_check_default_ssh_key_partial",
+      "source": "test_ssh_operations_testsshkeyconfigure",
+      "target": "test_ssh_operations_testsshkeyconfigure_test_check_default_ssh_key_partial",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\test_ssh_operations.py",
+      "source_location": "L16",
+      "weight": 1.0,
+      "_src": "test_ssh_operations_rationale_16",
+      "_tgt": "test_ssh_operations_testsshkeyconfigure",
+      "source": "test_ssh_operations_testsshkeyconfigure",
+      "target": "test_ssh_operations_rationale_16",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\test_ssh_operations.py",
+      "source_location": "L19",
+      "weight": 1.0,
+      "_src": "test_ssh_operations_rationale_19",
+      "_tgt": "test_ssh_operations_testsshkeyconfigure_setup",
+      "source": "test_ssh_operations_testsshkeyconfigure_setup",
+      "target": "test_ssh_operations_rationale_19",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\test_ssh_operations.py",
+      "source_location": "L24",
+      "weight": 1.0,
+      "_src": "test_ssh_operations_rationale_24",
+      "_tgt": "test_ssh_operations_testsshkeyconfigure_teardown",
+      "source": "test_ssh_operations_testsshkeyconfigure_teardown",
+      "target": "test_ssh_operations_rationale_24",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\test_ssh_operations.py",
+      "source_location": "L80",
+      "weight": 1.0,
+      "_src": "test_ssh_operations_rationale_80",
+      "_tgt": "test_ssh_operations_testsshkeyconfigure_test_check_default_ssh_key_exists",
+      "source": "test_ssh_operations_testsshkeyconfigure_test_check_default_ssh_key_exists",
+      "target": "test_ssh_operations_rationale_80",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\test_ssh_operations.py",
+      "source_location": "L96",
+      "weight": 1.0,
+      "_src": "test_ssh_operations_rationale_96",
+      "_tgt": "test_ssh_operations_testsshkeyconfigure_test_check_default_ssh_key_missing",
+      "source": "test_ssh_operations_testsshkeyconfigure_test_check_default_ssh_key_missing",
+      "target": "test_ssh_operations_rationale_96",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\test_ssh_operations.py",
+      "source_location": "L102",
+      "weight": 1.0,
+      "_src": "test_ssh_operations_rationale_102",
+      "_tgt": "test_ssh_operations_testsshkeyconfigure_test_check_default_ssh_key_partial",
+      "source": "test_ssh_operations_testsshkeyconfigure_test_check_default_ssh_key_partial",
+      "target": "test_ssh_operations_rationale_102",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\test_ssh_operations.py",
+      "source_location": "L115",
+      "weight": 1.0,
+      "_src": "test_ssh_operations_rationale_115",
+      "_tgt": "test_ssh_operations_testopensshproxy",
+      "source": "test_ssh_operations_testopensshproxy",
+      "target": "test_ssh_operations_rationale_115",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\git_demo_repo\\src\\main.c",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_src": "main",
+      "_tgt": "test",
+      "source": "main",
+      "target": "test",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\git_demo_repo\\src\\main.c",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_src": "main",
+      "_tgt": "main_main",
+      "source": "main",
+      "target": "main_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\git_demo_repo\\src\\test.c",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_src": "test",
+      "_tgt": "test",
+      "source": "test",
+      "target": "test",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "test\\git_demo_repo\\src\\test.c",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_src": "test",
+      "_tgt": "test_sayhello",
+      "source": "test",
+      "target": "test_sayhello",
+      "confidence_score": 1.0
+    }
+  ],
+  "hyperedges": []
+}
