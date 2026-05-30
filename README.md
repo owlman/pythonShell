@@ -54,12 +54,14 @@ if __name__ == "__main__":
 该项目设计为使用 `pip` 安装。
 
 1. **克隆仓库:**
+
    ```bash
    git clone https://github.com/owlman/pythonShell.git
    cd pythonShell
    ```
 
 2. **使用 pip 安装包:**
+
    此命令将安装包并自动使所有命令行工具在系统路径中可用。
    ```bash
    pip install .
@@ -96,6 +98,7 @@ if __name__ == "__main__":
 要为项目做贡献，请按以下步骤设置环境。
 
 1. **创建并激活虚拟环境:**
+
    ```bash
    python3 -m venv .venv
    source .venv/bin/activate  # Linux/macOS
@@ -104,21 +107,25 @@ if __name__ == "__main__":
    ```
 
 2. **以可编辑模式安装开发依赖:**
+
    ```bash
    pip install -e .[dev]
    ```
 
 3. **运行测试:**
+
    ```bash
    python -m pytest
    ```
 
 4. **运行代码检查:**
+
    ```bash
    ruff check .
    ```
 
 5. **类型检查:**
+
    ```bash
    mypy src/
    ```

@@ -1,0 +1,189 @@
+- generic [ref=e5]:
+  - textbox "Search nodes..." [ref=e7]
+  - generic [ref=e8]:
+    - heading "Node Info" [level=3] [ref=e9]
+    - generic [ref=e10]: Click a node to inspect it
+  - generic [ref=e11]:
+    - heading "Communities" [level=3] [ref=e12]
+    - generic [ref=e13]:
+      - generic [ref=e14] [cursor=pointer]:
+        - generic [ref=e16]: Integration Tests
+        - generic [ref=e17]: "23"
+      - generic [ref=e18] [cursor=pointer]:
+        - generic [ref=e20]: Project Scaffolding Tests
+        - generic [ref=e21]: "18"
+      - generic [ref=e22] [cursor=pointer]:
+        - generic [ref=e24]: Git Operations Tests
+        - generic [ref=e25]: "16"
+      - generic [ref=e26] [cursor=pointer]:
+        - generic [ref=e28]: SSH Operations Tests
+        - generic [ref=e29]: "14"
+      - generic [ref=e30] [cursor=pointer]:
+        - generic [ref=e32]: Test Fixtures
+        - generic [ref=e33]: "12"
+      - generic [ref=e34] [cursor=pointer]:
+        - generic [ref=e36]: Command Execution Tests
+        - generic [ref=e37]: "12"
+      - generic [ref=e38] [cursor=pointer]:
+        - generic [ref=e40]: SSH Key Configure Tests
+        - generic [ref=e41]: "12"
+      - generic [ref=e42] [cursor=pointer]:
+        - generic [ref=e44]: Mixed Test Classes
+        - generic [ref=e45]: "10"
+      - generic [ref=e46] [cursor=pointer]:
+        - generic [ref=e48]: Common Utilities
+        - generic [ref=e49]: "7"
+      - generic [ref=e50] [cursor=pointer]:
+        - generic [ref=e52]: Git Pull Tests
+        - generic [ref=e53]: "6"
+      - generic [ref=e54] [cursor=pointer]:
+        - generic [ref=e56]: Git Push Tests
+        - generic [ref=e57]: "6"
+      - generic [ref=e58] [cursor=pointer]:
+        - generic [ref=e60]: Main Entry Point
+        - generic [ref=e61]: "4"
+      - generic [ref=e62] [cursor=pointer]:
+        - generic [ref=e64]: Graphify Internals
+        - generic [ref=e65]: "3"
+      - generic [ref=e66] [cursor=pointer]:
+        - generic [ref=e68]: SSH Key Configuration
+        - generic [ref=e69]: "3"
+      - generic [ref=e70] [cursor=pointer]:
+        - generic [ref=e72]: Book Project Creation
+        - generic [ref=e73]: "2"
+      - generic [ref=e74] [cursor=pointer]:
+        - generic [ref=e76]: Translation Project Creation
+        - generic [ref=e77]: "2"
+      - generic [ref=e78] [cursor=pointer]:
+        - generic [ref=e80]: Git Configuration
+        - generic [ref=e81]: "2"
+      - generic [ref=e82] [cursor=pointer]:
+        - generic [ref=e84]: Git Repository Creation
+        - generic [ref=e85]: "2"
+      - generic [ref=e86] [cursor=pointer]:
+        - generic [ref=e88]: Git Pull Remote
+        - generic [ref=e89]: "2"
+      - generic [ref=e90] [cursor=pointer]:
+        - generic [ref=e92]: Git Push Remote
+        - generic [ref=e93]: "2"
+      - generic [ref=e94] [cursor=pointer]:
+        - generic [ref=e96]: Open SSH Proxy
+        - generic [ref=e97]: "2"
+      - generic [ref=e98] [cursor=pointer]:
+        - generic [ref=e100]: Community 21
+        - generic [ref=e101]: "1"
+      - generic [ref=e102] [cursor=pointer]:
+        - generic [ref=e104]: Community 22
+        - generic [ref=e105]: "1"
+      - generic [ref=e106] [cursor=pointer]:
+        - generic [ref=e108]: Community 23
+        - generic [ref=e109]: "1"
+      - generic [ref=e110] [cursor=pointer]:
+        - generic [ref=e112]: Community 24
+        - generic [ref=e113]: "1"
+      - generic [ref=e114] [cursor=pointer]:
+        - generic [ref=e116]: Community 25
+        - generic [ref=e117]: "1"
+      - generic [ref=e118] [cursor=pointer]:
+        - generic [ref=e120]: Community 26
+        - generic [ref=e121]: "1"
+      - generic [ref=e122] [cursor=pointer]:
+        - generic [ref=e124]: Community 27
+        - generic [ref=e125]: "1"
+      - generic [ref=e126] [cursor=pointer]:
+        - generic [ref=e128]: Community 28
+        - generic [ref=e129]: "1"
+      - generic [ref=e130] [cursor=pointer]:
+        - generic [ref=e132]: Community 29
+        - generic [ref=e133]: "1"
+      - generic [ref=e134] [cursor=pointer]:
+        - generic [ref=e136]: Community 30
+        - generic [ref=e137]: "1"
+      - generic [ref=e138] [cursor=pointer]:
+        - generic [ref=e140]: Community 31
+        - generic [ref=e141]: "1"
+      - generic [ref=e142] [cursor=pointer]:
+        - generic [ref=e144]: Community 32
+        - generic [ref=e145]: "1"
+      - generic [ref=e146] [cursor=pointer]:
+        - generic [ref=e148]: Community 33
+        - generic [ref=e149]: "1"
+      - generic [ref=e150] [cursor=pointer]:
+        - generic [ref=e152]: Community 34
+        - generic [ref=e153]: "1"
+      - generic [ref=e154] [cursor=pointer]:
+        - generic [ref=e156]: Community 35
+        - generic [ref=e157]: "1"
+      - generic [ref=e158] [cursor=pointer]:
+        - generic [ref=e160]: Community 36
+        - generic [ref=e161]: "1"
+      - generic [ref=e162] [cursor=pointer]:
+        - generic [ref=e164]: Community 37
+        - generic [ref=e165]: "1"
+      - generic [ref=e166] [cursor=pointer]:
+        - generic [ref=e168]: Community 38
+        - generic [ref=e169]: "1"
+      - generic [ref=e170] [cursor=pointer]:
+        - generic [ref=e172]: Community 39
+        - generic [ref=e173]: "1"
+      - generic [ref=e174] [cursor=pointer]:
+        - generic [ref=e176]: Community 40
+        - generic [ref=e177]: "1"
+      - generic [ref=e178] [cursor=pointer]:
+        - generic [ref=e180]: Community 41
+        - generic [ref=e181]: "1"
+      - generic [ref=e182] [cursor=pointer]:
+        - generic [ref=e184]: Community 42
+        - generic [ref=e185]: "1"
+      - generic [ref=e186] [cursor=pointer]:
+        - generic [ref=e188]: Community 43
+        - generic [ref=e189]: "1"
+      - generic [ref=e190] [cursor=pointer]:
+        - generic [ref=e192]: Community 44
+        - generic [ref=e193]: "1"
+      - generic [ref=e194] [cursor=pointer]:
+        - generic [ref=e196]: Community 45
+        - generic [ref=e197]: "1"
+      - generic [ref=e198] [cursor=pointer]:
+        - generic [ref=e200]: Community 46
+        - generic [ref=e201]: "1"
+      - generic [ref=e202] [cursor=pointer]:
+        - generic [ref=e204]: Community 47
+        - generic [ref=e205]: "1"
+      - generic [ref=e206] [cursor=pointer]:
+        - generic [ref=e208]: Community 48
+        - generic [ref=e209]: "1"
+      - generic [ref=e210] [cursor=pointer]:
+        - generic [ref=e212]: Community 49
+        - generic [ref=e213]: "1"
+      - generic [ref=e214] [cursor=pointer]:
+        - generic [ref=e216]: Community 50
+        - generic [ref=e217]: "1"
+      - generic [ref=e218] [cursor=pointer]:
+        - generic [ref=e220]: Community 51
+        - generic [ref=e221]: "1"
+      - generic [ref=e222] [cursor=pointer]:
+        - generic [ref=e224]: Community 52
+        - generic [ref=e225]: "1"
+      - generic [ref=e226] [cursor=pointer]:
+        - generic [ref=e228]: Community 53
+        - generic [ref=e229]: "1"
+      - generic [ref=e230] [cursor=pointer]:
+        - generic [ref=e232]: Community 54
+        - generic [ref=e233]: "1"
+      - generic [ref=e234] [cursor=pointer]:
+        - generic [ref=e236]: Community 55
+        - generic [ref=e237]: "1"
+      - generic [ref=e238] [cursor=pointer]:
+        - generic [ref=e240]: Community 56
+        - generic [ref=e241]: "1"
+      - generic [ref=e242] [cursor=pointer]:
+        - generic [ref=e244]: Community 57
+        - generic [ref=e245]: "1"
+      - generic [ref=e246] [cursor=pointer]:
+        - generic [ref=e248]: Community 58
+        - generic [ref=e249]: "1"
+      - generic [ref=e250] [cursor=pointer]:
+        - generic [ref=e252]: Community 59
+        - generic [ref=e253]: "1"
+  - generic [ref=e254]: 199 nodes · 156 edges · 60 communities

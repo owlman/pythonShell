@@ -4,6 +4,62 @@
   "graph": {},
   "nodes": [
     {
+      "label": "_graphify_ast.py",
+      "file_type": "code",
+      "source_file": "_graphify_ast.py",
+      "source_location": "L1",
+      "id": "graphify_ast",
+      "community": 21
+    },
+    {
+      "label": "_graphify_build.py",
+      "file_type": "code",
+      "source_file": "_graphify_build.py",
+      "source_location": "L1",
+      "id": "graphify_build",
+      "community": 12
+    },
+    {
+      "label": "_graphify_cache_check.py",
+      "file_type": "code",
+      "source_file": "_graphify_cache_check.py",
+      "source_location": "L1",
+      "id": "graphify_cache_check",
+      "community": 22
+    },
+    {
+      "label": "_graphify_final.py",
+      "file_type": "code",
+      "source_file": "_graphify_final.py",
+      "source_location": "L1",
+      "id": "graphify_final",
+      "community": 23
+    },
+    {
+      "label": "_graphify_html.py",
+      "file_type": "code",
+      "source_file": "_graphify_html.py",
+      "source_location": "L1",
+      "id": "graphify_html",
+      "community": 12
+    },
+    {
+      "label": "_graphify_labels.py",
+      "file_type": "code",
+      "source_file": "_graphify_labels.py",
+      "source_location": "L1",
+      "id": "graphify_labels",
+      "community": 12
+    },
+    {
+      "label": "_graphify_merge.py",
+      "file_type": "code",
+      "source_file": "_graphify_merge.py",
+      "source_location": "L1",
+      "id": "graphify_merge",
+      "community": 24
+    },
+    {
       "label": "common.py",
       "file_type": "code",
       "source_file": "src\\common.py",
@@ -49,7 +105,7 @@
       "source_file": "src\\create_book_project.py",
       "source_location": "L1",
       "id": "create_book_project",
-      "community": 13
+      "community": 14
     },
     {
       "label": "main()",
@@ -57,7 +113,7 @@
       "source_file": "src\\create_book_project.py",
       "source_location": "L28",
       "id": "create_book_project_main",
-      "community": 13
+      "community": 14
     },
     {
       "label": "create_translation_project.py",
@@ -65,7 +121,7 @@
       "source_file": "src\\create_translation_project.py",
       "source_location": "L1",
       "id": "create_translation_project",
-      "community": 14
+      "community": 15
     },
     {
       "label": "main()",
@@ -73,7 +129,7 @@
       "source_file": "src\\create_translation_project.py",
       "source_location": "L26",
       "id": "create_translation_project_main",
-      "community": 14
+      "community": 15
     },
     {
       "label": "git_configuration.py",
@@ -81,7 +137,7 @@
       "source_file": "src\\git_configuration.py",
       "source_location": "L1",
       "id": "git_configuration",
-      "community": 15
+      "community": 16
     },
     {
       "label": "main()",
@@ -89,7 +145,7 @@
       "source_file": "src\\git_configuration.py",
       "source_location": "L21",
       "id": "git_configuration_main",
-      "community": 15
+      "community": 16
     },
     {
       "label": "git_create_repository.py",
@@ -97,7 +153,7 @@
       "source_file": "src\\git_create_repository.py",
       "source_location": "L1",
       "id": "git_create_repository",
-      "community": 16
+      "community": 17
     },
     {
       "label": "main()",
@@ -105,7 +161,7 @@
       "source_file": "src\\git_create_repository.py",
       "source_location": "L20",
       "id": "git_create_repository_main",
-      "community": 16
+      "community": 17
     },
     {
       "label": "git_pull_remote.py",
@@ -113,7 +169,7 @@
       "source_file": "src\\git_pull_remote.py",
       "source_location": "L1",
       "id": "git_pull_remote",
-      "community": 17
+      "community": 18
     },
     {
       "label": "main()",
@@ -121,7 +177,7 @@
       "source_file": "src\\git_pull_remote.py",
       "source_location": "L24",
       "id": "git_pull_remote_main",
-      "community": 17
+      "community": 18
     },
     {
       "label": "git_push_remote.py",
@@ -129,7 +185,7 @@
       "source_file": "src\\git_push_remote.py",
       "source_location": "L1",
       "id": "git_push_remote",
-      "community": 18
+      "community": 19
     },
     {
       "label": "main()",
@@ -137,7 +193,7 @@
       "source_file": "src\\git_push_remote.py",
       "source_location": "L25",
       "id": "git_push_remote_main",
-      "community": 18
+      "community": 19
     },
     {
       "label": "open_ssh_proxy.py",
@@ -145,7 +201,7 @@
       "source_file": "src\\open_ssh_proxy.py",
       "source_location": "L1",
       "id": "open_ssh_proxy",
-      "community": 19
+      "community": 20
     },
     {
       "label": "main()",
@@ -153,7 +209,7 @@
       "source_file": "src\\open_ssh_proxy.py",
       "source_location": "L17",
       "id": "open_ssh_proxy_main",
-      "community": 19
+      "community": 20
     },
     {
       "label": "sshkey_configure.py",
@@ -161,7 +217,7 @@
       "source_file": "src\\sshkey_configure.py",
       "source_location": "L1",
       "id": "sshkey_configure",
-      "community": 12
+      "community": 13
     },
     {
       "label": "check_default_ssh_key()",
@@ -169,7 +225,7 @@
       "source_file": "src\\sshkey_configure.py",
       "source_location": "L12",
       "id": "sshkey_configure_check_default_ssh_key",
-      "community": 12
+      "community": 13
     },
     {
       "label": "main()",
@@ -177,7 +233,7 @@
       "source_file": "src\\sshkey_configure.py",
       "source_location": "L18",
       "id": "sshkey_configure_main",
-      "community": 12
+      "community": 13
     },
     {
       "label": "__init__.py",
@@ -457,7 +513,7 @@
       "source_file": "test\\test_common.py",
       "source_location": "L51",
       "id": "test_common_rationale_51",
-      "community": 20
+      "community": 25
     },
     {
       "label": "Test print_banner with custom terminal width.",
@@ -465,7 +521,7 @@
       "source_file": "test\\test_common.py",
       "source_location": "L67",
       "id": "test_common_rationale_67",
-      "community": 21
+      "community": 26
     },
     {
       "label": "Test print_banner with a long message.",
@@ -473,7 +529,7 @@
       "source_file": "test\\test_common.py",
       "source_location": "L79",
       "id": "test_common_rationale_79",
-      "community": 22
+      "community": 27
     },
     {
       "label": "test_git_operations.py",
@@ -649,7 +705,7 @@
       "source_file": "test\\test_git_operations.py",
       "source_location": "L22",
       "id": "test_git_operations_rationale_22",
-      "community": 23
+      "community": 28
     },
     {
       "label": "Test git configuration commands on Windows.",
@@ -657,7 +713,7 @@
       "source_file": "test\\test_git_operations.py",
       "source_location": "L51",
       "id": "test_git_operations_rationale_51",
-      "community": 24
+      "community": 29
     },
     {
       "label": "Test main function with invalid arguments.",
@@ -665,7 +721,7 @@
       "source_file": "test\\test_git_operations.py",
       "source_location": "L66",
       "id": "test_git_operations_rationale_66",
-      "community": 25
+      "community": 30
     },
     {
       "label": "Test cases for git_create_repository functionality.",
@@ -697,7 +753,7 @@
       "source_file": "test\\test_git_operations.py",
       "source_location": "L94",
       "id": "test_git_operations_rationale_94",
-      "community": 26
+      "community": 31
     },
     {
       "label": "Test repository creation with custom name.",
@@ -705,7 +761,7 @@
       "source_file": "test\\test_git_operations.py",
       "source_location": "L115",
       "id": "test_git_operations_rationale_115",
-      "community": 27
+      "community": 32
     },
     {
       "label": "Test main function with invalid arguments.",
@@ -713,7 +769,7 @@
       "source_file": "test\\test_git_operations.py",
       "source_location": "L130",
       "id": "test_git_operations_rationale_130",
-      "community": 28
+      "community": 33
     },
     {
       "label": "Test cases for git_pull_remote functionality.",
@@ -745,7 +801,7 @@
       "source_file": "test\\test_git_operations.py",
       "source_location": "L158",
       "id": "test_git_operations_rationale_158",
-      "community": 29
+      "community": 34
     },
     {
       "label": "Test main function with invalid arguments.",
@@ -753,7 +809,7 @@
       "source_file": "test\\test_git_operations.py",
       "source_location": "L173",
       "id": "test_git_operations_rationale_173",
-      "community": 30
+      "community": 35
     },
     {
       "label": "Test git pull with different remote and branch.",
@@ -761,7 +817,7 @@
       "source_file": "test\\test_git_operations.py",
       "source_location": "L188",
       "id": "test_git_operations_rationale_188",
-      "community": 31
+      "community": 36
     },
     {
       "label": "Test cases for git_push_remote functionality.",
@@ -793,7 +849,7 @@
       "source_file": "test\\test_git_operations.py",
       "source_location": "L220",
       "id": "test_git_operations_rationale_220",
-      "community": 32
+      "community": 37
     },
     {
       "label": "Test main function with invalid arguments.",
@@ -801,7 +857,7 @@
       "source_file": "test\\test_git_operations.py",
       "source_location": "L237",
       "id": "test_git_operations_rationale_237",
-      "community": 33
+      "community": 38
     },
     {
       "label": "Test git push with different remote and branch.",
@@ -809,7 +865,7 @@
       "source_file": "test\\test_git_operations.py",
       "source_location": "L251",
       "id": "test_git_operations_rationale_251",
-      "community": 34
+      "community": 39
     },
     {
       "label": "test_integration.py",
@@ -969,7 +1025,7 @@
       "source_file": "test\\test_integration.py",
       "source_location": "L60",
       "id": "test_integration_rationale_60",
-      "community": 35
+      "community": 40
     },
     {
       "label": "Test project scaffolding integration with file system.",
@@ -985,7 +1041,7 @@
       "source_file": "test\\test_integration.py",
       "source_location": "L83",
       "id": "test_integration_rationale_83",
-      "community": 36
+      "community": 41
     },
     {
       "label": "Test error handling across different modules.",
@@ -1009,7 +1065,7 @@
       "source_file": "test\\test_integration.py",
       "source_location": "L129",
       "id": "test_integration_rationale_129",
-      "community": 37
+      "community": 42
     },
     {
       "label": "Test command line interface integration.",
@@ -1145,7 +1201,7 @@
       "source_file": "test\\test_project_scaffolding.py",
       "source_location": "L44",
       "id": "test_project_scaffolding_rationale_44",
-      "community": 38
+      "community": 43
     },
     {
       "label": "Test main function with invalid arguments.",
@@ -1153,7 +1209,7 @@
       "source_file": "test\\test_project_scaffolding.py",
       "source_location": "L59",
       "id": "test_project_scaffolding_rationale_59",
-      "community": 39
+      "community": 44
     },
     {
       "label": "Test successful project creation.",
@@ -1161,7 +1217,7 @@
       "source_file": "test\\test_project_scaffolding.py",
       "source_location": "L72",
       "id": "test_project_scaffolding_rationale_72",
-      "community": 40
+      "community": 45
     },
     {
       "label": "Test cases for create_translation_project functionality.",
@@ -1193,7 +1249,7 @@
       "source_file": "test\\test_project_scaffolding.py",
       "source_location": "L112",
       "id": "test_project_scaffolding_rationale_112",
-      "community": 41
+      "community": 46
     },
     {
       "label": "Test main function with invalid arguments.",
@@ -1201,7 +1257,7 @@
       "source_file": "test\\test_project_scaffolding.py",
       "source_location": "L127",
       "id": "test_project_scaffolding_rationale_127",
-      "community": 42
+      "community": 47
     },
     {
       "label": "Test successful project creation.",
@@ -1209,7 +1265,7 @@
       "source_file": "test\\test_project_scaffolding.py",
       "source_location": "L140",
       "id": "test_project_scaffolding_rationale_140",
-      "community": 43
+      "community": 48
     },
     {
       "label": "Test main function with default project name.",
@@ -1217,7 +1273,7 @@
       "source_file": "test\\test_project_scaffolding.py",
       "source_location": "L158",
       "id": "test_project_scaffolding_rationale_158",
-      "community": 44
+      "community": 49
     },
     {
       "label": "test_ssh_operations.py",
@@ -1401,7 +1457,7 @@
       "source_file": "test\\test_ssh_operations.py",
       "source_location": "L36",
       "id": "test_ssh_operations_rationale_36",
-      "community": 45
+      "community": 50
     },
     {
       "label": "Test main function creating new SSH key.",
@@ -1409,7 +1465,7 @@
       "source_file": "test\\test_ssh_operations.py",
       "source_location": "L55",
       "id": "test_ssh_operations_rationale_55",
-      "community": 46
+      "community": 51
     },
     {
       "label": "Test main function shows warning on Windows.",
@@ -1417,7 +1473,7 @@
       "source_file": "test\\test_ssh_operations.py",
       "source_location": "L70",
       "id": "test_ssh_operations_rationale_70",
-      "community": 47
+      "community": 52
     },
     {
       "label": "Test check_default_ssh_key when keys exist.",
@@ -1457,7 +1513,7 @@
       "source_file": "test\\test_ssh_operations.py",
       "source_location": "L119",
       "id": "test_ssh_operations_rationale_119",
-      "community": 48
+      "community": 53
     },
     {
       "label": "Test handling of pexpect errors.",
@@ -1465,7 +1521,7 @@
       "source_file": "test\\test_ssh_operations.py",
       "source_location": "L140",
       "id": "test_ssh_operations_rationale_140",
-      "community": 49
+      "community": 54
     },
     {
       "label": "Test main function with invalid arguments.",
@@ -1473,7 +1529,7 @@
       "source_file": "test\\test_ssh_operations.py",
       "source_location": "L152",
       "id": "test_ssh_operations_rationale_152",
-      "community": 50
+      "community": 55
     },
     {
       "label": "Test main function with empty username.",
@@ -1481,7 +1537,7 @@
       "source_file": "test\\test_ssh_operations.py",
       "source_location": "L160",
       "id": "test_ssh_operations_rationale_160",
-      "community": 51
+      "community": 56
     },
     {
       "label": "Test main function with empty host.",
@@ -1489,7 +1545,7 @@
       "source_file": "test\\test_ssh_operations.py",
       "source_location": "L168",
       "id": "test_ssh_operations_rationale_168",
-      "community": 52
+      "community": 57
     },
     {
       "label": "Test main function with empty password.",
@@ -1497,7 +1553,7 @@
       "source_file": "test\\test_ssh_operations.py",
       "source_location": "L176",
       "id": "test_ssh_operations_rationale_176",
-      "community": 53
+      "community": 58
     },
     {
       "label": "Test main function with complex username and password.",
@@ -1505,7 +1561,7 @@
       "source_file": "test\\test_ssh_operations.py",
       "source_location": "L184",
       "id": "test_ssh_operations_rationale_184",
-      "community": 54
+      "community": 59
     },
     {
       "label": "main.c",
@@ -1541,6 +1597,42 @@
     }
   ],
   "links": [
+    {
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "_graphify_build.py",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_src": "graphify_build",
+      "_tgt": "graphify_build",
+      "source": "graphify_build",
+      "target": "graphify_build",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "_graphify_html.py",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_src": "graphify_html",
+      "_tgt": "graphify_build",
+      "source": "graphify_build",
+      "target": "graphify_html",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "_graphify_labels.py",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_src": "graphify_labels",
+      "_tgt": "graphify_build",
+      "source": "graphify_build",
+      "target": "graphify_labels",
+      "confidence_score": 1.0
+    },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
